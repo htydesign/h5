@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>S81</title>
+		<link rel="stylesheet" type="text/css" href="css/s81-main.css" />
+		<link rel="stylesheet" type="text/css" href="css/s81-animte.css" />
+	</head>
+	<body>
+		<div class="m-main">
+			<!-- 导航 -->
+			<div class="s81-navBox" :class="{active:isPhoneNavBtn}">
+				<div class="s81-navContainer">
+					<div class="s81-logo">S81</div>
+					<div class="s81-nav">
+						<a href="#s81Design" class="active">工业设计</a>
+						<a href="#s81OLED">OLED</a>
+						<a href="#s81ImageQuality">画质</a>
+						<a href="#s81ToneQuality">音质</a>
+						<a href="#s8Intelligence">智能体验</a>
+					</div>
+					<div class="s81-buy-btn-box">
+						<div class="s81-buy-btn" @click="onClickOpenBuyPopups">购买</div>
+						<div class="s81-buy-btn-phone" @click="onClickOpenSubNav"><i></i></div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 购物链接弹窗 -->
+			<transition name="fadeIn" style="display: none;">
+				<div class="s81-buy-popups" v-show="isBuyPopus">
+					<div class="s81-popups-box">
+						<div class="s81-popups-title">官方购买平台</div>
+						<div class="s81-popups-close" @click="onClickCloseBuyPopups"></div>
+						<div class="s81-buy-list">
+							<span @click="onClickOpenMiniQRCode">
+								<img src="images/PC/prod-item-1.png" alt="" />
+								<p>创维优品</p>
+							</span>
+							<a href="https://shop.skyworth.com/Product/ProInfo.aspx?id=14801002" target="_blank">
+								<img src="images/PC/prod-item-2.png" alt="" />
+								<p>创维官方商城</p>
+							</a>
+							<a href="http://item.jd.com/100004516437.html" target="_blank">
+								<img src="images/PC/prod-item-3.png" alt="" />
+								<p>创维电视京东自营旗舰店</p>
+							</a>
+							<a href="https://detail.tmall.com/item.htm?id=599078378999" target="_blank">
+								<img src="images/PC/prod-item-4.png" alt="" />
+								<p>创维官方旗舰店</p>
+							</a>
+							<a href="https://m.suning.com/product/0000000000/000000011338844351.html" target="_blank">
+								<img src="images/PC/prod-item-5.png" alt="" />
+								<p>创维电视苏宁自营旗舰店</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</transition>
+
+			<!-- 小程序码 -->
+			<transition name="fadeIn" style="display: none;">
+				<div class="mini-qrcode" v-show="isMiniQRCode">
+					<div class="mini-qrcode-box">
+						<div class="s81-popups-close" @click="onClickCloseMiniQRCode"></div>
+						<div class="mini-qrcode-container">
+							<img src="images/PC/prod-model-qr.jpg">
+						</div>
+					</div>
+				</div>
+			</transition>
+
+			<!-- 返回顶部 -->
+			<transition name="fadeIn" style="display: none;">
+				<div class="s81-goTop" v-show="isGoTop"><a href="#s81Top" style="display: none;"></a></div>
+			</transition>
+
+			<!-- kv -->
+			<div class="s81-kv" :style="{height:window_height+'px'}">
+				<div class="s81-kv-box">
+					<div class="s81-kv-tv"><img src="images/PC/s81-kv-03.png"></div>
+					<div class="s81-kv-text">
+						<span>探寻无限</span>
+						<span><img src="images/PC/s81-kv-01.png"></span>
+						<span>创维自发光智能电视</span>
+						<div class="play-btn">
+							<i data-videourl="video/S81.mp4"><img src="images/PC/s81-kv-04.png">观看TVC视频</i>
+							<i data-videourl="video/S81-2.mp4"><img src="images/PC/s81-kv-04.png">观看产品视频</i>
+						</div>
+					</div>
+				</div>
+			</div>
+			<transition name="fade" style="display: none;">
+				<div class="s81-kv-video" v-if="isVideo">
+					<div class="video">
+						<video :src="videoUrl" id="kvVideo" loop="loop" autoplay="autoplay" controls="controls"></video>
+					</div>
+					<div class="close" @click="onCloseVideo"></div>
+				</div>
+			</transition>
+
+			<div class="s81-container" :style="{marginTop:window_height+'px'}">
+
+				<!-- 工业设计 -->
+				<div class="s81-block" id="s81Design">
+					<!-- 工业设计 开篇 -->
+					<div class="s81-design s81-open">
+						<div class="s81-open-bg">
+							<img src="images/PC/design/design-1.jpg" alt="">
+						</div>
+						<div class="s81-open-text">
+							<span>工业设计</span>
+							<span>
+								<!-- <canvas class="drawLine"></canvas> -->
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+							</span>
+						</div>
+					</div>
+					<!-- 隐藏式底座 -->
+					<div class="s81-box s81-nav-target s81-dizuo imageLeft">
+						<div class="s81-text">
+							<span>SKYWORTH DESIGN</span>
+							<span>悬山底座</span>
+							<span>石灰岩色的底座灵感来源于2020潮春夏核心色，前卫复古暖色设计体现出柔和都市之感，采用悬山屋顶式设计，力学几何的三角形结构，保证简洁明快的同时更加稳固耐压。</span>
+							<span><img src="images/PC/design/design-14.jpg" alt=""></span>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/design/design-3.jpg" alt=""></span>
+						</div>
+					</div>
+					<!-- 5°健康仰角设计 -->
+					<div class="s81-box s81-yangjiao imageRight" style="padding-bottom: 0;">
+						<div class="s81-text">
+							<span>SKYWORTH DESIGN</span>
+							<span>5°健康仰角设计</span>
+							<span>通过人机工程学的长期研究和反复的实验，电视机屏幕保持5°至8°的仰角，能够形成合适的观看仰角角度，从而在观影过程中有效放松身体姿势，缓解肩颈肌肉紧张。</span>
+						</div>
+						<div class="s81-image">
+							<div class="poster-image" style="position: relative;">
+								<img src="images/PC/elevation-1.png">
+								<img src="images/PC/elevation-2.png" style="position: absolute; top: 0;left: 0;">
+							</div>
+							<canvas id="elevation" class="frameCanvas"></canvas>
+						</div>
+					</div>
+					<!-- 悬浮全面屏 -->
+					<div class="s81-quanmianping imageBottom ">
+						<div class="s81-text">
+							<span>SKYWORTH DESIGN</span>
+							<span>悬浮全面屏</span>
+							<span>正看一整面都是屏，同样机身正面的面积可以容纳更大的屏幕，科技与颜值集于一身，时代潮流之选，感受强劲的视觉冲击。</span>
+						</div>
+						<div class="s81-image">
+							<div class="poster-image">
+								<img src="images/PC/bezel-less-1.jpg" style="opacity: 1;">
+								<img src="images/PC/bezel-less-2.jpg" style="opacity: 0; display: none;">
+								<img src="images/PC/bezel-less-3.png" style="opacity: 0; display: none;">
+							</div>
+							<canvas id="bezel_less" class="frameCanvas"></canvas>
+						</div>
+					</div>
+					<!-- 无螺钉一体化背板 -->
+					<div class="s81-box s81-beiban imageCenter">
+						<div class="s81-text">
+							<span>SKYWORTH DESIGN</span>
+							<span>无螺钉一体化背板</span>
+							<span>采用进口高亮拉丝板材，一体成形背板的每个细节历经数十道镜面打磨、抛光、CNC、缎面拉丝等，带来高品质感；卡扣式设计后壳，菱形科技感纹理，打造一体式无螺钉后壳。</span>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/design/design-43.jpg" alt="" class="wdb-img"></span>
+						</div>
+					</div>
+					<!-- 细节之处彰显科技 -->
+					<div class="s81-box s81-xijie imageCenter imageCenter2">
+						<div class="s81-text">
+							<span>SKYWORTH DESIGN</span>
+							<span>细节之处彰显科技</span>
+						</div>
+						<div class="s81-img">
+							<ul>
+								<li>
+									<h1><img src="images/PC/design/design-52.png" alt=""></h1>
+									<h2>3.5mm纤薄机身，尽显科技美学</h2>
+								</li>
+								<li>
+									<h1><img src="images/PC/design/design-54.png" alt=""></h1>
+									<h2>渐变光影轨道，行走在时空之巅，沉浸在光影世界</h2>
+								</li>
+							</ul>
+						</div>
+						<div class="s81-img s81-img2">
+							<ul>
+								<li>
+									<h1><img src="images/PC/design/design-67.png" alt=""></h1>
+									<h2>隐藏式麦克风及红外智控，还原电视本真的模样</h2>
+								</li>
+							</ul>
+						</div>
+						<!-- 注释 -->
+						<div class="annotation">
+							<span>*55英寸和65英寸机身最薄处为3.5mm</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- OLED -->
+				<div class="s81-block" id="s81OLED">
+					<!-- OLED 开篇 -->
+					<div class="s81-oled s81-open">
+						<div class="s81-open-bg">
+							<img src="images/PC/OLED/OLED-1.jpg" alt="">
+						</div>
+						<div class="s81-open-text">
+							<span><img src="images/PC/OLED/OLED.png"></span>
+							<span>
+								<!-- <canvas class="drawLine"></canvas> -->
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+							</span>
+						</div>
+					</div>
+					<!-- OLED像素自发光 -->
+					<div class="s81-box s81-nav-target s81-px imageRight">
+						<div class="s81-text">
+							<span><img src="images/SVG/OLED.svg"></span>
+							<span>天生骄傲 画质旗舰</span>
+							<span>OLED屏的核心是采用自发光材料，可独立控制画面的每个像素，控制画面每个细节，在画面对比度、可视角度、色彩和运动画面等环节都达到了全新的标准。</span>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/OLED/OLED-4.jpg"></span>
+						</div>
+					</div>
+					<!-- 高对比快响应准色彩广视角 -->
+					<div class="s81-box s81-tedian s81-trait">
+						<ul>
+							<li>
+								<span><img src="images/PC/OLED/OLED-18.jpg"></span>
+								<span></span>
+								<span>高-对比</span>
+							</li>
+							<li>
+								<span><img src="images/PC/OLED/OLED-19.jpg"></span>
+								<span></span>
+								<span>快-响应</span>
+							</li>
+							<li>
+								<span><img src="images/PC/OLED/OLED-20.jpg"></span>
+								<span></span>
+								<span>准-色彩</span>
+							</li>
+							<li>
+								<span><img src="images/PC/OLED/OLED-21.jpg"></span>
+								<span></span>
+								<span>广-视角</span>
+							</li>
+						</ul>
+					</div>
+					<!-- 对比增强天然黑 -->
+					<transition name="fade" style="display: none;">
+						<div class="s81-box s81-trait-height s81-fixed " v-if="isTraitHeight">
+							<div class="fixed-box">
+								<div class="s81-text">
+									<span>对比增强天然黑</span>
+									<span>在OLED屏上，太阳夺目刺眼、黑夜寒气逼人、一花一草仿佛都可以伸手触摸。</span>
+								</div>
+								<div class="bg-image">
+									<span><img src="images/PC/OLED/OLED-23.jpg"></span>
+									<span>普通液晶电视</span>
+									<span>自发光电视</span>
+								</div>
+							</div>
+							<div class="close" @click="onClickCloseTrait"></div>
+						</div>
+					</transition>
+					<!-- 快速响应无拖尾 -->
+					<transition name="fade" style="display: none;">
+						<div class="s81-box s81-trait-fast s81-fixed " v-if="isTraitFast">
+							<div class="fixed-box">
+								<div class="s81-text">
+									<span>快速响应无拖尾</span>
+									<span>OLED屏显示快速运动画面时，没有拖尾与抖动，画面平滑清晰，不丢失任何画面细节。</span>
+								</div>
+								<div class="bg-image">
+									<span><img src="images/PC/OLED/OLED-25.jpg"></span>
+									<span>普通液晶电视</span>
+									<span>自发光电视</span>
+								</div>
+							</div>
+							<div class="close" @click="onClickCloseTrait"></div>
+						</div>
+					</transition>
+					<!-- 色彩真实更惊艳 -->
+					<transition name="fade" style="display: none;">
+						<div class="s81-box s81-trait-colour s81-fixed " v-if="isTraitColour">
+							<div class="fixed-box">
+								<div class="s81-text">
+									<span>色彩真实更惊艳</span>
+									<span>OLED屏对于色彩的表现更加真实，大自然的原貌在你眼前惊艳呈现。</span>
+								</div>
+								<div class="bg-image">
+									<span><img src="images/PC/OLED/OLED-27.jpg"></span>
+									<span>普通液晶电视</span>
+									<span>自发光电视</span>
+								</div>
+							</div>
+							<div class="close" @click="onClickCloseTrait"></div>
+						</div>
+					</transition>
+					<!-- 超广视角可侧看 -->
+					<transition name="fade" style="display: none;">
+					<div class="s81-box imageCenter s81-wideAngle s81-fixed " v-if="isTraitWideAngle">
+						<div class="s81-text">
+							<span>超广视角可侧看</span>
+							<span>侧看位置和正中间观看皇帝位相比，亮度和色彩均无衰减，正看侧看，一样好看。</span>
+						</div>
+						<div class="s81-image">
+							<!-- <div class="poster-image"><img src="images/frame/wideAngle/wideAngle_1.png"></div>
+							<canvas id="wideAngle" class="frameCanvas"></canvas> -->
+							<div class="gj">
+								<div class="gj-box" :class="{active:isGJActive}">
+									<span><img src="images/PC/s81-gj.jpg"></span>
+									<span><img src="images/PC/s81-gj.jpg"></span>
+									<span><img src="images/PC/s81-gj.jpg"></span>
+								</div>
+							</div>
+						</div>
+						<div class="s81-du">
+							<span>普通电视 可视70度</span>
+							<span>自发光电视 可视180度</span>
+						</div>
+						<div class="close" @click="onClickCloseTrait"></div>
+					</div>
+					</transition>
+					<!-- 对比增强天然黑 -->
+						<div class="s81-box s81-trait-height">
+							<div class="fixed-box">
+								<div class="s81-text">
+									<span>对比增强天然黑</span>
+									<span>在OLED屏上，太阳夺目刺眼、黑夜寒气逼人、一花一草仿佛都可以伸手触摸。</span>
+								</div>
+								<div class="bg-image">
+									<span><img src="images/PC/OLED/OLED-23.jpg"></span>
+									<span>普通液晶电视</span>
+									<span>自发光电视</span>
+								</div>
+							</div>
+						</div>
+					<!-- 快速响应无拖尾 -->
+						<div class="s81-box s81-trait-fast">
+							<div class="fixed-box">
+								<div class="s81-text">
+									<span>快速响应无拖尾</span>
+									<span>OLED屏显示快速运动画面时，没有拖尾与抖动，画面平滑清晰，不丢失任何画面细节。</span>
+								</div>
+								<div class="bg-image">
+									<span><img src="images/PC/OLED/OLED-25.jpg"></span>
+									<span>普通液晶电视</span>
+									<span>自发光电视</span>
+								</div>
+							</div>
+						</div>
+					<!-- 色彩真实更惊艳 -->
+						<div class="s81-box s81-trait-colour">
+							<div class="fixed-box">
+								<div class="s81-text">
+									<span>色彩真实更惊艳</span>
+									<span>OLED屏对于色彩的表现更加真实，大自然的原貌在你眼前惊艳呈现。</span>
+								</div>
+								<div class="bg-image">
+									<span><img src="images/PC/OLED/OLED-27.jpg"></span>
+									<span>普通液晶电视</span>
+									<span>自发光电视</span>
+								</div>
+							</div>
+						</div>
+					<!-- 超广视角可侧看 -->
+					<div class="s81-box imageCenter s81-wideAngle">
+						<div class="s81-text">
+							<span>超广视角可侧看</span>
+							<span>侧看位置和正中间观看皇帝位相比，亮度和色彩均无衰减，正看侧看，一样好看。</span>
+						</div>
+						<div class="s81-image">
+							<!-- <div class="poster-image"><img src="images/frame/wideAngle/wideAngle_1.png"></div>
+							<canvas id="wideAngle" class="frameCanvas"></canvas> -->
+							<div class="gj">
+								<div class="gj-box" :class="{active:isGJActive}">
+									<span><img src="images/PC/s81-gj.jpg"></span>
+									<span><img src="images/PC/s81-gj.jpg"></span>
+									<span><img src="images/PC/s81-gj.jpg"></span>
+								</div>
+							</div>
+						</div>
+						<div class="s81-du">
+							<span>普通电视 可视70度</span>
+							<span>自发光电视 可视180度</span>
+						</div>
+					</div>					
+					<!-- 无有害蓝光 -->
+					<div class="s81-box s81-wuhai imageBottom2" style="padding-bottom: 0; margin: 0;">
+						<div class="s81-text">
+							<span>无有害蓝光</span>
+							<span>健康护眼更舒适</span>
+							<span>OLED屏无需背光源，每个像素点独立发光，不含有害蓝光波段，从根源上避免了有害蓝光问题。</span>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/OLED/OLED-47.jpg"></span>
+						</div>
+					</div>
+					<div class="s81-box s81-wuhai imageBottom2" style="padding-top: 0;">
+						<div class="s81-echart">
+							<ul>
+								<li><img src="images/PC/OLED/OLED-51.jpg"></li>
+								<li><img src="images/PC/OLED/OLED-53.jpg"></li>
+								<li><img src="images/PC/OLED/OLED-55.jpg"></li>
+							</ul>
+						</div>
+					</div>
+					<!-- SOBiF 无残影技术 -->
+					<div class="s81-box s81-sobif imageCenter s81-traceTree">
+						<div class="s81-text">
+							<span><img src="images/SVG/SOBIF.svg"></span>
+							<span>尽情享受美好画面</span>
+							<span>创维OLED 10大无残影防护技术，令正常使用场景下的残影发生概率几乎为0，延长屏幕使用寿命，尽情享受OLED产品带来的视觉观感。</span>
+							<span>LEA-边缘台标监测及调整 | 视频局部亮度调整 | TPC静态图像亮度调整 | Over Scan像素位移技术 | OFFRS功能 | JB功能 | OLED专用动态屏保 | OSD层亮度控制技术 |
+								台标识别算法及台标处理 | OLED专用UI设计标准</span>
+						</div>
+						<div class="s81-image">
+							<span></span>
+						</div>
+						<div class="s81-sobif-tv">
+							<span><img src="images/PC/OLED/OLED-SOBIF-6.png"></span>
+							<span><img src="images/PC/OLED/OLED-SOBIF-7.png"></span>
+						</div>
+						<div class="annotation">
+							<span>*此测量数据来自创维实验室</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- 画质 -->
+				<div class="s81-block" id="s81ImageQuality">
+					<!-- 画质 开篇 -->
+					<div class="s81-image-quality s81-open">
+						<div class="s81-open-bg">
+							<img src="images/PC/image-quality/image-quality-1.jpg" alt="">
+						</div>
+						<div class="s81-open-text">
+							<span>画质</span>
+							<span>
+								<!-- <canvas class="drawLine"></canvas> -->
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+							</span>
+						</div>
+					</div>
+					<!-- 创维30+调校 -->
+					<div class="s81-box s81-nav-target s81-30 imageBottom3">
+						<div class="s81-text">
+							<span v-show="isWeb"><img src="images/PC/image-quality/image-quality-30-1.png"></span>
+							<span>创维30+画质调校</span>
+							<span>专业画质调校团队 超30年画质调校经验 </span>
+							<ul v-if="isWeb">
+								<li>
+									<h1>建立专业画质测试序列库</h1>
+									<h2>10T+10G且不断更新的测试素材库</h2>
+								</li>
+								<li>
+									<h1>开发七大维度画质调校模型</h1>
+									<h2>七大维度画质调校数百余项评估</h2>
+								</li>
+								<li>
+									<h1>30年画质调校经验</h1>
+									<h2>30年调校经验、方法和技术沉淀</h2>
+								</li>
+								<li>
+									<h1>技术驱动型团队人才梯度</h1>
+									<h2>建立人才机制建立，在专业领域发挥所长</h2>
+								</li>
+							</ul>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/image-quality/image-quality-3.jpg" alt=""></span>
+							<div v-if="!isWeb">
+								<span><img src="images/PC/image-quality/image-quality-30-1.png"></span>
+								<ul>
+									<li>
+										<h1>建立专业画质测试序列库</h1>
+										<h2>10T+10G且不断更新的测试素材库</h2>
+									</li>
+									<li>
+										<h1>开发七大维度画质调校模型</h1>
+										<h2>七大维度画质调校数百余项评估</h2>
+									</li>
+									<li>
+										<h1>30年画质调校经验</h1>
+										<h2>30年调校经验、方法和技术沉淀</h2>
+									</li>
+									<li>
+										<h1>技术驱动型团队人才梯度</h1>
+										<h2>建立人才机制建立，在专业领域发挥所长</h2>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- 蜂鸟AI画质芯片Pro -->
+					<div class="s81-box s81-fengniaoAI imageRight s81-dispose">
+						<div class="s81-text">
+							<span>蜂鸟AI画质芯片Pro</span>
+							<span>专业AI画质芯片</span>
+							<span>蜂鸟AI画质芯片Pro(Trochilus Extreme)是创维自主研发的具备AI画质调校的专业芯片，能够根据画面不同对象对其进行色彩、对比度、清晰度及场景进行识别处理，改善画面观感，带来身临其境的画质体验。</span>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/image-quality/image-quality-6.jpg" alt=""></span>
+						</div>
+					</div>
+					<!-- 精密平滑处理 -->
+					<div class="s81-box s81-pinghua imageLeft s81-dispose2 slideImage">
+						<div class="s81-text">
+							<span>精密平滑处理（DPCS）</span>
+							<span><i>平滑渐变</i><i>拒绝色彩等高线</i></span>
+							<span>基于AI算法智能分析海量图像资源，实时对色彩进行深度补偿，有效解决图像失真的问题，让色彩表现更加平滑自然。</span>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/image-quality/image-quality-21-1.jpg" alt=""></span>
+							<span><img src="images/PC/image-quality/image-quality-21-2.jpg" alt=""></span>
+							<span><img src="images/PC/image-quality/image-quality-DRAG.png" alt=""><i></i></span>
+						</div>
+					</div>
+					<!-- 动态目标重塑 -->
+					<div class="s81-box imageRight s81-dispose2 slideImage target">
+						<div class="s81-text">
+							<span>动态目标重塑（NR）</span>
+							<span><i>图像降噪 </i><i>拒绝屏幕沙尘暴</i></span>
+							<span>基于AI算法智能判别物体细节，与巨型数据库资源进行对比修正，进而图像降噪，让物体细节精妙呈现。</span>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/image-quality/image-quality-37-2.jpg" alt=""></span>
+							<span><img src="images/PC/image-quality/image-quality-37.jpg" alt=""></span>
+							<span><img src="images/PC/image-quality/image-quality-DRAG.png" alt=""><i></i></span>
+						</div>
+					</div>
+					<!-- 超级清晰度 -->
+					<div class="s81-box imageRight s81-dispose2 slideImage definition">
+						<div class="s81-text">
+							<span>超级清晰度（SR）</span>
+							<span><i>深度提锐</i><i>拒绝图像马赛克</i></span>
+							<span>基于AI算法智能分析图像结构特性，大幅提升画面锐度，消除边缘锯齿，让图像更加清晰。 </span>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/image-quality/image-quality-52-2.jpg" alt=""></span>
+							<span><img src="images/PC/image-quality/image-quality-52.jpg" alt=""></span>
+							<span><img src="images/PC/image-quality/image-quality-DRAG.png" alt=""><i></i></span>
+						</div>
+					</div>
+					<!-- AI场景自适应 -->
+					<div class="s81-box imageLeft s81-dispose2 s81-AIPQ">
+						<div class="s81-text">
+							<span>AI场景自适应（AIPQ）</span>
+							<span><i>场景识别</i><i>拒绝千篇一律</i></span>
+							<span>基于AI算法智能识别画面场景，自动切换画质和音质模式，定制画面和声音提升方案并自动完成优化。</span>
+							<div class="AI-node" v-if="isWeb">
+								<ul>
+									<li v-for="(item,index) in ratioArray[ratioIndex]" :key="index">
+										<i :style="{top:item+'%'}"></i>
+										<p :style="{height:(100-item)+'%'}"></p>
+									</li>
+								</ul>
+								<h1>
+									<i>亮度</i>
+									<i>对比度</i>
+									<i>饱和度</i>
+									<i>清晰度</i>
+									<i>背光调节</i>
+									<i>低音</i>
+									<i>中音</i>
+									<i>高音</i>
+								</h1>
+							</div>
+						</div>
+						<div class="s81-image">
+							<div class="s81-movie-poster">
+								<ul>
+									<li class="active"><img src="images/PC/image-quality/image-quality-65-1.jpg" alt=""></li>
+									<li class=""><img src="images/PC/image-quality/image-quality-65-2.jpg" alt=""></li>
+									<li class=""><img src="images/PC/image-quality/image-quality-65-3.jpg" alt=""></li>
+									<li class=""><img src="images/PC/image-quality/image-quality-65-4.jpg" alt=""></li>
+									<li class=""><img src="images/PC/image-quality/image-quality-65-5.jpg" alt=""></li>
+									<li class=""><img src="images/PC/image-quality/image-quality-65-6.jpg" alt=""></li>
+									<li class=""><img src="images/PC/image-quality/image-quality-65-7.jpg" alt=""></li>
+								</ul>
+							</div>
+							<div class="s81-movie-classify">
+								<ul>
+									<li class="active">影院</li>
+									<li>体育</li>
+									<li>新闻</li>
+									<li>节能</li>
+									<li>音乐</li>
+									<li>游戏</li>
+									<li>动画</li>
+								</ul>
+							</div>
+						</div>
+						<div class="AI-node" v-if="!isWeb">
+							<ul>
+								<li v-for="(item,index) in ratioArray[ratioIndex]" :key="index">
+									<i :style="{top:item+'%'}"></i>
+									<p :style="{height:(100-item)+'%'}"></p>
+								</li>
+							</ul>
+							<h1>
+								<i>亮度</i>
+								<i>对比度</i>
+								<i>饱和度</i>
+								<i>清晰度</i>
+								<i>背光调节</i>
+								<i>低音</i>
+								<i>中音</i>
+								<i>高音</i>
+							</h1>
+						</div>
+					</div>
+					<!-- VRR* -->
+					<div class="s81-box imageCenter s81-VRR" style="padding-bottom: 0;">
+						<div class="s81-text">
+							<span>可变刷新率（Vartical Refresh Rate,VRR）</span>
+							<span>流畅体验 游戏电视</span>
+							<span>可保证游戏源中不同场景的视频帧处于理想状态，消除了迟滞、窒滞和画面撕裂现象，带来更流畅、细节更逼真的游戏体验。</span>
+						</div>
+					</div>
+					<div class="s81-box imageCenter s81-VRR" style="padding-top: 0;">
+						<div class="s81-image">
+							<span v-if="isWeb">
+								<img src="images/PC/image-quality/image-quality-96-1.jpg" alt="">
+								<img src="images/PC/image-quality/image-quality-96-2.jpg" alt="">
+							</span>
+							<span v-if="!isWeb">
+								<img src="images/WEB/1.jpg" alt="">
+							</span>
+						</div>
+						<!-- 注释 -->
+						<div class="annotation">
+							<span>*部分功能需升级后实现</span>
+						</div>
+					</div>
+					<!-- logo 杜比视界 -->
+					<div class="s81-box imageBottom s81-dolby">
+						<div class="s81-text">
+							<span><img src="images/PC/image-quality/image-quality-dolby-1.png"></span>
+							<span>绝妙视觉 美轮美奂</span>
+							<span>杜比视界 (Dolby Vision)通过令人叹为观止的亮度、对比度和色彩，让图像内容活灵活现地呈现在您的眼前。</span>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/image-quality/image-quality-103.jpg" alt=""></span>
+						</div>
+					</div>
+				</div>
+
+				<!-- 音质 -->
+				<div class="s81-block" id="s81ToneQuality">
+					<!-- 音质 开篇 -->
+					<div class="s81-tone-quality s81-open">
+						<div class="s81-open-bg">
+							<img src="images/PC/tone-quality/tone-quality-1.jpg" alt="">
+						</div>
+						<div class="s81-open-text">
+							<span>音质</span>
+							<span>
+								<!-- <canvas class="drawLine"></canvas> -->
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+							</span>
+						</div>
+					</div>
+					<!-- 杜比全景声2.0 -->
+					<div class="s81-box s81-nav-target imageCenter s81-dolby2" style="padding-bottom: 0;">
+						<div class="s81-text">
+							<span>杜比全景声2.0</span>
+							<span>听声辨位 身临其境</span>
+							<span>杜比全景声(Dolby Atmos)通过萦绕于四周的逼真流动音效将您融入到故事情节中，感受来自天空的声音。</span>
+						</div>
+					</div>
+					<div class="s81-box imageCenter s81-dolby2" style="padding-top: 0;">
+						<div class="s81-image">
+							<div class="poster-image">
+								<span><img src="images/PC/voice-1.jpg" style="opacity: 0;"></span>
+								<span><img src="images/PC/voice-2.png" style="display: none; opacity: 0;"></span>
+							</div>
+							<canvas id="voice" class="frameCanvas"></canvas>
+						</div>
+					</div>
+					<!-- Wonder Audio+ 魔音技术+ 魔音技术+ -->
+					<div class="s81-box imageLeft s81-WonderAudio">
+						<div class="s81-text">
+							<span>Wonder Audio 魔音技术</span>
+							<span>魔音入耳 一听不忘</span>
+							<ul>
+								<li>
+									<h1>声场定位</h1>
+									<h2>立体环绕声<br>突出声音细节</h2>
+								</li>
+								<li>
+									<h1>DSP智能修正 </h1>
+									<h2>针对扬声器特性<br>智能修正</h2>
+								</li>
+								<li>
+									<h1>音效偏好设置 </h1>
+									<h2>根据用户偏好<br>自定义环境音效</h2>
+								</li>
+								<li>
+									<h1>音量突变保护 </h1>
+									<h2>智能护航<br>防止音量忽高忽低</h2>
+								</li>
+							</ul>
+						</div>
+						<div class="s81-image">
+							<div class="poster-image"><img src="images/frame/music/music_1.jpg"></div>
+							<canvas id="music" class="frameCanvas"></canvas>
+						</div>
+					</div>
+				</div>
+
+				<!-- 智能体验 -->
+				<div class="s81-block" id="s8Intelligence">
+					<!-- 智能体验 开篇 -->
+					<div class="s81-intelligence s81-open">
+						<div class="s81-open-bg">
+							<img src="images/PC/intelligence/intelligence-1.jpg" alt="">
+						</div>
+						<div class="s81-open-text">
+							<span>智能体验</span>
+							<span>
+								<!-- <canvas class="drawLine"></canvas> -->
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+								<i></i>
+							</span>
+						</div>
+					</div>
+					<!-- 小维智联 智控万物 -->
+					<div class="s81-box s81-nav-target imageCenter s81-xiaowei" style="padding-bottom: 0;">
+						<div class="s81-text">
+							<span><img src="images/SVG/Swaiot.svg"></span>
+							<span>小维智联 智控万物</span>
+							<span>Swaiot(小维智联)实现了以大屏电视作为核心的智能设备万物互联，在电视上即可查看、操控及管理全屋Swaiot智能设备。</span>
+						</div>
+					</div>
+					<div class="s81-box imageCenter s81-xiaowei" style="padding-top: 0;">
+						<div class="s81-image">
+							<transition v-if="isWeb">
+								<span><img id="img" src="images/PC/intelligence/intelligence-wifi-router.png" style="opacity: 0;"></span>
+								<canvas id="mycanvas"></canvas>
+								<img src="images/PC/point.png" id="point" style="display: none;">
+							</transition>
+							<transition v-if="!isWeb">
+								<span><img src="images/WEB/2.jpg"></span>
+							</transition>
+						</div>
+					</div>
+					<!-- 视频交互系统 -->
+					<div class="s81-box imageLeft s81-video">
+						<div class="s81-text">
+							<span>全视频交互系统</span>
+							<span>全视频交互系统</span>
+							<span>全新的酷开系统整合了全平台影视资源，通过大数据分析把握用户的观影喜好，并建立视频化交互形式，刷新客厅大屏娱乐新体验。</span>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/intelligence/intelligence-15.jpg"></span>
+						</div>
+						<!-- 注释 -->
+						<div class="annotation">
+							<span>*酷开系统及投放内容中可能会出现定制化广告服务</span>
+						</div>
+					</div>
+					<!-- TrensAI 智能生活管家 -->
+					<div class="s81-box imageCenter s81-TrensAI">
+						<div class="s81-text">
+							<span><img src="images/SVG/TrensAI.svg"></span>
+							<span>智能生活管家</span>
+							<span>TrensAI可实现24小时随时语音唤醒，180°零死角远场语音识别，可通过语音轻松获取各项便捷的互联网服务及控制Swaiot智能设备。</span>
+							<span>
+								<i>远场语音</i>
+								<i>声纹识别</i>
+								<i>免唤醒多轮对话</i>
+							</span>
+							<span><img src="images/PC/intelligence/intelligence-41.png"></span>
+						</div>
+						<div class="s81-image voice">
+							<span><i></i><i></i><i></i><i></i></span>
+							<span><i></i><i></i><i></i><i></i></span>
+							<span><i></i><i></i><i></i><i></i></span>
+							<span><i></i><i></i><i></i><i></i></span>
+							<span><i></i><i></i><i></i><i></i></span>
+						</div>
+					</div>
+					<!-- 声纹识别 -->
+					<div class="s81-box imageRight s81-shengwen">
+						<div class="s81-text">
+							<span><img src="images/SVG/TrensAI.svg"></span>
+							<span>声纹识别</span>
+							<span>千人千面，个性化推荐，每个人喊出来的内容的都不一样。</span>
+							<ul>
+								<li class="active">
+									<img src="images/PC/intelligence/intelligence-trensAI-women.png">
+									<img src="images/PC/intelligence/intelligence-trensAI-women-active.png">
+									<i>小维小维，为我推荐电影</i>
+								</li>
+								<li>
+									<img src="images/PC/intelligence/intelligence-trensAI-man.png">
+									<img src="images/PC/intelligence/intelligence-trensAI-man-active.png">
+									<i>小维小维，为我推荐电影</i>
+								</li>
+								<li>
+									<img src="images/PC/intelligence/intelligence-trensAI-children.png">
+									<img src="images/PC/intelligence/intelligence-trensAI-children-active.png">
+									<i>小维小维，为我推荐电影</i>
+								</li>
+							</ul>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/intelligence/intelligence-trensAI-tv.png"></span>
+							<!-- <span><img src="images/PC/intelligence/intelligence-trensAI-2.png"></span> -->
+							<ul>
+								<li class="active"><img src="images/PC/intelligence/intelligence-trensAI-women-movie.png"></li>
+								<li><img src="images/PC/intelligence/intelligence-trensAI-man-movie.png"></li>
+								<li><img src="images/PC/intelligence/intelligence-trensAI-children-movie.png"></li>
+							</ul>
+						</div>
+						<div class="s81-trensAI-bg">
+							<span><img src="images/PC/intelligence/intelligence-trancAi-1.jpg"></span>
+						</div>
+					</div>
+					<!-- 免唤醒多轮对话 -->
+					<div class="s81-box imageCenter s81-dialogue">
+						<div class="s81-text">
+							<span><img src="images/SVG/TrensAI.svg"></span>
+							<span>免唤醒多轮对话</span>
+							<span>开启拟人化智能人机交互语音方式，支持连续对话，再也不用一直喊小维小维了。</span>
+						</div>
+						<div class="s81-image">
+							<div class="poster-image"><img src="images/frame/dialogue/dialogue_1.png"></div>
+							<ul>
+								<li><img src="images/PC/intelligence/intelligence-yuyin-1.png"></li>
+								<li><img src="images/PC/intelligence/intelligence-yuyin-2.png"></li>
+								<li><img src="images/PC/intelligence/intelligence-yuyin-3.png"></li>
+								<li><img src="images/PC/intelligence/intelligence-yuyin-4.png"></li>
+								<li><img src="images/PC/intelligence/intelligence-yuyin-5.png"></li>
+								<li><img src="images/PC/intelligence/intelligence-yuyin-6.png"></li>
+								<li><img src="images/PC/intelligence/intelligence-yuyin-7.png"></li>
+								<li><img src="images/PC/intelligence/intelligence-yuyin-8.png"></li>
+							</ul>
+							<canvas id="dialogue" class="frameCanvas"></canvas>
+						</div>
+						<!-- 注释 -->
+						<div class="annotation">
+							<span>*部分功能需升级后实现</span>
+						</div>
+					</div>
+					<!-- TrensAI AOD* -->
+					<div class="s81-box imageLeft s81-TrensAI-AOD">
+						<div class="s81-text">
+							<span><img src="images/SVG/TrensAI-AOD.svg"></span>
+							<span>息屏显示</span>
+							<span>得益于OLED屏幕的特性，AOD(Always On Display)屏可在电视息屏状态下显示当前时间天气、Swaiot智能设备信息、备忘录、音乐等内容等，给您24小时的陪伴。</span>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/intelligence/intelligence-65.jpg"></span>
+							<ul>
+								<li class="active"><img src="images/PC/intelligence/intelligence-65-1.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-65-2.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-65-3.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-65-4.jpg"></li>
+							</ul>
+						</div>
+						<!-- 注释 -->
+						<div class="annotation">
+							<span>*部分功能需升级后实现</span>
+						</div>
+					</div>
+					<!-- 多模智能网关 -->
+					<div class="s81-box imageRight s81-ggp">
+						<div class="s81-text">
+							<span>多模智能网关</span>
+							<span>让老家电焕发新智</span>
+							<span>三种模式智能切换，覆盖绝大多数家用电器设备，支持6000+款全屋全品类非智能设备的控制，真正的解决用户所有痛点。</span>
+							<ul>
+								<li>双频WI-FI</li>
+								<li>蓝牙 5.0</li>
+								<li><img src="images/PC/intelligence/intelligence-103.png"></li>
+							</ul>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/intelligence/intelligence-83.jpg"></span>
+							<div class="s81-loading">
+								<div class="s81-loading-box">
+									<i v-for="(item,index) in loadingPoints" :key="index"></i>
+								</div>
+							</div>
+							<ul :class="{active:wifiActive}">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+					<!-- 投屏 -->
+					<div class="s81-box imageBottom s81-projectionScreen">
+						<div class="s81-text">
+							<span>iOS有线投屏</span>
+							<span>大屏畅爽 大家共享</span>
+							<span>将苹果手机有线连接电视并投屏，打造 iOS苹果智能电视 ，连接更稳定，体验更流畅，大屏共享更多欢乐。</span>
+						</div>
+						<div class="s81-image">
+							<span v-if="isWeb"><img src="images/PC/intelligence/intelligence-106.jpg"></span>
+							<span v-else><img src="images/WEB/3.jpg"></span>
+							<!-- 注释 -->
+							<div class="annotation">
+								<span>*部分功能需升级后实现</span>
+							</div>	
+						</div>
+					</div>
+					<!-- 超强配置 -->
+					<div class="s81-box imageLeft s81-configuration">
+						<div class="s81-text">
+							<span>2GB DDR4+32GB eMMC</span>
+							<span>强悍配置 体验护航</span>
+							<span>搭载目前性能强悍的旗舰芯片，2G DDR4+32GeMMC的强悍配置，各种应用秒启，切换游刃有余。</span>
+						</div>
+						<div class="s81-image">
+							<span><img src="images/PC/intelligence/intelligence-108.jpg"></span>
+						</div>
+					</div>
+					<!-- 名师学堂 -->
+					<div class="s81-box imageCenter s81-famousSchool">
+						<div class="s81-text">
+							<span>名师学堂</span>
+							<span><i>给您的孩子</i><i>请位私人导师</i></span>
+							<span>创维名师学堂深度整合全平台教育资源，让孩子在家中也能享受到名校名师的精英教育。</span>
+							<span>
+								<i>正版教材</i>
+								<i>专业讲师</i>
+								<i>海量内容</i>
+							</span>
+						</div>
+						<div class="s81-image">
+							<span v-if="isWeb"><img src="images/PC/intelligence/intelligence-139.jpg"></span>
+							<span v-else><img src="images/WEB/4.jpg"></span>
+						</div>
+					</div>
+					<!-- 腾讯视频 -->
+					<div class="s81-box imageCenter s81-txTV">
+						<div class="s81-text">
+							<span><img src="images/PC/intelligence/intelligence-143.jpg"></span>
+							<span><i>腾讯影视源</i><i>海量内容一网打尽</i></span>
+							<span>享尽电视剧、电影、动漫、纪录片、音乐、体育等全内容</span>
+						</div>
+						<div class="s81-image">
+							<ul>
+								<li><img src="images/PC/intelligence/intelligence-161.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-164.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-158.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-155.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-172.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-173.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-171.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-170.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-185.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-188.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-182.jpg"></li>
+								<li><img src="images/PC/intelligence/intelligence-179.jpg"></li>
+							</ul>
+						</div>
+						<!-- 注释 -->
+						<div class="annotation">
+							<span>*腾讯超级影视VIP需要单独购买</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/pxloader-all.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/s81-main.js" type="text/javascript" charset="utf-8"></script>
+</html>
