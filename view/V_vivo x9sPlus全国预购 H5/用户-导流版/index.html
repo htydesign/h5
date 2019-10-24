@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="width=640, user-scalable=no" />
+		<title>vivo X9sPlus全国火热预约中</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body>
+		<audio src="music/music.mp3" id="music" loop="loop" preload="auto"></audio>
+		<span id="music_icon"><img src="images/img-music_on.png"></span>
+		
+		<div class="scene">
+			<!--翻转提示-->
+			<div class="rotation-hint">
+				<span><img src=""></span>
+			</div>
+						
+			<!--loading-->
+			<div class="loading">
+				<img id="loading_image" src="images/loading2.jpg" style="display:none;opacity: 0;"/>
+				<canvas id="loadingCanvas"></canvas>
+				<span class="loading_1"></span>
+				<span class="loading_2"></span>
+				<h1>2000万柔光双摄正在准备，照亮你的美</h1>
+				<p>Loading...5%</p>
+			</div>
+			
+			<div class="container">
+				<canvas id="canvas"></canvas>
+			</div>
+			
+			<!--最后定帧-->
+			<div class="poster">
+				<span class="btn_1"><a href="http://shop.vivo.com.cn/wap/activity/new?source=vivo_ly_weixin"></a></span>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/easeljs-0.8.2.min.js"></script>
+	<script type="text/javascript" src="js/pxloader-all.min.js"></script>
+	<script type="text/javascript" src="js/utf.js" ></script>
+	<script type="text/javascript" src="js/jquery.qrcode.js" ></script>	
+	<script type="text/javascript" src="js/wx-video-audio-hack.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+		var oMusic = document.getElementById("music");
+		var music_btn=document.getElementById("music_icon");
+		var music_icon=document.querySelector("#music_icon img");
+		var isPlayMusci=true;
+		setTimeout(function() {
+			oMusic.src = 'music/music.mp3';
+			oMusic.play();
+		}, 300);
+		music_btn.addEventListener(touchEvents.touchstart,function(){
+			if(isPlayMusci){
+				music_icon.src='images/img-music_off.png';
+				oMusic.pause();
+			}else{
+				music_icon.src='images/img-music_on.png';
+				oMusic.play();
+			}
+			isPlayMusci=!isPlayMusci;
+		},false);
+	</script>
+</html>

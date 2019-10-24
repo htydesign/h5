@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script>
+			// class
+			! function(navigator) {
+				var userAgent = navigator.userAgent;
+				documentElement = document.documentElement;
+				if(userAgent.match(/micromessenger\/5/gi)) {
+					documentElement.className += " mobile wx_mobile wx_mobile_5";
+				} else if(userAgent.match(/micromessenger/gi)) {
+					documentElement.className += " mobile wx_mobile";
+				} else if(userAgent.match(/ucbrowser/gi)) {
+					documentElement.className += " mobile uc_mobile";
+				} else if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())) {
+					documentElement.className += " mobile";
+				} else if(userAgent.toLowerCase().match(/msie/gi) && (parseFloat(userAgent.toLowerCase().match(/msie ([0-9]{1,}[\.0-9]{0,})/i)[1] || 999) < 9)) {
+					documentElement.className += " pc pc-ie pc-ie8";
+				} else if(userAgent.toLowerCase().match(/msie/gi) || navigator.msPointerEnabled || navigator.pointerEnabled) {
+					documentElement.className += " pc pc-ie";
+				} else {
+					documentElement.className += " pc";
+				}
+			}(navigator);
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>金立S10摄影展</title>
+		<link rel="stylesheet" href="css/mian.css" />
+		<link rel="stylesheet" href="css/animte.css" />
+	</head>
+
+	<body>
+
+		<audio src="music/bg.mp3" id="music" loop="loop" preload="auto"></audio>
+
+		<div class="container" id="container">
+
+			<div class="music_icon"><img src="images/other/music_on.png" id="music_icon"></div>
+
+			<div class="section loading" id="loading">
+				<span>
+					<i id="loadingProgress"><b></b></i>
+				</span>
+			</div>
+
+			<div class="section hint" id="hint">
+				<span><img src="images/other/img-01.png"></span>
+			</div>
+
+			<div class="section scene" id="stage">
+				<span><img src="images/other/logo.png"></span>
+				<h1 class="arrow"><img src="images/other/img-06.png"></h1>
+			</div>
+
+			<div class="section showImage" id="showImage">
+				<div class="images-container">
+					<i class="left_icon" id="left_icon"><img src="images/other/img-arrow.png"></i>
+					<i class="right_icon" id="right_icon"><img src="images/other/img-arrow.png"></i>
+					<div class="box" id="box">
+						<ul id="box_ul"></ul>
+					</div>
+				</div>
+				<span class="close" id="close"></span>
+			</div>
+
+			<div class="section poster" id="poster">
+				<div id="addevent"></div>
+				<span><img src="images/other/img-03.jpg"></span>
+				<span>
+					<a href="javascript:;" class="share_btn" id="share_btn"></a>
+					<a href="https://wqitem.jd.com/item/view?sku=5024834" id="alink"></a>
+				</span>
+			</div>
+
+			<div class="section share" id="share">
+				<img src="images/other/img-05.png">
+			</div>
+
+		</div>
+		<div class="hsp">
+			<p></p>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/three.min.js"></script>
+	<script type="text/javascript" src="js/TrackballControls.js"></script>
+	<script type="text/javascript" src="js/DeviceOrientationControls.js"></script>
+	<script type="text/javascript" src="js/tween.min.js"></script>
+	<script type="text/javascript" src="js/pxloader-all.js"></script>
+	<script type="text/javascript" src="js/wx-video-audio-hack.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/mian.js"></script>
+	<script>
+		window.onload = function() {
+			var music_icon = document.getElementById("music_icon");
+			
+			oMusic.pause();
+			setTimeout(function() {
+				oMusic.src = 'music/bg.mp3';
+				if(iOS){
+					oMusic.play();
+				}
+				
+			}, 300);
+
+			var isOpenMusic = true;
+
+			music_icon.addEventListener('touchstart', function() {
+				if(isOpenMusic) {
+					oMusic.pause();
+					music_icon.src = 'images/other/music_off.png';
+				} else {
+					oMusic.play();
+					music_icon.src = 'images/other/music_on.png';
+				}
+				isOpenMusic = !isOpenMusic;
+			}, false);
+			var oLink = document.getElementById("alink");
+			oLink.addEventListener('touchstart', function(e) {
+				e.stopPropagation();
+			}, false);
+		}
+	</script>
+
+</html>

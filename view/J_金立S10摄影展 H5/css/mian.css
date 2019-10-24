@@ -1,0 +1,419 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	max-height: 1080px;
+	overflow: hidden;
+	background: #000;
+}
+
+.music_icon {
+	width: 44px;
+	height: 44px;
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	z-index: 9990;
+}
+
+.music_icon img {
+	display: block;
+	width: 100%;
+}
+
+.container,
+.section {
+	width: 100%;
+	height: 100%;
+	max-height: 1080px;
+	overflow: hidden;
+	z-index: 10;
+	transition: all 0.5s 0.1s ease-in;
+	-webkit-transition: all 0.5s 0.1s ease-in;
+	transform: translateZ(10px);
+	-webkit-transform: translateZ(10px);
+}
+
+.scene {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+}
+
+p {
+	color: #f20;
+}
+
+.loading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9995;
+	background: #fff url(../images/other/img-loading.jpg) no-repeat;
+	background-size: 100% auto;
+}
+
+.loading span {
+	width: 80%;
+	height: 0.5rem;
+	display: block;
+	position: absolute;
+	bottom: 2rem;
+	left: 10%;
+	margin-left: 0;
+	border-radius: 18px;
+	border: 2px solid #d1d1d2;
+	overflow: hidden;
+}
+
+.loading span i {
+	display: block;
+	width: 1%;
+	height: 100%;
+	overflow: hidden;
+	border-radius: 18px;
+}
+
+.loading span i b {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, #9d9d9d, #bfbfbf);
+	background: linear-gradient(to right, #9d9d9d, #bfbfbf);
+}
+
+.hint {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.75);
+	z-index: 9992;
+}
+
+.hint span {
+	display: block;
+	width: 50%;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	transform: translate(0, -50%);
+	-webkit-transform: translate(0, -50%);
+}
+
+.hint span img {
+	display: block;
+	width: 100%;
+}
+
+.showImage {
+	position: fixed;
+	top: 0%;
+	left: 0;
+	background: rgba(0, 0, 0, 0.75);
+	z-index: 9999;
+	display: none;
+	opacity: 1;
+}
+
+.images-container {
+	width: 100%;
+	height: 100%;
+}
+
+.close {
+	width: 3rem;
+    height: 3rem;
+    display: block;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    margin-left: -1.5rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.close:before,
+.close:after {
+    content: "";
+    width: 1.4rem;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -1px 0 0 -0.7rem;
+    background: #FFFFFF;
+}
+
+.close:before {
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+
+.close:after {
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+}
+
+.scene span {
+	display: block;
+	width: 178px;
+	height: 37px;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	z-index: 1;
+}
+
+.scene span img {
+	display: block;
+	width: 100%;
+}
+
+.scene h1 {
+	display: block;
+	width: 1.8rem;
+	height: auto;
+	position: absolute;
+	bottom: 35px;
+	left: 50%;
+	margin-left: -1rem;
+	z-index: 10;
+}
+
+.scene h1 img {
+	display: block;
+	width: 100%;
+}
+
+.images-container i {
+	display: block;
+	width: 1.25rem;
+	height: auto;
+	position: absolute;
+	top: 50%;
+	margin: -0.75rem 0 0 0;
+	z-index: 999;
+}
+.images-container i img{
+	display: block;
+	width: 100%;
+}
+
+.left_icon {
+	left: 30px;
+}
+
+.right_icon {
+	right: 30px;
+}
+.left_icon img {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+}
+
+.box {
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+	-webkit-transform: translate(-50%, 0%);
+    overflow: hidden;
+}
+
+.box ul {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.35s;
+	-webkit-transition: all 0.35s;
+}
+
+.box ul li {
+	width: 100%;
+	height: 100%;
+	float: left;
+	position: relative;
+	list-style: none;
+}
+
+.box ul li span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	margin-top: -20px;
+}
+
+.box ul li span img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.box ul li p {
+	padding: 1rem 0 0 0;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+#addevent{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9990;
+	display: none;
+}
+.poster {	
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	transform: translateY(100%);
+	-webkit-transform: translateY(100%);
+}
+.poster-box{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.poster h1{
+	width: 6px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 2px;
+	background: rgba(0,0,0,0.1);
+}
+.poster h1 i{
+	display: block;
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-radius: 3px;
+	background: rgba(0,0,0,0.2);
+}
+.poster span {
+	display: block;
+	position: relative;
+}
+
+.poster span img {
+	display: block;
+	width: 100%;
+}
+
+.poster-box .ab a{
+	display: block;
+	width: 230px;
+	height: 80px;
+	position: absolute;
+	bottom: 80px;
+}
+.poster-box .ab a:nth-of-type(1){
+	background: url(../images/other/a1.png) no-repeat;
+	left: 70px;
+}
+.poster-box .ab a:nth-of-type(2){
+	background: url(../images/other/a2.png) no-repeat;
+	right: 70px;
+}
+
+.share {
+	position: fixed;
+	display: none;
+	background: rgba(0, 0, 0, 0.75);
+	z-index: 9999;
+}
+
+.share img {
+	width: 250px;
+	display: block;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
+.hsp {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: none;
+}
+
+.hsp p {
+	font-size: 28px;
+	color: #333;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+}
+
+
+@media screen and (min-width:320px) and (max-width:374px) {
+	html,body{
+		font-size: 12px;
+	}
+}
+@media screen and (min-width:375px) and (max-width:413px) {
+	html,body{
+		font-size: 14px;
+	}
+
+}
+@media screen and (min-width:413px) and (max-width:767px) {
+	html,body{
+		font-size: 16px;
+	}
+
+}
+@media screen and (min-width:768px) and (max-width:1200px) {
+	html,body{
+		font-size: 24px;
+	}
+}
+
+
+.poster span:nth-of-type(2){
+	width: 540px;
+	height: 107px;
+	background: url(../images/other/a3.png) no-repeat;
+	position: absolute;
+	bottom: 2rem;
+	left: 50px;
+	z-index: 9999;
+}
+.poster span:nth-of-type(2) a{
+	display: block;
+	width: 232px;
+	height: 80px;
+	background: rgba(0,0,0,0);
+	float: left;
+	margin-left: 14px;
+}
+.poster span:nth-of-type(2) a:nth-of-type(1){
+	margin-right: 34px;
+}

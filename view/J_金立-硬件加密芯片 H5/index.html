@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<!--<meta http-equiv="Pragma" content="no-cache"> 
+		<meta http-equiv="Cache-Control" content="no-cache"> 
+		<meta http-equiv="Expires" content="0"> -->
+		<script>
+			// class
+			! function(navigator) {
+				var userAgent = navigator.userAgent;
+				documentElement = document.documentElement;
+				if(userAgent.match(/micromessenger\/5/gi)) {
+					documentElement.className += " mobile wx_mobile wx_mobile_5";
+				} else if(userAgent.match(/micromessenger/gi)) {
+					documentElement.className += " mobile wx_mobile";
+				} else if(userAgent.match(/ucbrowser/gi)) {
+					documentElement.className += " mobile uc_mobile";
+				} else if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())) {
+					documentElement.className += " mobile";
+				} else if(userAgent.toLowerCase().match(/msie/gi) && (parseFloat(userAgent.toLowerCase().match(/msie ([0-9]{1,}[\.0-9]{0,})/i)[1] || 999) < 9)) {
+					documentElement.className += " pc pc-ie pc-ie8";
+				} else if(userAgent.toLowerCase().match(/msie/gi) || navigator.msPointerEnabled || navigator.pointerEnabled) {
+					documentElement.className += " pc pc-ie";
+				} else {
+					documentElement.className += " pc";
+				}
+			}(navigator);
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>金立M6 内置安全加密芯片</title>
+		<link rel="stylesheet" href="css/index.min.css" />
+        
+        <script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "//hm.baidu.com/hm.js?9a132538b4b0f1c763551ba9481a2053";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+			
+			_hmt.push(["_trackEvent", "访问量", "网站访问量"]);
+		</script>
+
+	</head>
+
+	<body>
+
+		<!--music图标-->
+		<!--<div class="music-icon" >
+			<img src="images/music.png">
+		</div>-->
+
+		<!--中奖的音效-->
+		<audio id="win_music" src="music/win.mp3" preload="auto"></audio>
+
+		<!--骷髅头的音效-->
+		<audio id="poisoning_music" src="music/kuloutou.mp3" loop="loop" preload="auto"></audio>
+
+		<!--尖叫的音效-->
+		<audio id="scream_music" src="music/scream.mp3" preload="auto"></audio>
+
+		<!--九宫格移动滑块的音效-->
+		<audio id="slide_music" src="music/move.wav" preload="auto"></audio>
+
+		<!--背景music  1-->
+		<audio id="bg_music1" src="music/toy-thief.mp3" loop="loop" preload="auto"></audio>
+		
+		<!--背景music  2-->
+		<audio id="video_music" src="music/bg2.mp3" loop="loop" preload="auto"></audio>
+		
+		<!--loading-->
+		<div class="loading-box">
+			<span class="loading-mail"><img src="images/img-mail.png"></span>
+			<span class="loading-phone"><img src="images/img-42_1.png"></span>
+			<span class="loading-phone2"><img src="images/img-42_1.png"></span>
+            <span class="nows_time">14:45</span>
+		</div>
+
+		<!--显示中奖-->
+		<div class="show-win yellow-bg">
+
+			<!--<div id="loader_txt" class="loader-txt">
+				<div class="t1 t">
+					<ul>
+						<li>6</li>
+						<li>5</li>
+						<li>4</li>
+						<li>3</li>
+						<li>2</li>
+						<li>1</li>
+						<li>0</li>
+						<li>9</li>
+						<li>8</li>
+						<li>7</li>
+						<li>6</li>
+					</ul>
+				</div>
+				<div class="t2 t">
+					<ul>
+						<li>6</li>
+						<li>5</li>
+						<li>4</li>
+						<li>3</li>
+						<li>2</li>
+						<li>1</li>
+						<li>0</li>
+						<li>9</li>
+						<li>8</li>
+						<li>7</li>
+						<li>6</li>
+					</ul>
+				</div>
+				<div class="t3 t">
+					<ul>
+						<li>6</li>
+						<li>5</li>
+						<li>4</li>
+						<li>3</li>
+						<li>2</li>
+						<li>1</li>
+						<li>0</li>
+						<li>9</li>
+						<li>8</li>
+						<li>7</li>
+						<li>6</li>
+					</ul>
+				</div>
+			</div>-->
+
+			<!--旋转光线-->
+			<div class="light-box">
+				<div class="rotate-light">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+
+			<!--手机-->
+			<div class="phone">
+				<!--中奖信息-->
+				<div class="show-info">
+					<div class="s-container">
+                        <span class="cur-time2">12:00</span>
+						<span class="cur-date">12:00</span>
+						<div class="s-box">
+							<h1>恭喜你！中奖啦！</h1>
+							<h2>你获得一张国庆7日游<br />往马尔代夫的旅行套餐</h2>
+							<h2>送价值**机票<br />送价值**酒店</h2>
+							<p>http://www.ctrip1.vyou.com</p>
+							<h3>出发时间：10.1日<br />回航时间：10.7日</h3>
+							<span class="cur-time">12:00</span>
+						</div>
+					</div>
+					<span class="click-btn">点击领取</span>
+					<span class="user-hand"><img src="images/img-40.png"></span>
+
+				</div>
+
+				<!--病毒-->
+				<div class="phone-virus">
+					<img src="images/img-3.png" title="" />
+					<span>再次恭喜您！<br /> 再次中奖啦！ </span>
+				</div>
+			</div>
+
+			<!--木马-->
+			<div class="cockhorse">
+				<span class="cockhorse_img"><img src="images/img-cockhorse.png"></span>
+			</div>
+
+		</div>
+
+		<!--显示手机中毒-->
+		<div class="show-virus" id="box_virus">
+		</div>
+
+		<!--求助-->
+		<div class="user-help">
+			<div class="page section1">
+				<h1><img src="images/img-22.png"></h1>
+				<h2><img src="images/img-23.png"></h2>
+			</div>
+			<div class="page section2">
+				<h3><img src="images/img-24.png"></h3>
+				<span><img src="images/img-21.png"></span>
+			</div>
+		</div>
+
+		<!--九宫格拼图-->
+		<div class="sudoku">
+			<div class="sudoku-box">
+				<div id="game" class="game">
+					<div id="d1" class="d1"><img src="images/img-5.png"></div>
+					<div id="d2" class="d2"><img src="images/img-6.png"></div>
+					<div id="d3" class="d3"><img src="images/img-7.png"></div>
+					<div id="d4" class="d4"><img src="images/img-8.png"></div>
+					<div id="d5" class="d5"><img src="images/img-9.png"></div>
+					<div id="d6" class="d6"><img src="images/img-10.png"></div>
+					<div id="d7" class="d7"><img src="images/img-11.png"></div>
+					<div id="d8" class="d8"><img src="images/img-12.png"></div>
+				</div>
+				<div class="box">
+					<div id="d9" class="d9"><img src="images/img-13.png"></div>
+				</div>
+				<div class="game-bg"></div>
+				<div class="sudoku-info g-container">
+					<p>5秒钟观察时间</p>
+				</div>
+				<div class="game-btn-box g-container">
+					<div class="g-btn">
+						<span class="reset">重置</span>
+						<span class="help">帮助</span>
+					</div>
+					<div class="g-help g-h1">
+						<p>拼图太难? <br/>点击金大立来帮你!</p>
+					</div>
+					<!--<div class="g-help g-h2">
+						<p>金大立高能拼图中...</p>
+					</div>-->
+					<div class="g-help g-h3">
+						<p>完成！</p>
+					</div>
+				</div>
+				<div class="frame"></div>
+			</div>
+		</div>
+
+		<!--显示芯片-->
+		<div class="show-chip" id="show_chip">
+			<div class="chip-box">
+				<h1><img src="images/img-28.png"></h1>
+				<h2>硬件加密芯片</h2>
+				<p>比软件加密更安全<br/>从硬件底层对个人信息进行加密<br/>软件加密能够在较短时间内破解<br/>硬件加密想要破解，需要花十辈子的时间。 </p>
+			</div>
+			<div class="user-hint">
+				<span><img src="images/img-20.png"></span>
+				<span><img src="images/img-19.png"></span>
+			</div>
+		</div>
+
+		<!--视频部分-->
+		<div class="video-box" id="v_container">
+			<canvas id="canvas" width="640" height="1138" class="mycanvas"></canvas>
+			<video id="video" class="myvideo" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" style="background:transparent;">
+				<!--<source src="video/H5_3.mp4" type="video/mp4"></source>-->
+			</video>
+		</div>
+
+		<!--视频交互部分-->
+		<div class="user-interaction">
+			<div class="user-box">
+				<span class="user-txt"><img src="images/img-39.png"></span>
+				<div class="one"></div>
+				<span class="arrows"><img src="images/img-32.png"></span>
+			</div>
+		</div>
+
+		<!--视频播放完后，显示页面-->
+		<div class="end-page">
+			<div class="end-box">
+				<div class="end-video">
+					<div class="end-txt">
+						<div class="endVideo-txt">
+							<!--版本1-->
+							<div class="page1">
+								<span><img src="images/img-34.png"></span>
+								<span><img src="images/img-35.png"></span>
+								<span><img src="images/img-36.png"></span>
+							</div>
+							<!--版本2-->
+							<!--<div class="page2">
+								<span><img src="images/img-37.png"></span>
+								<span><img src="images/img-38.png"></span>
+							</div>-->
+						</div>
+					</div>
+					<div class="endVideo-bg">
+						<div class="endVideo-box">
+							<canvas id="endcanvas" width="360" height="204" class="endcanvas"></canvas>
+							<video id="endvideo" width="360" height="204" class="endvideo" x-webkit-airplay="true" webkit-playsinline="true" preload="auto">
+								<!--<source id="endSource" src="video/M6_Plus.mp4" type="video/mp4"></source>-->
+							</video>
+						</div>
+						<span class="endVideo-btn"><img src="images/play-btn.png"></span>
+					</div>
+				</div>
+				<div class="end-ul">
+					<ul>
+						<li>
+							<a href="safety.html">
+								<p>加密芯片<br/>为何物？</p>
+							</a>
+						</li>
+						<li>
+							<a href="index.html">
+								<p>不够，<br/>再玩一次！</p>
+							</a>
+						</li>
+						<li>
+							<a href="http://www.gionee.com/">
+								<p>找我？<br/>来商场！</p>
+							</a>
+						</li>
+						<li class="share-btn">
+							<a href="javascript:;">
+								<p>用“芯”<br/>刷屏！</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!--分享-->
+		<div class="share-container">
+			<div class="arrow"><img src="images/arrow_right.png"></div>
+			<p>点击右上角可以分享哦！</p>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/pxloader-all.min.js"></script>
+	<script src="js/main.min.js"></script>
+	<script src="js/sudoku.min.js"></script>
+    <script src='http://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+    <script src="js/share.js"></script>
+	
+
+</html>

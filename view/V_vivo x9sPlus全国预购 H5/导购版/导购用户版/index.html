@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="width=640, user-scalable=no" />
+		<title>vivo X9sPlus全国火热预约中</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body>
+		<audio src="music/music.mp3" id="music" loop="loop" preload="auto"></audio>
+		<span id="music_icon"><img src="images/img-music_on.png"></span>
+		
+		<div class="scene">
+			<!--翻转提示-->
+			<div class="rotation-hint">
+				<span><img src=""></span>
+			</div>
+			
+			<!--loading-->
+			<div class="loading">
+				<img id="loading_image" src="images/loading2.jpg" style="display:none;opacity: 0;"/>
+				<canvas id="loadingCanvas"></canvas>
+				<span class="loading_1"></span>
+				<span class="loading_2"></span>
+				<h1>2000万柔光双摄正在准备，照亮你的美</h1>
+				<p>Loading...5%</p>
+			</div>
+			
+			<div class="container">
+				<canvas id="canvas"></canvas>
+			</div>
+			
+			<!--最后定帧-->
+			<div class="poster">
+				<p class="shop-name"></p>
+				<p class="shop-addr"></p>
+				<span>
+					<i class="gift-btn"><img src="images/img-12.png"></i>
+					<b class="gift-btn">点击礼包了解更多优惠信息</b>
+					<a href="javascript:;" class="click-phone">
+						<img src="images/img-tel.png" />
+						<h1>电话咨询</h1>
+					</a>
+				</span>
+				<span class="btn_1"></span>
+				<span class="btn_2">
+					<a href="javascript:;" class="look_yy"></a>
+					<a href="javascript:;" class="change_yy"></a>
+				</span>
+			</div>
+			
+			<!--填写您的预购信息-->
+			<div class="write-info">
+				<h1><img src="images/img-13.png"></h1>
+				<h1><img src="images/img-10.png"></h1>
+				<h1><i><img src="images/img-11.png"><img src="images/img-12.png"></i></h1>
+				<div class="write-line">
+					<input type="text" class="user-name" placeholder="请填写预约人姓名"/>
+					<input type="tel" class="user-phone" placeholder="请填写预约联系电话"/>
+					<span class="affirm">确定</span>
+					<p class="t1">请输入您的姓名</p>
+					<p class="t2">请输入您的联系电话</p>
+					<p class="t3">请输入正确的联系电话</p>
+				</div>
+				<h3 class="go-black go-black1"></h3>
+			</div>
+			
+			<!--保存二维码-->
+			<div class="save">
+				<span><img src=""></span>
+				<h1>请长按保存此页面</h1>
+				
+				<h2 class="succeed_x9" style="display: none;"><img src="images/img-13.png"></h2>
+				<h2 class="succeed_img" style="display: none;"><img src="images/img-14.png"></h2>
+				<h2 class="vivo_logo" style="display: none;"><img src="images/120.png"></h2>			
+				<div id="qrcodeCanvas" style="display: none;"></div>
+				<h3 class="go-black go-black2"></h3>
+			</div>
+			
+			<!--显示礼包-->
+			<div class="gift">
+				<div class="gift-box">
+					<span class="gift-close"></span>
+					<div class="shop-gift">
+						<p>赠送原装移动电源</p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/easeljs-0.8.2.min.js"></script>
+	<script type="text/javascript" src="js/pxloader-all.min.js"></script>
+	<script type="text/javascript" src="js/utf.js" ></script>
+	<script type="text/javascript" src="js/jquery.qrcode.js" ></script>	
+	<script type="text/javascript" src="js/wx-video-audio-hack.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+		var oMusic = document.getElementById("music");
+		var music_btn=document.getElementById("music_icon");
+		var music_icon=document.querySelector("#music_icon img");
+		var isPlayMusci=true;
+		setTimeout(function() {
+			oMusic.src = 'music/music.mp3';
+			oMusic.play();
+		}, 300);
+		music_btn.addEventListener(touchEvents.touchstart,function(){
+			if(isPlayMusci){
+				music_icon.src='images/img-music_off.png';
+				oMusic.pause();
+			}else{
+				music_icon.src='images/img-music_on.png';
+				oMusic.play();
+			}
+			isPlayMusci=!isPlayMusci;
+		},false);
+	</script>
+</html>

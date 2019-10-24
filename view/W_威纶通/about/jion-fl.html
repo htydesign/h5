@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>招聘</title>
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/jion.css" />
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/style.js" ></script>
+	<script>
+		$(document).ready(function() {
+			//导航
+			setNav();
+			//首页我们的产品tab
+			setIndexTab();
+			//导航顶部搜索
+			setTopsearch();
+		});
+		//滚动页面 头部导航浮动在顶部
+		$(window).bind('scroll', function() {
+				if ($(window).scrollTop() > 30) {
+					$(".header-bottom-bg").addClass('header_fixed');
+					$('.header-bottom-bg').css({position:'fixed',top:0,left:0});
+				} else {
+					$(".header-bottom-bg").removeClass('header_fixed');
+					$('.header-bottom-bg').css({position:'relative'});
+					$('.header-bottom-bg').css({
+						left: 0
+					});
+				}
+			});
+		//更改浮动导航，出现滚动条
+		$(window).scroll(function() {
+			var original_left = $('.header-bottom').offset().left;
+			var new_left = -$(window).scrollLeft() + 'px';
+			$('.header_fixed').css({
+				left: new_left
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+	<!--顶部导航-->
+	<div class="header">
+		<div class="header-top-bg">
+			<div class="header-top">
+				<div class="change">
+					<a href="javascript:;">English</a>/
+					<a href="javascript:;">中文</a>
+				</div>
+				<div class="other">
+					<ul>
+						<li class="luntan"><span><img src="../images/img-info.png"></span><a href="javascript:;">进入论坛</a></li>
+						<li class="search ">
+							<form class="">
+								<div class="search-bg">
+									<span class="search-topimg"></span>
+									<p>搜索</p>
+									<input type="text" name="text" id="txt" />
+								</div>
+							</form>
+						</li>
+						<li class="login"><span><img src="../images/img-gologin.png"></span><a href="../login/login.html">登录</a>/<a href="../login/register.html">注册</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom-bg">
+			<div class="header-bottom">
+				<div class="logo">
+					<a href="../index.html">
+						<img src="../images/logo.png" />
+					</a>
+				</div>
+				<div class="navbar">
+					<ul>
+						<li class=""><a href="../index.html">首页</a></li>
+						<li class="nav-li nav-on"><a href="javascript:;">关于我们</a></li>
+						<li class="nav-li"><a href="javascript:;">产品系列</a></li>
+						<li class="nav-li"><a href="javascript:;">服务支持</a></li>
+						<li class="nav-li"><a href="javascript:;">方案案例</a></li>
+						<li class="nav-li"><a href="javascript:;">新闻动态</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--下拉菜单-->
+			<div class="sub-bg">
+
+					<!--关于我们-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../about/video.html"><span><img src="../images/nav/jianjie.png"></span>公司简介</a></li>
+								<li><a href="../about/about.html"><span><img src="../images/nav/fazhan.png"></span>发展历程</a></li>
+								<li><a href="../about/culture.html"><span><img src="../images/nav/wenhua.png"></span>企业文化</a></li>
+								<li><a href="../about/jion.html"><span><img src="../images/nav/zhaopin.png"></span>人才招聘</a></li>
+								<li><a href="../about/adress.html"><span><img src="../images/nav/lianxi.png"></span>联系我们</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--产品系列-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../products/touch.html"><span><img src="../images/nav/chumoing.png"></span>触摸屏系列</a></li>
+								<li><a href="../products/screen.html"><span><img src="../images/nav/bianpinqi.png"></span>变频器系列</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--服务支持-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../service/maintain.html"><span><img src="../images/nav/weixiu.png"></span>维修服务</a></li>
+								<li><a href="../service/download.html"><span><img src="../images/nav/xiazai.png"></span>下载中心</a></li>
+								<li><a href="../service/training.html"><span><img src="../images/nav/peixun.png"></span>培训中心</a></li>
+								<li><a href="../service/servicebrand.html"><span><img src="../images/nav/fuwu.png"></span>服务品牌</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--方案与案例-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../case/solution.html"><span><img src="../images/nav/fangan.png"></span>解决方案</a></li>
+								<li><a href="../case/usecase.html"><span><img src="../images/nav/anli.png"></span>应用案例</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--新闻中心-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../news/news-center.html"><span><img src="../images/nav/xinwen.png"></span>公司新闻</a></li>
+								<li><a href="../news/activity-area.html"><span><img src="../images/nav/huodong.png"></span>活动专区</a></li>
+								<li><a href="../news/product-dynamic.html"><span><img src="../images/nav/dongtai.png"></span>产品动态</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+	<div class="inn-ban"></div>
+	<div class="container">
+		<div class="ul-us">
+			<div class="content">
+				<ul>
+					<li><a href="jion.html">社会招聘</a></li>
+					<li><a href="jion-xy.html">校园招聘</a></li>
+					<li class="on"><a href="jion-fl.html">福利待遇</a></li>
+					<li><a href="jion-lc.html">应聘流程</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content mt40">
+			
+			<div class="nav-con">
+				<i class="fl-i"></i>
+				<h3 class="fl-h3">威纶通视员工为企业的第一财富!</h3>
+				<p class="fl-p">我们以吸引、激励和保留优秀人才为目的、以绩效为导向；以业绩为主、能力和职务为辅助；进行内部价值分配。 公司在兼顾市场竞争力和内部公平性的基础上,为员工提供全面的、且富有竞争力的薪酬体系,包括:固定工资、年终奖金、绩效奖金、专项奖励、全薪病假、年休假、社会保险及公积金、商业保险、免费午餐、婚育礼金、病假慰问金、年度健康体检,员工救助计划、国外旅游等。</p>
+				<div>
+					<h4 class="fl-h4">有竞争力的薪酬</h4>
+					<h5 class="fl-h5">[固定工资:]</h5>
+					<p class="fl-sp">我们根据员工的岗位为每一位员工提供具有市场竞争力的固定工资,并在每年根据最新市场趋势、调整员工的薪酬水平以及绩效水平,同时也将进行综合的回顾和审阅。</p>
+					<h5 class="fl-h5">[年度服务奖金:]</h5>
+					<p class="fl-sp"> 为了感谢员工一来年的贡献,我们根据员工当年在公司的服务时间,为员工提供年度服务奖金。</p>
+					<h5 class="fl-h5">[绩效奖金:]</h5>
+					<p class="fl-sp"> 我们每月会根据公司整体业绩和员工绩效表现提供绩效奖金。绩效奖金与员工绩效和贡献紧密联系,体现与公司与员工同成长、共分享的理念。</p>
+					<h5 class="fl-h5">[比赛奖励:]</h5>
+					<p class="fl-sp">在加入我们这个大家庭后,员工将有众多的机会成为公司的“明星”。我们每年会设立多项比赛,在全国的威纶通中评选出各类的优秀人才。认可每一个有特长的杰出贡献的员工及团队,向全国员工宣传“明星”们的闪光点,以树立良好的楷模。。</p>
+				</div>
+				<div>
+					<h4 class="fl-h4">完善的福利</h4>
+					<h5 class="fl-h5">[社会保险:]</h5>
+					<p class="fl-sp">我们为员工提供完善的保障计划,包括国家法定的养老保险、医疗保险、工伤保险、失业保险、生育保险及根据政府政策缴纳住房公积金。</p>
+					<h5 class="fl-h5">[商业保险:]</h5>
+					<p class="fl-sp"> 为了更好地解除员工基本生活的后顾之忧,公司为员工投保了团体商业补充医疗保险,在原有社会保险之外,员工还享有意外医疗保险、重大疾病保险、女性生育保障、门诊/住院医疗保障等。</p>
+					<h5 class="fl-h5">[员工假期:]</h5>
+					<p class="fl-sp">  员工除了享有法定假期,我们还提供:年休假、带薪病假、双休日/法定公众假期、婚假、丧假、产假、陪产假、哺乳假、工伤假等相关假期。</p>
+					<h5 class="fl-h5">[员工关怀与救助计划:]</h5>
+					<p class="fl-sp">我们为员工提供多种福利计划旨在为员工创建舒适的工作环境,并实现工作生活的平衡。这些福利计划包括: 各种员工俱乐部、部门活动经费、年度旅游、免费午餐、婚育礼金、员工救助计划等。</p>
+					<h5 class="fl-h5">[暑期实习:]</h5>
+					<p class="fl-sp">对于暑期实习生,若实习期间工作所在地与其家庭或学校所在地非同一城市,公司将免费提供住宿,同时,实习生还享有办公环境内的公共休闲娱乐设施,免费午餐等福利。我们还为实习生购买意外伤害商业保险。</p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<!--底部-->
+	<div class="footer-bg">
+			<div class="footer-t">
+				<div class="footer-box footer-t-t">
+					<div class="footer-nav-dingyue">
+						<div class="footer-logo"><img src="../images/logo-footer.png"></div>
+						<form>
+							<label>订阅电子邮件</label>
+							<input type="email" name="email" id="email" />
+							<input type="submit" name="btn" id="dingyue" value="订阅" />
+						</form>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>关于我们</h1></li>
+							<li><a href="../about/video.html">公司简介</a></li>
+							<li><a href="../about/about.html">发展历程</a></li>
+							<li><a href="../about/culture.html">企业文化</a></li>
+							<li><a href="../about/jion.html">人才招聘</a></li>
+							<li><a href="../about/adress.html">联系我们</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>产品中心</h1></li>
+							<li><a href="../products/touch.html">触摸屏系列</a></li>
+							<li><a href="../products/screen.html">变频器系列</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>服务支持</h1></li>
+							<li><a href="../service/maintain.html">维修服务</a></li>
+							<li><a href="../service/download.html">下载中心</a></li>
+							<li><a href="../service/learning.html">培训中心</a></li>
+							<li><a href="../service/servicebrand.html">服务品牌</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>方案与案列</h1></li>
+							<li><a href="../case/solution.html">解决方案</a></li>
+							<li><a href="../case/usecase.html">应用案例</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>新闻中心</h1></li>
+							<li><a href="../news/news-center.html">公司新闻</a></li>
+							<li><a href="../news/activity-area.html">活动专区</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-contact">
+						<div class="footer-nav-tel">
+							<p>400-836-2000</p>
+						</div>
+						<ul>
+							<li>
+								<p>微博</p>
+								<span><img src="../images/erweima.png"></span>
+							</li>
+							<li style="margin-left: 30px;">
+								<p>微信</p>
+								<span><img src="../images/erweima.png"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-b">
+				<div class="footer-box footer-b-t">
+					<div class="footer-share">
+						<div class="bdsharebuttonbox" data-tag="share_1">
+							<a class="share_one" data-cmd="tsina"></a>
+							<a class="share_two" data-cmd="weixin"></a>
+							<a class="share_three" data-cmd="qzone"></a>
+							<a class="share_four" data-cmd="kaixin001"></a>
+							<a class="share_five" data-cmd="tqq"></a>
+						</div>
+						<script>
+							window._bd_share_config = {
+								share: [{
+									"bdSize": 32
+								}],
+							}
+							with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+						</script>
+					</div>
+					<div class="footer-copyright">
+						<ul>
+							<li>Copyright ©威纶通 All Rights Reserved</li>
+							<li><a href="../login/legalnotice.html">法律声明</a></li>
+							<li>|</li>
+							<li><a href="../login/privacy.html">隐私保护</a></li>
+							<li>|</li>
+							<li><a href="../login/feedback.html">意见反馈</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+<script type="text/javascript">
+	$(".jion_div").css({"height":$(".lc-ul").height()-$(".lc-ul").find("ul li:last-child").height()  + "px"});
+//	$(".ul-us li").each(function(index, el) {
+//		$(this).click(function(event) {
+//			initPage2(index);
+//			$(this).addClass('on').siblings().removeClass('on');
+//		});
+//	});
+	function initPage2(index){
+        $(".nav-con").css("display","none");
+        $(".nav-con").eq(index).css("display","block");
+    }
+    initPage2(0);
+</script>
+</html>

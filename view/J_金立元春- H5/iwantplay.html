@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script>
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>余文乐冯小刚给你送新年祝福啦</title>
+		<link rel="stylesheet" href="css/main.css" />
+        <style>
+            .user-benediction p {
+                font-size: 45px;
+                line-height: 51px;
+                color: #d49a5d;
+                text-align: center;
+                font-family: 'huawenxingkai';
+                display: none;
+            }
+        </style>
+	</head>
+
+	<body>
+
+		<div class="container">
+			<!--我也要玩-->
+			<div class="section benediction play">
+				<span><img src="images/img-bg1.jpg"></span>
+				<div class="m-benediction-container">
+					<h3><img src="images/img-bg3.png"></h3>
+					<h2></h2>
+	
+					<div class="u-red-packet">
+						<a href="index.html">让六叔六爷帮我送祝福</a>
+					</div>
+					<div class="user-benediction">
+						<p><i style="opacity: 1;">黄晓明</i>新年快乐</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script>
+		window.onload=function(){
+			var oUserName=document.querySelector('.user-benediction p i');
+			var oUserNameStyle = document.querySelector('.user-benediction p');	
+			
+			var getName='金立';
+			oUserName.innerHTML=getName;
+			if(getName.length == 4) {
+				oUserNameStyle.style.fontSize = '40px';
+				oUserNameStyle.style.lineHeight = '44px';
+				oUserNameStyle.style.display = 'block';
+			} else if(getName.length == 3) {
+				oUserNameStyle.style.lineHeight = '51px';
+				oUserNameStyle.style.fontSize = '45px';
+                oUserNameStyle.style.display = 'block';
+			} else if(getName.length == 2) {
+				oUserNameStyle.style.lineHeight = '60px';
+                oUserNameStyle.style.fontSize = '48px';
+                oUserNameStyle.style.display = 'block';
+			} else {
+				oUserNameStyle.style.lineHeight = '72px';
+				oUserNameStyle.style.fontSize = '55px';
+                oUserNameStyle.style.display = 'block';
+			}
+
+		}
+	</script>
+</html>

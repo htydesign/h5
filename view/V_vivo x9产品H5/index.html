@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta http-equiv="cache-control" content="no-cache">
+
+		<script>
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>彭于晏带你看X9</title>
+		<link rel="stylesheet" href="css/index.css" />     
+	</head>
+
+	<body>
+
+	
+		<!--加载动画-->
+		<div class="loading-box" id="loading">
+			<div class="load"></div>
+			<h2>正在改造你的自拍镜头
+				<span class="percent"></span>
+			</h2>
+		</div>
+
+		<!--视频部分-->
+		<div class="video-box" id="v_container">
+
+			<div class="loading-box" id="afterLoading">
+				<div class="load"></div>
+				<h2>正在改造你的自拍镜头
+					<span class="percent" id="percent">0%</span>
+				</h2>
+			</div>
+
+			<!-- 第一次交互效果，点击摄像头 -->
+        	<div class="page-1">
+	        	<div class="first">
+	       
+		        	<span class="click_box1"></span>
+		        	<div class="click_text1">
+		        		<span>点</span>
+		        		<span>击</span>
+		        		<span>镜</span>
+		        		<span>头</span>
+		        		<span class="kong">&nbsp;</span>
+		        		<span>升</span>
+		        		<span>级</span>
+		        		<span>为</span>
+		        		<span>前</span>
+		        		<span>置</span>
+		        		<span>双</span>
+		        		<span>摄</span>
+		        	</div>
+	        	</div>
+			</div>
+			<!-- <div class="video_1">
+				<video id="video_1" src="video/Vivo_X9_More_H5_Iphone.mp4" preload="auto"  poster="images/01.jpg" width="100%" style="background:transparent;">
+	        	</video>
+			</div> -->
+			<div class="video_2">
+				<video id="video_2" src="video/Vivo_X9_More_H5_Android.mp4" playsinline webkit-playsinline preload x5-video-player-type="h5" x5-video-player-fullscreen="true" poster="images/02.jpg" width="100%" style="background:transparent;">
+	        	</video>
+			</div>
+        	
+
+			<div class="thelast">
+				<a href="http://www.vivo.com.cn/vivo/x9/?_v=desktop" class="lastlink"></a>
+			</div>
+        	
+        	
+		</div>
+
+	</body>
+
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/pxloader-all.min.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript" src='http://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+    <script type="text/javascript" src="js/share.js"></script>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script>
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>创意新狮界</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+	</head>
+
+	<body>
+		<!--music-->
+		<audio src="music/music.mp3" class="music" loop="loop"></audio>
+
+		<div class="musicIcon">
+			<i></i>
+			<span><img src="images/Music_18.png"></span>
+		</div>
+
+		<!--loading-->
+		<div class="loading">
+			<ul>
+				<li><img src="images/load-01.png"></li>
+				<li><img src="images/load-02.png"></li>
+				<li><img src="images/load-03.png"></li>
+				<li><img src="images/load-04.png"></li>
+				<li><img src="images/load-05.png"></li>
+				<li><img src="images/load-06.png"></li>
+				<li><img src="images/load-07.png"></li>
+			</ul>
+			<ul class="ali">
+				<li><img src="images/load-08.png"></li>
+				<li><img src="images/load-09.png"></li>
+				<li><img src="images/load-10.png"></li>
+				<li><img src="images/load-11.png"></li>
+				<li><img src="images/load-12.png"></li>
+				<li><img src="images/load-13.png"></li>
+				<li><img src="images/load-14.png"></li>
+			</ul>
+			<p>0%</p>
+		</div>
+
+		<div class="container">
+			<!--index-->
+			<div class="index-container">
+				<div class="index-bg">
+					<span></span>
+				</div>
+				<div class="i-title">
+					<span><img src="images/img-14.png"></span>
+					<span><img src="images/img-02.png"></span>
+				</div>
+
+				<div class="i-elevator">
+					<div class="i-panel">
+						<span><img src="images/img-13.png"></span>
+						<span><img src="images/img-08.png"></span>
+					</div>
+					<div class="i-elevator-box">
+						<span><img src="images/img-09.png"></span>
+						<span><img src="images/img-10.png"></span>
+					</div>
+					<div class="i-elevator-control">
+						<span><img src="images/img-07.png"></span>
+						<span><img src="images/img-11.png"></span>
+						<span><img src="images/img-16.png"></span>
+					</div>
+					<div class="i-flowerpot">
+						<span><img src="images/img-15.png"></span>
+					</div>
+				</div>
+
+				<div class="i-person">
+					<span><img src="images/img-03.png"></span>
+					<span><img src="images/img-05.png"></span>
+					<span><img src="images/img-04.png"></span>
+				</div>
+
+				<div class="i-open-btn">
+					<span><img src="images/img-12.png"></span>
+					<span><img src="images/img-06.png"></span>
+				</div>
+			</div>
+		</div>
+
+		<!---->
+		<div class="main">
+
+			<!--提示-->
+			<div class="hint">
+				<span><img src="images/img-200.png"></span>
+			</div>
+			
+			<!--马路-->
+			<div class="road"></div>
+
+			<!--马路右边-->
+			<div class="road-right">
+				<span><img src="images/img-46.png"></span>
+				<span class="p1 p"></span>
+				<span><img src="images/img-48.png"></span>
+				<span><img src="images/img-49.png"></span>
+				<span class="p2 p"><img src="images/img-50.png"></span>
+				<span class="p3 p"><img src="images/img-51.png"></span>
+				<span>
+					<i><img src="images/img-52.png"></i>
+					<i><img src="images/img-52.png"></i>
+					<i><img src="images/img-52.png"></i>
+				</span>
+				<span>
+					<img src="images/img-53-01.png">
+					<img src="images/img-53-02.png">
+					<img src="images/img-53-03.png">
+					<img src="images/img-53-04.png">
+					<img src="images/img-53-05.png">
+					<img src="images/img-53-06.png">
+					<img src="images/img-53-07.png">
+				</span>
+				<span><img src="images/img-54.png"></span>
+				<span class="p4 p"></span>
+				<span class="p5 p"></span>
+				<span class="car run"><i class="p6 p"></i></span>
+				<span class="car run"><img src="images/img-38.png"></span>
+			</div>
+
+			<!--马路左边-->
+			<div class="road-left">
+				<span><img src="images/img-78.png"></span>
+				<span><img src="images/img-79.png"></span>
+				<span>
+					<h1><img src="images/img-80.png"></h1>
+					<h2><img src="images/img-99.png"></h2>
+					<div class="maopao"></div>
+				</span>
+				<span><img src="images/img-81.png"></span>
+				<span><img src="images/img-82.png"></span>
+				<span><img src="images/img-83.png"></span>
+				<span><img src="images/img-84.png"></span>
+				<span><img src="images/img-73.png"></span>
+				<span><img src="images/img-41.png"></span>
+				<span><img src="images/img-85.png"></span>
+				<span><img src="images/img-86.png"></span>
+				<span><img src="images/img-87.png"></span>
+				<span><img src="images/img-88.png"></span>
+				<span><img src="images/img-89.png"></span>
+				<span><img src="images/img-90.png"></span>
+				<span><img src="images/img-91.png"></span>
+				<span><img src="images/img-92.png"></span>
+				<span><img src="images/img-93.png"></span>
+				<span><img src="images/img-94.png"></span>
+				<span><img src="images/img-95.png"></span>
+				<span><img src="images/img-96.png"></span>
+				<span><img src="images/img-97.png"></span>
+				<span><img src="images/img-32.png"></span>
+				<span>
+					<i><img src="images/img-66-01.png"></i>
+					<i><img src="images/img-66-02.png"></i>
+					<i><img src="images/img-66-03.png"></i>
+					<i><img src="images/img-66-04.png"></i>
+					<i><img src="images/img-66-05.png"></i>
+					<i><img src="images/img-66-06.png"></i>
+					<i><img src="images/img-66-07.png"></i>
+					<i><img src="images/img-66-08.png"></i>
+					<i><img src="images/img-66-09.png"></i>
+					<i><img src="images/img-66-10.png"></i>
+					<i><img src="images/img-66-11.png"></i>
+					<i><img src="images/img-66-12.png"></i>
+					<i><img src="images/img-66-13.png"></i>
+				</span>
+				<span class="shandian"><img src="images/img-68.png"></span>
+				<span><img src="images/img-103.png"></span>
+				<span></span>
+				<span class="person-1">
+					<i class="p"></i>
+					<i class="p"><img src="images/img-70.png"></i>
+				</span>
+				<span class="p person-2"></span>
+				<span class="snow"></span>
+				<span class="p person-3"><img src="images/img-71.png"></span>
+				<span class="p person-4"><img src="images/img-72.png"></span>
+				<span><img src="images/img-42.png"></span>
+				<span><img src="images/img-39.png"></span>
+				<span>
+					<i><img src="images/img-40.png"></i>
+				</span>
+				<span><img src="images/img-77.png"></span>
+				<span><img src="images/img-75.png"></span>
+				<span><img src="images/img-76.png"></span>
+
+			</div>
+
+			<!--背景-->
+			<div class="background-box">
+				<span><img src="images/img-55.png"></span>
+				<span><img src="images/img-56.png"></span>
+				<span><img src="images/img-65.png"></span>
+				<span><img src="images/img-64.png"></span>
+				<span><img src="images/img-58.png"></span>
+				<span><img src="images/img-59.png"></span>
+				<span><img src="images/img-62.png"></span>
+				<span><img src="images/img-57.png"></span>
+				<span><img src="images/img-61.png"></span>
+				<span><img src="images/img-60.png"></span>
+				<span><img src="images/img-63.png"></span>
+				<span class="metro">
+					<i><img src="images/img-43.png"></i>
+				</span>
+			</div>
+
+			<!--云-->
+			<div class="cloud"></div>
+
+			<div class="footer">
+				<div class="f-box">
+					<div class="l-light l-light1">
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+					</div>
+					<div class="l-light l-light2">
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+						<i></i>
+					</div>
+					<div class="t-text">
+						<i><img src="images/img-33.png"></i>
+						<i><img src="images/img-34.png"></i>
+						<i><img src="images/img-35.png"></i>
+					</div>
+					<div class="b-button">
+						<a href="javascript:;"><img src="images/img-37.png"></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="dialog-box">
+				<span><img src="images/img-105.png"></span>
+				<span><img src="images/img-106.png"></span>
+				<span><img src="images/img-107.png"></span>
+				<span><img src="images/img-108.png"></span>
+				<span><img src="images/img-109.png"></span>
+				<span><img src="images/img-110.png"></span>
+				<span><img src="images/img-111.png"></span>
+				<span><img src="images/img-112.png"></span>
+				<span><img src="images/img-113.png"></span>
+				<span><img src="images/img-114.png"></span>
+				<span><img src="images/img-115.png"></span>
+				<span><img src="images/img-116.png"></span>
+				<span><img src="images/img-117.png"></span>
+				<span><img src="images/img-118.png"></span>
+				<span><img src="images/img-119.png"></span>
+				<span><img src="images/img-120.png"></span>
+				<span><img src="images/img-121.png"></span>
+				<span><img src="images/img-122.png"></span>
+				<span><img src="images/img-123.png"></span>
+				<span><img src="images/img-124.png"></span>
+				<span><img src="images/img-125.png"></span>
+			</div>
+
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/pxloader-all.min.js"></script>
+	<script type="text/javascript" src="js/wx-video-audio-hack.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="js/wxfx-zq-1.0.1.js"></script>
+
+</html>

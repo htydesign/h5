@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script>
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>谦友年终测试</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		
+		<div class="music-icon">
+			<span><img src="images/img-music-1.png"></span>
+			<span><img src="images/img-music-2.png"></span>
+		</div>
+		<audio src="music/music.mp3" class="background-music" preload="auto" loop="loop"></audio>
+		
+		<!---->
+		<img src="images/img-06-on.png" style="display: none;">
+		<img src="images/img-14.png" style="display: none;">
+		<img src="images/img-37.png" style="display: none;">
+		
+		<div class="loading">
+			<span><img src="images/loading.gif"></span>
+			<p>正在呼叫薛之谦</p>
+		</div>
+		
+		<!--首页-->
+		<div class="section index">
+			<span><img src="images/img-31.png"></span>			
+		</div>
+			
+		<!--视频--1-->
+		<div class="section start-video">
+			<canvas style="display: none;"></canvas>
+			<video class="video" src="video/1.mp4" width="640" preload="auto" webkit-playsinline="true" x-webkit-airplay="true"  playsinline="true" x5-video-player-type="h5" x5-vide o-player-fullscreen="true" /> </video>			
+			<div class="light light1">
+				<span></span>
+				<span></span>
+				<i><img src="images/hand-02.png"></i>
+			</div>
+			
+		</div>
+		
+		<!--答题-->
+		<div class="section answer">
+			
+			<div class="answer-btn">
+				<span><img src="images/img-32.png"></span>
+			</div>
+			
+			<div class="answer-box">
+				
+				<div class="music">
+					<audio src="music/1.mp3"></audio>
+					<audio src="music/2.mp3"></audio>
+					<audio src="music/3.mp3"></audio><!--正确音乐-->
+					<audio src="music/4.mp3"></audio>
+				</div>
+									
+				<!--第1题-->
+				<div class="question first">
+					<div class="q-topic">
+						<span><img src="images/1.png"></span>
+						<span>堪比6级的听力考题来了<br>听听哪句才是属于<br>薛之谦的声音？</span>
+						<span><img src="images/img-08.png"></span>
+					</div>
+					<div class="q-info">
+						<span>
+							<i class="one-check"><img src="images/img-24.png"></i>
+							<i class="one-music"></i>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<i class="one-check"><img src="images/img-24.png"></i>
+							<i class="one-music"></i>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<i class="one-check"><img src="images/img-24.png"></i>
+							<i class="one-music"></i>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<i class="one-check"><img src="images/img-24.png"></i>
+							<i class="one-music"></i>
+							<b><img src=""></b>
+						</span>
+					</div>
+					<div class="q-next">
+						<span><img src="images/img-04.png"></span>
+					</div>
+				</div>
+				
+				<!--第2题-->
+				<div class="question two">
+					<div class="q-topic">
+						<span><img src="images/2.png"></span>
+						<span>有一天，几个穷凶恶极的外星<br>人绑架了薛之谦，情况<br>十分危急，此时此刻，<br>薛之谦最需要？</span>
+						<span><img src="images/img-08.png"></span>
+					</div>
+					<div class="q-info">
+						<span>
+							<p>一部金立手机，<br>赶紧给警察叔叔打call</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>一根魔法棒，变身<br>巴啦啦小魔仙大战外星人</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>一个麦克风，<br> 赶紧给外星人唱一首《别》</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>一瓶二锅头， <br>把外星人灌醉赶紧跑</p>
+							<b><img src=""></b>
+						</span>
+					</div>
+					<div class="q-next">
+						<span><img src="images/img-04.png"></span>
+					</div>
+				</div>
+				
+				<!--第3题-->
+				<div class="question third">
+					<div class="q-topic">
+						<span><img src="images/3.png"></span>
+						<span>作为老薛的真爱粉，我谦的演<br>唱会当然每场都不能错过！可<br>是，你知道金立赞助了他的哪<br>一场演唱会吗？</span>
+						<span><img src="images/img-08.png"></span>
+					</div>
+					<div class="q-info">
+						<span>
+							<p>上海站</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>重庆站</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>广州站</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>深圳站</p>
+							<b><img src=""></b>
+						</span>
+					</div>
+					<div class="q-next">
+						<span><img src="images/img-04.png"></span>
+					</div>
+				</div>
+				
+				<!--第4题-->
+				<div class="question fourth">
+					<div class="q-topic">
+						<span><img src="images/4.png"></span>
+						<span>听说歌名要写的长长长长长<br>长长才霸气！那么薛之<br>谦作品中，哪首歌<br>名字最长？</span>
+						<span><img src="images/img-08.png"></span>
+					</div>
+					<div class="q-info">
+						<span>
+							<p>我们好像在哪儿见过</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>我好像在哪儿见过你</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>我终于成了别人的女人</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>在冬天和奶奶一起晒太阳</p>
+							<b><img src=""></b>
+						</span>
+					</div>
+					<div class="q-next">
+						<span><img src="images/img-04.png"></span>
+					</div>
+				</div>
+				
+				<!--第5题-->
+				<div class="question fifth">
+					<div class="q-topic">
+						<span><img src="images/5.png"></span>
+						<span>宇宙无敌飞天霹雳好用的金<br>立S10薛之谦定制版<br>是哪一天上市的？</span>
+						<span><img src="images/img-08.png"></span>
+					</div>
+					<div class="q-info">
+						<span>
+							<p>2017.06.16</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>2017.07.17</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>2017.08.18</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>2017.09.19</p>
+							<b><img src=""></b>
+						</span>
+					</div>
+					<div class="q-next">
+						<span><img src="images/img-04.png"></span>
+					</div>
+				</div>
+						
+				<!--第6题-->
+				<div class="question sixth">
+					<div class="q-topic">
+						<span><img src="images/6.png"></span>
+						<span>要抓住男人的心就要先拴住<br>他的胃，so！你认为做好哪<br>道菜可以拴住薛之谦的胃？</span>
+						<span><img src="images/img-08.png"></span>
+					</div>
+					<div class="q-info">
+						<span class="">
+							<i><img src="images/img-16.gif"></i>
+							<p>咖喱鸡</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<i><img src="images/img-15.gif"></i>
+							<p>白切鸡</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<i><img src="images/img-17.gif"></i>
+							<p>口水鸡</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<i><img src="images/img-18.gif"></i>
+							<p>辣子鸡</p>
+							<b><img src=""></b>
+						</span>
+					</div>
+					<div class="q-next">
+						<span><img src="images/img-04.png"></span>
+					</div>
+				</div>
+				
+				<!--第7题-->
+				<div class="question seventh">
+					<div class="q-topic">
+						<span><img src="images/7.png"></span>
+						<span>谦友对老薛的爱就像初恋，然<br>鹅，你还记得老薛的<br>第一张专辑名<br>是什么吗？</span>
+						<span><img src="images/img-08.png"></span>
+					</div>
+					<div class="q-info">
+						<span>
+							<p>《薛之谦》</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>《刚刚好》</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>《意外》</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>《深深爱过你》</p>
+							<b><img src=""></b>
+						</span>
+					</div>
+					<div class="q-next">
+						<span><img src="images/img-04.png"></span>
+					</div>
+				</div>
+				
+				<!--第8题-->
+				<div class="question eighth">
+					<div class="q-topic">
+						<span><img src="images/8.png"></span>
+						<span>谦谦以前捡回了<br>一只流浪喵，<br>取名叫做？</span>
+						<span><img src="images/img-08.png"></span>
+					</div>
+					<div class="q-info">
+						<span>
+							<p>暴 暴</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>抱 抱</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>报 报</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>包 包</p>
+							<b><img src=""></b>
+						</span>
+					</div>
+					<div class="q-next">
+						<span><img src="images/img-04.png"></span>
+					</div>
+				</div>
+				
+				<!--第9题-->
+				<div class="question ninth">
+					<div class="q-topic">
+						<span><img src="images/9.png"></span>
+						<span>作为资深谦友加手控，在人群<br>中一眼认出老薛的手当然是必<br>备技能！所以，哪一只才是<br>薛之谦的手？</span>
+						<span><img src="images/img-08.png"></span>
+					</div>
+					<div class="q-info">
+						<span>
+							<h1><img src="images/a.png"></h1>
+							<i><img src="images/img-19.png"></i>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<h1><img src="images/b.png"></h1>
+							<i><img src="images/img-20.png"></i>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<h1><img src="images/c.png"></h1>
+							<i><img src="images/img-21.png"></i>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<h1><img src="images/d.png"></h1>
+							<i><img src="images/img-22.png"></i>
+							<b><img src=""></b>
+						</span>
+					</div>
+					<div class="q-next">
+						<span><img src="images/img-04.png"></span>
+					</div>
+				</div>
+								
+				<!--第10题-->
+				<div class="question tenth ">
+					<div class="q-topic">
+						<span><img src="images/10.png"></span>
+						<span>真正的谦友一定对老薛的口<br>头禅了如指掌！那么，<br>以下哪一句不是<br>老薛的口头禅？</span>
+						<span><img src="images/img-08.png"></span>
+					</div>
+					<div class="q-info">
+						<span>
+							<p>神经病啊</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>我不要面子的</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>整段垮掉</p>
+							<b><img src=""></b>
+						</span>
+						<span>
+							<p>告辞</p>
+							<b><img src=""></b>
+						</span>
+					</div>
+					<div class="q-next">
+						<span><img src="images/img-23.png"></span>
+					</div>
+				</div>
+
+				<!--结果页-->
+				<div class="question result">
+					<div class="q-poser">
+						<p><i></i>分</p>
+						<h1><img src=""></h1>
+					</div>
+					<div class="q-next">
+						<span><img src="images/img-26.png"></span>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		<!--视频--2-->
+		<div class="section end-video">
+			<canvas style="display: none;"></canvas>
+			<video class="video" src="video/2.mp4" width="640" preload="auto" webkit-playsinline="true" x-webkit-airplay="true"  playsinline="true" x5-video-player-type="h5" x5-vide o-player-fullscreen="true" /> </video>			
+			<div class="light light2">
+				<span></span>
+				<span></span>
+				<i><img src="images/hand-02.png"></i>
+			</div>
+		</div>
+		
+		<!--领取福利-->
+		<div class="section welfare">
+			<div class="bg"></div>
+			<div class="get">
+				<input class="user-phone" type="tel" placeholder="输入手机号"></input>
+				<!--<p>优惠信息将以短信形式发送至手机</p>-->
+				<span></span>
+			</div>
+			<div class="share">
+				<i><img src="images/img-34.png"></i>
+				<div class="agen">
+					<h1></h1>
+					<!--<h2>右上角呼唤更多谦友领取福利</h2>-->
+					<span></span>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+	<script type="text/javascript" src="js/pxloader-all.min.js" ></script>
+	<script type="text/javascript" src="js/wx-video-audio-hack.js" ></script>
+	<script type="text/javascript" src="js/data.js" ></script>
+	<script type="text/javascript" src="js/main.js" ></script>
+
+</html>

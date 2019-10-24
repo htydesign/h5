@@ -1,0 +1,430 @@
+
+@media only screen and (max-width: 760px) {
+	html,
+	body {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	/*::-webkit-scrollbar {
+		width: 2px;
+		height: 2px;
+		background-color: #fff;
+	}
+	::-webkit-scrollbar:hover {
+		background-color: #eee;
+	}
+	::-webkit-resizer {}
+	::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 5px;
+		background-color: rgba(0, 0, 0, 0.1);
+		height: 2px;
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background-color: #aaa;
+	}
+	::-webkit-scrollbar-thumb:active {
+		background-color: #666;
+	}*/
+	a {
+		display: block;
+		text-decoration: none;
+		-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+		-webkit-user-select: none;
+		-moz-user-focus: none;
+		-moz-user-select: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+	.header {
+		width: 100%;
+		min-width: 100%;
+		height: 4rem;
+	}
+	.nav-container {
+		display: none;
+	}
+	.logo {
+		padding: 0rem 0 0 0.25rem;
+		transform: scale(0.8);
+		-webkit-transform: scale(0.8);
+	}
+	.open-responsive-nav {
+		display: block;
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	.open-sidebar-btn {
+		display: block;
+		width: 3rem;
+		height: 3rem;
+		position: absolute;
+		top: 0.5rem;
+		right: 3rem;
+	}
+	.open-sidebar-btn span {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: url(../images/sprites@2x.png) center center no-repeat;
+		background-size: 60%;
+	}
+	.m-block {
+		min-width: 100%;
+	}
+	#wrapper {
+		min-width: 100%;
+	}
+	.m-block-info {
+		max-width: 100%;
+		min-width: 100%;
+		box-sizing: border-box;
+		padding: 4rem 1rem;
+	}
+	.m-contact .m-contact-info{
+		padding: 4rem 1rem;
+	}
+	.m-block-info span img {
+		width: 100%;
+	}
+	.bgImg {
+		min-width: 100%;
+	}
+	.bgImg p {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		line-height: 3rem;
+	}
+	.m-works .m-block-info {
+		padding: 4rem 1rem 1rem 1rem;
+	}
+	.m-block-info span {
+		padding: 2rem 0 0 0;
+	}
+	.m-about .m-about-info span {
+		padding: 0;
+		width: 100%;	   
+	    background-size: 100% auto;
+	    height: 5rem;
+	    margin: 2rem 0 0 0;
+	}
+	.m-about-info span a{
+		width: 26%;
+		margin: 0 2.6rem 0 0;
+	}
+	.m-about-info span a:nth-of-type(2){
+		width: 25%;
+		margin: 0;
+	}
+	.m-about-info span a:last-child{
+		width: 26%;
+		margin: 0;
+		float: right;
+	}
+	
+	.m-contact .m-block-info p {
+		text-align: center;
+	}
+	.m-block-info p {
+		width: 100%;
+		text-align: left;
+	}
+	.m-work-info .m-work-class {
+		width: 100%;
+		overflow-y: scroll;
+		padding: 0rem 0 0 0;
+		height: 4rem;
+	}
+	.m-work-info .m-work-class ul {
+		width: 750px;
+	}
+	.m-do .m-do-container ul {
+		max-width: 100%;
+	}
+	.m-do .m-do-container ul li {
+		width: 21%;
+		margin: 0 2%;
+	}
+	.m-do .m-do-container ul li h1 {
+		font-size: 7rem;
+	}
+	.m-do .m-do-container ul li span {
+		font-size: 0.5rem;
+		top: 5.5rem;
+		left: 1.505rem;
+	}
+	.m-do .m-do-container ul li h2 {
+		width: 100%;
+		font-size: 0.8rem;
+		left: 0;
+	}
+	.m-do .m-do-container ul li p {
+		width: 100%;
+		left: 0;
+		font-size: 0.8rem;
+	}
+	.m-clients .m-clients-info {
+		height: auto;
+		padding-top: 4rem;
+	}
+	.m-clients {
+		padding: 0 0 4rem 0;
+	}
+	.m-block-info h2 {
+		font-size: 1.5rem;
+	}
+	.m-block-container {
+		min-width: 100%;
+	}
+	.m-work-container ul li {
+		width: 100%;
+	}
+	#jobs {
+		overflow: hidden;
+	}
+	.m-contact-message {
+		padding: 0 0 4rem 0;
+	}
+	.left-info {
+		margin: 0;
+		width: 100%;
+		float: none;
+	}
+	.left-info input {
+		width: 90%;
+		margin: 0 auto 1rem auto;
+		display: block;
+	}
+	.left-info textarea {
+		width: 90%;
+		margin: 0 auto 1rem auto;
+		display: block;
+	}
+	.left-info span {
+		margin: 0 0 0 5%;
+	}
+	.right-info {
+		float: none;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 4rem 5% 0 5%;
+	}
+	.u-tel-info,
+	.u-mail-info {
+		width: calc(100% - 60px);
+		width: -webkit-calc(100% - 60px);
+		box-sizing: border-box;
+		padding: 0.45rem 0 0 2rem;
+		margin: 0;
+	}
+	.u-tel-info p,
+	.u-mail-info p {
+		font-size: 1.5rem;
+	}
+	.u-tel-info span,
+	.u-mail-info span {
+		padding: 0.5rem 0 0 0;
+		display: block;
+	}
+	.u-tel-icon,
+	.u-mail-icon {
+		width: 3rem;
+		height: 3rem;
+	}
+	.u-tel-icon img,
+	.u-mail-icon img {
+		display: block;
+		width: 100%;
+	}
+	.m-sz {
+		padding: 0 0 2rem 0;
+	}
+	.m-footer {
+		min-width: 100%;
+		height: 5.5rem;
+	}
+	.m-footer-block {
+		min-width: 100%;
+	}
+	.m-footer-block p {
+		width: 100%;
+		padding: 0;
+		line-height: 1.5rem;
+		box-sizing: border-box;
+		padding: 1rem 2rem 0 2rem;
+	}
+	.share-box {
+		display: none;
+	}
+	.bgImg {
+		height: 50%;
+	}
+	#wrapper,
+	.bg-box {
+		background-attachment: inherit;
+		background-repeat: no-repeat;
+	}
+	.m-block-info h1 {
+		font-size: 3rem;
+		padding-bottom: 2rem;
+	}
+	.sidebar-nav {
+		width: 50%;
+		position: fixed;
+		/* left: 0; */
+		right: -50%;
+		top: 4rem;
+		height: 100%;
+		background: #262626;
+		-webkit-transition: right .4s ease-out;
+		-o-transition: right .4s ease-out;
+		transition: right .4s ease-out;
+		z-index: 999999;
+		display: block;
+	}
+	.sidebar-nav nav li {
+		border-bottom: 1px solid #333333;
+	}
+	.sidebar-nav nav li a {
+		line-height: 40px;
+		color: white;
+		margin-left: 16px;
+	}
+	#home {
+		padding: 4rem 0 0 0;
+	}
+	#jobs {
+		min-width: 100%;
+	}
+	.m-clients-container ul {
+		max-width: 100%;
+		box-sizing: border-box;
+		padding: 0 1rem;
+	}
+	.m-clients-container ul li {
+		width: 25%;
+	}
+	.d-container {
+		padding: 2rem 0;
+		overflow-x: hidden;
+	}
+	.m-work-details-box {
+		padding-bottom: 2rem;
+	}
+	.d-close a {
+		opacity: 1;
+		background: none;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+		border-radius: 50%;
+		border: 2px solid rgba(0, 0, 0, 0.75);
+		margin: 0;
+		box-sizing: border-box;
+	}
+	.d-close a:before,
+	.d-close a:after {
+		content: "";
+		width: 60%;
+		height: 2px;
+		background: rgba(0, 0, 0, 0.75);
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border-radius: 2px;
+	}
+	.d-close a:before {
+		transform: translate(-50%, -50%) rotate(45deg);
+		-webkit-transform: translate(-50%, -50%) rotate(45deg);
+	}
+	.d-close a:after {
+		transform: translate(-50%, -50%) rotate(-45deg);
+		-webkit-transform: translate(-50%, -50%) rotate(-45deg);
+	}
+	
+	.d-title ul li a{
+		background: none;
+		position: relative;
+		opacity: 1;
+	}
+	
+	.d-title ul li a:before{
+		content: "";
+		width: 13px;
+		height: 2px;
+		background: #000000;
+		display: block;
+		position: absolute;
+	}
+	.d-title ul li a:after{
+		content: "";
+		width: 13px;
+		height: 2px;
+		background: #000000;
+		display: block;
+		position: absolute;
+	}
+	.d-title ul li.next a:before{		
+		top: 10px;
+   		 left: 7px;
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+	}
+	.d-title ul li.next a:after{		
+		top: 18px;
+    	left: 7px;
+		transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+	}
+	
+	.d-title ul li.prev a:before{		
+		top: 10px;
+   		 left: 7px;
+		transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+	}
+	.d-title ul li.prev a:after{		
+		top: 18px;
+    	left: 7px;
+		transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+	}
+	.m-jobs .m-jobs-info{
+		padding: 4rem 0 0 0;
+	}
+	.m-jobs-container{
+		padding: 3rem 0;
+	}
+	.m-jobs-container ul li{
+		width: 35%;
+	}
+}
+
+@media screen and (max-width: 1200px) and (min-width: 761px) {
+	.m-work-container ul li {
+		width: 50%;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	.m-block-info h2{
+		font-size: 1rem;
+	}
+	.m-block-info h1{
+		font-size: 2.5rem;
+	}
+	.d-title ul li a{
+		transform: scale(0.8);
+		-webkit-transform: scale(0.8);
+	}
+}

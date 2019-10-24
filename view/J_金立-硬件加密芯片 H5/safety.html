@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<!--<meta http-equiv="Pragma" content="no-cache"> 
+		<meta http-equiv="Cache-Control" content="no-cache"> 
+		<meta http-equiv="Expires" content="0"> -->
+		<script>
+			// class
+			! function(navigator) {
+				var userAgent = navigator.userAgent;
+				documentElement = document.documentElement;
+				if(userAgent.match(/micromessenger\/5/gi)) {
+					documentElement.className += " mobile wx_mobile wx_mobile_5";
+				} else if(userAgent.match(/micromessenger/gi)) {
+					documentElement.className += " mobile wx_mobile";
+				} else if(userAgent.match(/ucbrowser/gi)) {
+					documentElement.className += " mobile uc_mobile";
+				} else if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())) {
+					documentElement.className += " mobile";
+				} else if(userAgent.toLowerCase().match(/msie/gi) && (parseFloat(userAgent.toLowerCase().match(/msie ([0-9]{1,}[\.0-9]{0,})/i)[1] || 999) < 9)) {
+					documentElement.className += " pc pc-ie pc-ie8";
+				} else if(userAgent.toLowerCase().match(/msie/gi) || navigator.msPointerEnabled || navigator.pointerEnabled) {
+					documentElement.className += " pc pc-ie";
+				} else {
+					documentElement.className += " pc";
+				}
+			}(navigator);
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>金立M6 内置安全加密芯片</title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="safety">
+			<p>M6安全视频</p>
+			<video width="640" autoplay webkit-playsinline="true" preload="auto" style="background:transparent;">
+				<source src="video/M6-1.mp4" type="video/mp4"></source>
+			</video>
+		</div>
+	</body>
+    <script src='http://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+    <script src="js/share.js"></script>
+</html>

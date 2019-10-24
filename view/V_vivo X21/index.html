@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script>
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>和鹿晗一起打开21的秘密</title>
+		<link rel="stylesheet" href="https://static.vivo.com.cn/hd/vivox21lh/css/main.css" />
+		<link rel="stylesheet" href="https://static.vivo.com.cn/hd/vivox21lh/css/animate.css" />
+	</head>
+
+	<body>
+		<canvas style="width: 100%; height: 100%;position: absolute; top: 0;left: 0;"></canvas>
+
+		<!--loading-->
+		<div class="loading-container">
+			<div class="loading-house"><img src="https://static.vivo.com.cn/hd/vivox21lh/images/img-06.png"></div>
+			<div class="loading-wifi"><img src="https://static.vivo.com.cn/hd/vivox21lh/images/img-09-1.png"></div>
+			<div class="loading-head"><img src="https://static.vivo.com.cn/hd/vivox21lh/images/img-04.png"></div>
+			<div class="loading-hint"><img src="https://static.vivo.com.cn/hd/vivox21lh/images/one_finger.png"></div>
+			<div class="loading-text">
+				<span><img src="https://static.vivo.com.cn/hd/vivox21lh/images/img-02.png"></span>
+				<i><img src="https://static.vivo.com.cn/hd/vivox21lh/images/img-03-1.png"></i>
+			</div>
+			<div class="loading-light">
+				<img src="https://static.vivo.com.cn/hd/vivox21lh/images/img-10.png">
+				<img src="https://static.vivo.com.cn/hd/vivox21lh/images/img-11.png">
+			</div>
+			<div class="loading-click"><img src="https://static.vivo.com.cn/hd/vivox21lh/images/img-12.png"></div>
+		</div>
+
+		<div class="video-btn">
+			<span></span>
+			<i><img src="https://static.vivo.com.cn/hd/vivox21lh/images/video.png"></i>
+		</div>
+
+		<!--video-->
+		<div class="video-container">
+			<div class="p"></div>
+			<video class="video" src="https://static.vivo.com.cn/hd/vivox21lh/video/1.mp4" preload="auto" webkit-playsinline="true" x-webkit-airplay="true" playsinline="true"></video>
+		</div>
+
+		<!--end-->
+		<div class="end-container">
+			<span class="btn">
+				<a href="javascript:;" class="again"></a>
+				<a href="https://mshopact.vivo.com.cn/page/x21coming?cid=w-1-pinpai_h5" class="liaojie"></a>
+			</span>
+		</div>
+
+		<script type="text/javascript" src="https://static.vivo.com.cn/hd/vivox21lh/js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="https://static.vivo.com.cn/hd/vivox21lh/js/pxloader-all.min.js"></script>
+		<script type="text/javascript" src="https://static.vivo.com.cn/hd/vivox21lh/js/main.js"></script>
+		<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script type="text/javascript" src="https://wx.vivo.com.cn/api/js/weixin.js?list=onMenuShareTimeline,onMenuShareQQ,onMenuShareAppMessage,onMenuShareWeibo"></script>
+		<script type="text/javascript" src="https://static.vivo.com.cn/hd/vivox21lh/js/wxfx.js?v1"></script>
+
+		<script>
+			var _mtac = {
+				"performanceMonitor": 1,
+				"senseQuery": 1
+			};
+			(function() {
+				var mta = document.createElement("script");
+				mta.src = "https://pingjs.qq.com/h5/stats.js?v2.0.4";
+				mta.setAttribute("name", "MTAH5");
+				mta.setAttribute("sid", "500596475");
+				mta.setAttribute("cid", "500596477");
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(mta, s);
+			})();
+
+			var h = window.innerHeight;
+
+			var ov = document.querySelector(".video");
+
+			if(h < 1080) {
+				ov.src = "https://static.vivo.com.cn/hd/vivox21lh/video/2.mp4";
+			}
+			
+			
+		</script>
+
+	</body>
+
+</html>

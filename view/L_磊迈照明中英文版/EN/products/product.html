@@ -1,0 +1,916 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Product</title>
+		<link rel="stylesheet" href="../css/litematrix.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+
+		<!--banner需要引进的1个文件bannerstyle-->
+		<link rel="stylesheet" href="../css/bannerstyle.css" />
+
+		<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+
+		<!--banner需要引进的3个文件jquery-1.8.3.min.js,banner，jquery.banner.revolution.min.js-->
+		<script type="text/javascript" src="../js/jquery.banner.revolution.min.js"></script>
+		<script type="text/javascript" src="../js/banner.js"></script>
+
+		<!---->
+		<script type="text/javascript" src="../js/nav.js"></script>
+		<script>
+			window.onload = function() {
+				//设置菜单导航
+				setNav();
+				//设置产品中心ul的宽度
+				setProPageUl()
+			}
+			$(window).scroll(function(){
+		 		var original_left=$('.header_box').offset().left;
+			 
+				var new_left = -$(window).scrollLeft() + 'px' ;
+			
+				$('.header_fixed').css({left:new_left});
+
+		 	});
+		</script>
+	</head>
+
+	<body>
+
+		<!--导航-->
+		<div class="header_fixed header_inside" style="z-index: 8888;">
+			<div class="header_box">
+				<div class="logo">
+					<a href="../index.html"><img src="../images/biglogo.jpg"></a>
+				</div>
+				<div class="nav_bg">
+					<!--导航nav-->
+					<div class="nav" id="nav">
+						<ul>
+							<li><a href="javascript:;" id="">LIGHT PLACE</a></li>
+							<li id="nav_on2"><a href="../products/product.html">PRODUCT</a></li>
+							<li><a href="javascript:;">PROJECT</a></li>
+							<li><a href="../technology/technology.html" id="">TECHNOLOGY</a></li>
+							<li><a href="../information/information.html">INFORMATION</a></li>
+						</ul>
+					</div>
+					<!--搜索-->
+					<div class="search">
+						<a href="../../CH/products/product.html">CH</a>
+						<form>
+							<div class="input">
+								<input type="text" name="" />
+								<span class="search_img"></span>
+							</div>
+							<input type="button" value="search" name="search" id="search_btn" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<!--下拉子菜单-->
+			<div class="sub_bg" id="lists">
+
+				<!--光影文化-->
+				<div class="sub_box ">
+					<h1>Light Place</h1>
+					<ul class="big_img">
+						<li>
+							<a href="../light/lightculture.html">
+								<span class="light_one"><img src="../images/light/nav01.png"></span>
+								<span class="p">>Light Culture</span>
+							</a>
+						</li>
+						<li>
+							<a href="../light/lighteconomy.html">
+								<span class="light_two"><img src="../images/light/nav02.png"></span>
+								<span class="p">>Light Cost-Effective</span>
+							</a>
+						</li>
+						<li>
+							<a href="../light/lightscene.html">
+								<span class="light_three"><img src="../images/light/nav03.png"></span>
+								<span class="p">>Light Environment</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--产品中心-->
+				<div class="sub_box sub_box2 " style="height: 620px;">
+					<span class="nav_product_title">
+						<h2 style="width: 300px;">Outdoor Lighting</h2>
+						<span style="width: 900px;"></span>
+					</span>
+					<ul class="small_img">
+						<li>
+							<a href="../products/product.html#hw1">
+								<span class="led_one"><img src="../images/product/hw-icon01.png"></span>
+								<span class="p">>LED Flood Light Series</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw2">
+								<span class="led_one"><img src="../images/product/hw-icon02.png"></span>
+								<span class="p">>LED Spot Light Series</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw3">
+								<span class="led_one"><img src="../images/product/hw-icon03.png"></span>
+								<span class="p">>LED Linear Light Series</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw4">
+								<span class="led_one"><img src="../images/product/hw-icon04.png"></span>
+								<span class="p">>LED Wall Grazing Light Series</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw5">
+								<span class="led_one"><img src="../images/product/hw-icon05.png"></span>
+								<span class="p">>LED Dot Light Series</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw6">
+								<span class="led_one"><img src="../images/product/hw-icon06.png"></span>
+								<span class="p">>LED Underwater Light Series</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw7">
+								<span class="led_one"><img src="../images/product/hw-icon07.png"></span>
+								<span class="p">>LED Pixel Light Series</span>
+							</a>
+						</li>
+					</ul>
+					<span class="nav_product_title">
+						<h2 style="width: 300px;">Control System</h2>
+						<span style="width: 900px;"></span>
+					</span>
+					<ul class="small_img">
+						<li>
+							<a href="../products/product.html#kz1">
+								<span class="led_one"><img src="../images/product/kz-icon01.png"></span>
+								<span class="p">>On-Line Master Controller</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz2">
+								<span class="led_one"><img src="../images/product/kz-icon02.png"></span>
+								<span class="p">>Off-Line Master Controller</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz3">
+								<span class="led_one"><img src="../images/product/kz-icon03.png"></span>
+								<span class="p">>Master Controller of Satellite Synchronization</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz4">
+								<span class="led_one"><img src="../images/product/kz-icon04.png"></span>
+								<span class="p">>Sub-Controller</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz5">
+								<span class="led_one"><img src="../images/product/kz-icon05.png"></span>
+								<span class="p">>Integrated Controller</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz6">
+								<span class="led_one"><img src="../images/product/kz-icon06.png"></span>
+								<span class="p">>Scene Selector</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--案例中心-->
+				<div class="sub_box ">
+					<h1>Project</h1>
+					<ul class="big_img">
+						<li>
+							<a href="../case/case.html">
+								<span class="light_one"><img src="../images/case/anli-icon01.png"></span>
+								<span class="p">>Oversea Market</span>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+
+				<!--技术中心-->
+				<div class="sub_box">
+					<h1>Technology</h1>
+					<ul class="big_img">
+						<li>
+							<a href="../technology/technologyfold.html">
+								<span class="light_one"><img src="../images/technology/pro-icon01.png"></span>
+								<span class="p">>Product Technology</span>
+							</a>
+						</li>
+						<li>
+							<a href="../technology/download.html">
+								<span class="light_two"><img src="../images/technology/pro-icon02.png"></span>
+								<span class="p">>Download</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--资讯中心-->
+				<div class="sub_box ">
+					<h1>Information</h1>
+					<ul class="big_img">
+						<li>
+							<a href="../information/introduce.html">
+								<span class="light_one"><img src="../images/information/info-nav-01.png"></span>
+								<span class="p">>Company Profile</span>
+							</a>
+						</li>
+						<li>
+							<a href="../information/honor.html">
+								<span class="light_two"><img src="../images/information/info-nav-02.png"></span>
+								<span class="p">>Certificates</span>
+							</a>
+						</li>
+						<li>
+							<a href="../information/news.html">
+								<span class="light_one"><img src="../images/information/info-nav-03.png"></span>
+								<span class="p">>LiteMatrix News</span>
+							</a>
+						</li>
+						<li>
+							<a href="../information/contact.html">
+								<span class="light_two"><img src="../images/information/info-nav-04.png"></span>
+								<span class="p">>Contact Us</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+		<!--/导航-->
+		<div class="clear" style="height: 66px;"></div>
+
+		<!--banner-->
+		<div id="wrapper3">
+			<div class="fullwidthbanner-container3">
+				<div class="fullwidthbanner3">
+					<ul>
+						<li>
+							<img src="../images/product/pro_banner.jpg" alt="" />
+						</li>
+						<li>
+							<img src="../images/product/pro_banner.jpg" alt="" />
+						</li>
+						<li>
+							<img src="../images/product/pro_banner.jpg" alt="" />
+						</li>
+						<li>
+							<img src="../images/product/pro_banner.jpg" alt="" />
+						</li>
+						<li>
+							<img src="../images/product/pro_banner.jpg" alt="" />
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!--面包线-->
+		<div class="link_bg">
+			<div class="link_box">
+				<div class="link_line">
+					<ul>
+						<li><a href="../index.html">Litematrix</a></li>
+						<li>></li>
+						<li><a href="#">Product</a></li>
+						<li>></li>
+						<li><a href="product.html">Outdoor Lighting</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!--产品列表-->
+
+		<div class="pro_page_box" id="pro_page_box" >
+			<div class="pro_page_content">
+				<h1><a name="hw1"></a>LED Flood Light Series</h1>
+				<ul>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="pro_page_content">
+				<h1><a name="hw2"></a>LED Spot Light Series</h1>
+				<ul>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="pro_page_content">
+				<h1><a name="hw3"></a>LED Linear Light Series</h1>
+				<ul>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="pro_page_content">
+				<h1><a name="hw5"></a>LED Dot Light Series</h1>
+				<ul>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="pro_page_content">
+				<h1><a name="hw6"></a>LED Underwater Light Series</h1>
+				<ul>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="pro_page_content">
+				<h1><a name="hw7"></a>LED Pixel Light Series</h1>
+				<ul>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage2.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img02.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+					<li>
+						<a href="productpage1.html">
+							<div class="led_red_bg">
+								<img src="../images/product/pro_img01.jpg">
+								<p class="show_p">144W大功率RGBW
+									<br>全彩投光灯</p>
+								<span class="show_img"></span>
+							</div>
+							<p class="pro_title">F 2 -RGB 96</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+
+		<!--底部-->
+		<div class="footer_bg">
+			<div class="footer en_h1">
+
+				<!--产品中心-->
+				<div class="footer_nav">
+					<h1>Prouduct</h1>
+					<ul>
+						<li><a href="../products/product.html">Outdoor Lighting</a></li>
+						<li><a href="../products/product.html">Indoor Lighting</a></li>
+						<li><a href="../products/product.html">Control System</a></li>
+					</ul>
+				</div>
+
+				<!--光影文化-->
+				<div class="footer_nav">
+					<h1>Light Place</h1>
+					<ul>
+						<li><a href="../light/lightculture.html">Light Culture</a></li>
+						<li><a href="../light/lighteconomy.html">Light Cost-Effective</a></li>
+						<li><a href="../light/lightscene.html">Light Environment</a></li>
+					</ul>
+				</div>
+
+				<!--技术支持-->
+				<div class="footer_nav">
+					<h1>Technology</h1>
+					<ul>
+						<li><a href="../technology/technology.html">Supports</a></li>
+						<li><a href="../technology/download.html">Download</a></li>
+					</ul>
+				</div>
+
+				<!--资讯中心-->
+				<div class="footer_nav">
+					<h1>Information</h1>
+					<ul>
+						<li><a href="../information/introduce.html">Company Profile</a></li>
+						<li><a href="../information/honor.html">Certificates</a></li>
+						<li><a href="../information/news.html">News</a></li>
+					</ul>
+				</div>
+
+				<!--售后服务-->
+				<div class="footer_nav serve">
+					<h1>After-Sales Service：</h1>
+					<div class="footer_tel">
+						<span class="tel_img"><img src="../images/tel.jpg"></span> 86-75526895498
+					</div>
+					<p>Follow Us</p>
+					<ul>
+
+						<div class="bdsharebuttonbox" data-tag="share_1">
+							<a class="share_one" data-cmd="fbook"></a>
+							<a class="share_two" data-cmd="fx"></a>
+							<a class="share_three" data-cmd="tsina"></a>
+							<a class="share_four" data-cmd="weixin"></a>
+							<a class="share_five" data-cmd="tqq"></a>
+						</div>
+					</ul>
+				</div>
+				<script>
+				//分享
+					window._bd_share_config = {
+						share: [{
+							"bdSize": 36
+						}],
+					}
+					with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+				</script>
+				
+			</div>
+			<div class="line"></div>
+			<div class="copyright">
+				<p> All Rights Reserved &copy;"LiteMatrix Technology 2012. Reserves All Rights</p>
+			</div>
+		</div>
+		<!--/底部-->
+
+	</body>
+
+</html>

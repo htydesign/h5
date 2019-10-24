@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script>
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>三星家电超级品牌日</title>
+		<link rel="stylesheet" href="css/main.css?1123" />
+		<link rel="stylesheet" href="css/animate.css" />
+		<script>
+			var _mtac = {};
+			(function() {
+				var mta = document.createElement("script");
+				mta.src = "http://pingjs.qq.com/h5/stats.js?v2.0.2";
+				mta.setAttribute("name", "MTAH5");
+				mta.setAttribute("sid", "500590128");
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(mta, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+
+		<!--music-->
+		<audio src="music/countdown.mp3" id="countdown_music"></audio>
+		<audio src="music/bgMusic.mp3" id="bgMusic" loop="loop"></audio>
+		<audio src="music/s.mp3" id="fail"></audio>
+
+		<!--music-icon-->
+		<div class="music-icon" style="display: block;"><i><img src="images/music.png"></i></div>
+
+		<!--翻转提示-->
+		<div class="rotation-hint">
+			<span><img src=""></span>
+		</div>
+
+		<!--loading-->
+		<div class="loading">
+			<img src="images/loading.png" style="display: none;" id="loadingImage">
+			<span>
+				<canvas id="loadingCanvas"></canvas>
+			</span>
+			<p>loading 01%</p>
+		</div>
+
+		<!--首页-->
+		<div class="index ">
+			<span><img src="images/img-10.png"></span>
+			<span><img src="images/img-44.png"></span>
+			<span><i><img src="images/img-11.png"></i></span>
+			<span><i><img src="images/img-11.png"></i></span>
+			<span><i><img src="images/img-11.png"></i></span>
+			<span><img src="images/img-06.png"></span>
+			<span><img src="images/img-07.png"></span>
+			<span><img src="images/img-08.png"></span>
+			<span><img src="images/img-09.png"></span>
+			<span><img src="images/img-40.png"></span>
+			<span><img src="images/img-41.png"></span>
+			<span><img src="images/img-42.png"></span>
+			<span><img src="images/img-43.png"></span>
+			<span><img src="images/img-03.png"></span>
+			<span><img src="images/img-04.png"></span>
+			<span><img src="images/img-05.png"></span>
+			<span>
+				<img src="images/img-02.png">
+				<i class="start-bottom"></i>
+				<i class="rule-bottom"></i>
+			</span>
+			<span><img src="images/img-10-1.png"></span>
+			<div class="run_p">
+				<img src="images/notice1.png" alt="">
+				<div>
+					<p>特等奖(50英寸彩电)将会于3.3日活动结束时，在一等奖玩家中抽取，敬请期待!!
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<!--游戏规则-->
+		<div class="rule">
+			<div class="rule-box">
+				<span class="close"></span>
+				<div class="rule-info">
+					<div class="rule-info-txt">
+						<p>游戏场景中会随机掉落家居家电等欢乐元素 <br/> 快速点击属于这个场景的掉落元素<br/> 即可获得三星超品日超值元宵积分</p>
+						<p>在客厅、卧室、阳台、超品日四个场景中<br/> 三星产品的正确奖励和错误惩罚均会被提升<br/> 另有其他惊喜元素等你发现！！</p>
+						<p>快来参加赢取大奖吧！！</p>
+						<h1>特等奖：50英寸电视一台</h1>
+						<h2>（在一等奖中奖玩家中随机抽取一位玩家获得特等奖）</h2>
+						<h3>一等奖：<i>100元优惠券</i>，限量1000张<br/>二等奖：<i>50元优惠券</i>，限量2000张<br/>三等奖：<i>20元优惠券</i>，限量5000张</h3>
+						<p>奖品有限，先到先得！！</p>
+						<h4>（以上优惠券限购买苏宁易购三星家电旗舰店内的任意品类商品）<br/>（只有一次兑换机会，记得玩出自己的最高分哦！）</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--游戏中心-->
+		<div class="game">
+			<span class="time">
+				<p>00：30</p>
+				<i><img src="images/img-16.png"></i>
+			</span>
+			<span class="score">
+				<p>0</p>
+				<i><img src="images/img-17.png"></i>
+			</span>
+			<span class="logo"><img src="images/img-18.png"></span>
+			<h1><img src="images/img-15.png"></h1>
+			<h1><img src="images/img-21.png"></h1>
+			<h1><img src="images/img-23.png"></h1>
+			<h1><img src="images/img-25.png"></h1>
+			<canvas id="stage"></canvas>
+			<div class="next">
+				<h2><img src="images/img-50.png"></h2>
+				<h3><img src="images/img-54.png"></h3>
+				<h4 class="next-btn"><img src="images/img-49.png"></h4>
+			</div>
+			<div class="four"><img src="images/img-67.png"></div>
+			<div class="addRoSub"></div>
+
+			<div class="showGoods">
+
+				<i>与此场景匹配的三星家电</i>
+
+				<!--客厅-->
+				<div class="keting sumsungGoods-container">
+					<span><img src="images/samung.png"><b></b></span>
+					<span><img src="images/samung.png"><b></b></span>
+					<span><img src="images/samung.png"><b></b></span>
+				</div>
+
+				<!--卧室-->
+				<div class="woshi sumsungGoods-container">
+					<span><img src="images/samung.png"><b></b></span>
+					<span><img src="images/samung.png"><b></b></span>
+				</div>
+
+				<!--阳台-->
+				<div class="yangtai sumsungGoods-container">
+					<span><img src="images/samung.png"><b></b></span>
+				</div>
+
+			</div>
+
+		</div>
+
+		<!--尾页-->
+		<div class="finish">
+
+			<div class="canvas-createImage"><img src=""></div>
+
+			<div class="finish-btn">
+				<i class="again-btn"></i>
+				<i style="display: inline-block!important;float: right;" class="share-btn"></i>
+			</div>
+
+			<div id="qrcodeCanvas" style="display: none;"></div>
+
+			<h1>长按保存证书，邀请好友挑战～</h1>
+
+			<h2></h2>
+
+		</div>
+
+		<!--奖项页-->
+		<div class="awards">
+			<div class="awards-box">
+				<span class="close"></span>
+				<div class="awards-info">
+					<a href=""></a>
+					<a href=""></a>
+					<a href=""></a>
+				</div>
+			</div>
+		</div>
+
+		<!--分享提示-->
+		<div class="share">
+			<span><img src="images/img-36.png"></span>
+			<span class="close"><img src="images/img-37.png"></span>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/utf.js"></script>
+	<script type="text/javascript" src="js/jquery.qrcode.js"></script>
+	<script type="text/javascript" src="js/easeljs-0.8.2.min.js"></script>
+	<script type="text/javascript" src="js/tweenjs-0.6.2.min.js"></script>
+	<script type="text/javascript" src="js/pxloader-all.min.js"></script>
+	<script type="text/javascript" src="js/wx-video-audio-hack.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/main.js?1023"></script>
+
+</html>

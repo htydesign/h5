@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta name="format-detection" content="telephone=no" />
+		<script>
+			// class
+			! function(navigator) {
+				var userAgent = navigator.userAgent;
+				documentElement = document.documentElement;
+				if(userAgent.match(/micromessenger\/5/gi)) {
+					documentElement.className += " mobile wx_mobile wx_mobile_5";
+				} else if(userAgent.match(/micromessenger/gi)) {
+					documentElement.className += " mobile wx_mobile";
+				} else if(userAgent.match(/ucbrowser/gi)) {
+					documentElement.className += " mobile uc_mobile";
+				} else if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())) {
+					documentElement.className += " mobile";
+				} else if(userAgent.toLowerCase().match(/msie/gi) && (parseFloat(userAgent.toLowerCase().match(/msie ([0-9]{1,}[\.0-9]{0,})/i)[1] || 999) < 9)) {
+					documentElement.className += " pc pc-ie pc-ie8";
+				} else if(userAgent.toLowerCase().match(/msie/gi) || navigator.msPointerEnabled || navigator.pointerEnabled) {
+					documentElement.className += " pc pc-ie";
+				} else {
+					documentElement.className += " pc";
+				}
+			}(navigator);
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>产险</title>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+
+	<body>
+		<div class="container">
+
+			<div class="m-box">
+
+				<div class="u-box">
+					<div class="u-img ">
+						<img src="images/gongzhenhai.jpg">
+						<span>分享人：巩振海</span>
+					</div>
+					<div class="u-user">
+						<div class="l-name ">
+							<span>作品：E理赔手持智能终端</span>
+						</div>
+						<div class="r-link">
+							<a href="e-lipei.html"></a>
+						</div>
+					</div>
+					<div class="u-info">
+						<span>职位：</span>
+						<p>产险总部运营中心车意理赔部车主服务创新室车险理赔NPS管理岗</p>
+					</div>
+					<div class="u-like">
+						<span>一言不合</span>
+						<h1></h1>
+						<span>就给赞</span>
+					</div>
+				</div>
+
+				<div class="u-box">
+					<div class="u-img">
+						<img src="images/liuhanzhi.jpg">
+						<span>分享人：刘涵之</span>
+					</div>
+					<div class="u-user">
+						<div class="l-name">
+							<span>作品：个车核保模型</span>
+						</div>
+						<div class="r-link">
+							<a href="gechehebaomoxing.html"></a>
+						</div>
+					</div>
+					<div class="u-info">
+						<span>职位：</span>
+						<p>个人产品管理部平台运营室运营分析岗</p>
+					</div>
+					<div class="u-like">
+						<span>一言不合</span>
+						<h1></h1>
+						<span>就给赞</span>
+					</div>
+				</div>
+
+				<div class="u-box">
+					<div class="u-img">
+						<img src="images/zhengxuejun.jpg">
+						<span>分享人：郑学军</span>
+					</div>
+					<div class="u-user">
+						<div class="l-name font_height">
+							<span>作品：口袋理赔、小安移动智能指引</span>
+						</div>
+						<div class="r-link">
+							<a href="koudailipei.html"></a>
+						</div>
+					</div>
+					<div class="u-info">
+						<span>职位：</span>
+						<p>车意理赔部车主服务创新室副经理</p>
+					</div>
+					<div class="u-like">
+						<span>一言不合</span>
+						<h1></h1>
+						<span>就给赞</span>
+					</div>
+				</div>
+
+				<div class="u-box">
+					<div class="u-img">
+						<img src="images/zhangzhan.jpg">
+						<span>分享人：张展</span>
+					</div>
+					<div class="u-user">
+						<div class="l-name">
+							<span>作品：乐享美食</span>
+						</div>
+						<div class="r-link">
+							<a href="lexiangmeishi.html"></a>
+						</div>
+					</div>
+					<div class="u-info">
+						<span>职位：</span>
+						<p>小微客户发展部线上业务室负责人</p>
+					</div>
+					<div class="u-like">
+						<span>一言不合</span>
+						<h1></h1>
+						<span>就给赞</span>
+					</div>
+				</div>
+
+				<div class="u-box">
+					<div class="u-img">
+						<img src="images/zhouzhenyi.jpg">
+						<span>分享人：周震祎</span>
+					</div>
+					<div class="u-user">
+						<div class="l-name">
+							<span>作品：农险养殖业物联网项目</span>
+						</div>
+						<div class="r-link">
+							<a href="nongyebaoxian.html"></a>
+						</div>
+					</div>
+					<div class="u-info">
+						<span>职位：</span>
+						<p>农险部业务发展室农险核保岗</p>
+					</div>
+					<div class="u-like">
+						<span>一言不合</span>
+						<h1></h1>
+						<span>就给赞</span>
+					</div>
+				</div>
+
+				<div class="u-box">
+					<div class="u-img">
+						<img src="images/wangyan.jpg">
+						<span>分享人：王焰</span>
+					</div>
+					<div class="u-user">
+						<div class="l-name">
+							<span>作品：平安车险微信号</span>
+						</div>
+						<div class="r-link">
+							<a href="chexianweixinhao.html"></a>
+						</div>
+					</div>
+					<div class="u-info">
+						<span>职位：</span>
+						<p>新渠道数字运营室经理</p>
+					</div>
+					<div class="u-like">
+						<span>一言不合</span>
+						<h1></h1>
+						<span>就给赞</span>
+					</div>
+				</div>
+
+				<div class="u-box">
+					<div class="u-img">
+						<img src="images/huyan.jpg">
+						<span>分享人：胡龑</span>
+					</div>
+					<div class="u-user">
+						<div class="l-name">
+							<span>作品：团财风险筛选项目</span>
+						</div>
+						<div class="r-link">
+							<a href="tuancaifengxian.html"></a>
+						</div>
+					</div>
+					<div class="u-info">
+						<span>职位：</span>
+						<p>团体财产险部产品定价室系统开发岗</p>
+					</div>
+					<div class="u-like">
+						<span>一言不合</span>
+						<h1></h1>
+						<span>就给赞</span>
+					</div>
+				</div>
+
+				<!--<div class="u-box">
+					<div class="u-img">
+						<img src="images/zhengxuejun.jpg">
+						<span>分享人：郑学军</span>
+					</div>
+					<div class="u-user">
+						<div class="l-name">
+							<span>作品：小安移动智能指引</span>
+						</div>
+						<div class="r-link">
+							<a href="xiaoanyidongzhineng.html"></a>
+						</div>
+					</div>
+					<div class="u-info">
+						<span>职位：</span>
+						<p>车主服务创新室副经理</p>
+					</div>
+					<div class="u-like">
+						<span>一言不合</span>
+						<h1></h1>
+						<span>就给赞</span>
+					</div>
+				</div>-->
+
+				<div class="u-box">
+					<div class="u-img">
+						<img src="images/jingmingzhou.jpg">
+						<span>分享人：景明洲</span>
+					</div>
+					<div class="u-user">
+						<div class="l-name">
+							<span>作品：DRS鹰眼系统</span>
+						</div>
+						<div class="r-link">
+							<a href="yingyanxitong.html"></a>
+						</div>
+					</div>
+					<div class="u-info">
+						<span>职位：</span>
+						<p>风险工程管理部风控运营室副经理</p>
+					</div>
+					<div class="u-like">
+						<span>一言不合</span>
+						<h1></h1>
+						<span>就给赞</span>
+					</div>
+				</div>
+
+				<div class="u-box">
+					<div class="u-img">
+						<img src="images/wangjiong.jpg">
+						<span>分享人：王炯</span>
+					</div>
+					<div class="u-user">
+						<div class="l-name">
+							<span>作品：知库</span>
+						</div>
+						<div class="r-link">
+							<a href="zhiku.html"></a>
+						</div>
+					</div>
+					<div class="u-info">
+						<span>职位：</span>
+						<p>培训部培训平台室知库项目岗</p>
+					</div>
+					<div class="u-like">
+						<span>一言不合</span>
+						<h1></h1>
+						<span>就给赞</span>
+					</div>
+				</div>
+
+				<div class="u-box">
+					<div class="u-img">
+						<img src="images/xiajie.jpg">
+						<span>分享人：夏杰</span>
+					</div>
+					<div class="u-user">
+						<div class="l-name">
+							<span>作品：直通管家APP</span>
+						</div>
+						<div class="r-link">
+							<a href="zhitongguanjiaAPP.html"></a>
+						</div>
+					</div>
+					<div class="u-info">
+						<span>职位：</span>
+						<p>新渠道产品管理室产品经理</p>
+					</div>
+					<div class="u-like">
+						<span>一言不合</span>
+						<h1></h1>
+						<span>就给赞</span>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/wxfx.js" ></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	
+</html>

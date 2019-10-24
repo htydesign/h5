@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>法律声明</title>
+
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/logincss.css" />
+		
+		<link rel="stylesheet" href="../css/jquery.slideBox.css" />
+
+		<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.slideBox.min.js"></script>
+		<script type="text/javascript" src="../js/jq_scroll.js"></script>
+		<script type="text/javascript" src="../js/jquery.cxscroll.min.js"></script>
+		<script type="text/javascript" src="../js/style.js" ></script>
+		<script>
+			$(document).ready(function() {
+				//导航
+				setNav();
+				//首页我们的产品tab
+				setIndexTab();
+				//导航顶部搜索
+				setTopsearch();
+			});
+			//滚动页面 头部导航浮动在顶部
+			$(window).bind('scroll', function() {
+					if ($(window).scrollTop() > 30) {
+						$(".header-bottom-bg").addClass('header_fixed');
+						$('.header-bottom-bg').css({position:'fixed',top:0,left:0});
+					} else {
+						$(".header-bottom-bg").removeClass('header_fixed');
+						$('.header-bottom-bg').css({position:'relative'});
+						$('.header-bottom-bg').css({
+							left: 0
+						});
+					}
+				});
+			//更改浮动导航，出现滚动条
+			$(window).scroll(function() {
+				var original_left = $('.header-bottom').offset().left;
+				var new_left = -$(window).scrollLeft() + 'px';
+				$('.header_fixed').css({
+					left: new_left
+				});
+			});
+		</script>
+
+	</head>
+
+	<body>
+
+		<!--顶部导航-->
+		<div class="header">
+			<div class="header-top-bg">
+				<div class="header-top">
+					<div class="change">
+						<a href="javascript:;">English</a>/
+						<a href="javascript:;">中文</a>
+					</div>
+					<div class="other">
+						<ul>
+							<li class="luntan"><span><img src="../images/img-info.png"></span><a href="javascript:;">进入论坛</a></li>
+							<li class="search ">
+								<form class="">
+									<div class="search-bg">
+										<span class="search-topimg"></span>
+										<p>搜索</p>
+										<input type="text" name="text" id="txt" />
+									</div>
+								</form>
+							</li>
+							<li class="login"><span><img src="../images/img-gologin.png"></span><a href="../login/login.html">登录</a>/<a href="../login/register.html">注册</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+			<div class="header-bottom-bg">
+				<div class="header-bottom">
+					<div class="logo">
+						<a href="../index.html">
+							<img src="../images/logo.png" />
+						</a>
+					</div>
+					<div class="navbar">
+						<ul>
+							<li class=""><a href="../index.html">首页</a></li>
+							<li class="nav-li"><a href="javascript:;">关于我们</a></li>
+							<li class="nav-li"><a href="javascript:;">产品系列</a></li>
+							<li class="nav-li"><a href="javascript:;">服务支持</a></li>
+							<li class="nav-li"><a href="javascript:;">方案案例</a></li>
+							<li class="nav-li"><a href="javascript:;">新闻动态</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<!--下拉菜单-->
+				<div class="sub-bg">
+
+					<!--关于我们-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../about/video.html"><span><img src="../images/nav/jianjie.png"></span>公司简介</a></li>
+								<li><a href="../about/about.html"><span><img src="../images/nav/fazhan.png"></span>发展历程</a></li>
+								<li><a href="../about/culture.html"><span><img src="../images/nav/wenhua.png"></span>企业文化</a></li>
+								<li><a href="../about/jion.html"><span><img src="../images/nav/zhaopin.png"></span>人才招聘</a></li>
+								<li><a href="../about/adress.html"><span><img src="../images/nav/lianxi.png"></span>联系我们</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--产品系列-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../products/touch.html"><span><img src="../images/nav/chumoing.png"></span>触摸屏系列</a></li>
+								<li><a href="../products/screen.html"><span><img src="../images/nav/bianpinqi.png"></span>变频器系列</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--服务支持-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../service/maintain.html"><span><img src="../images/nav/weixiu.png"></span>维修服务</a></li>
+								<li><a href="../service/download.html"><span><img src="../images/nav/xiazai.png"></span>下载中心</a></li>
+								<li><a href="../service/training.html"><span><img src="../images/nav/peixun.png"></span>培训中心</a></li>
+								<li><a href="../service/servicebrand.html"><span><img src="../images/nav/fuwu.png"></span>服务品牌</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--方案与案例-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../case/solution.html"><span><img src="../images/nav/fangan.png"></span>解决方案</a></li>
+								<li><a href="../case/usecase.html"><span><img src="../images/nav/anli.png"></span>应用案例</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--新闻中心-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../news/news-center.html"><span><img src="../images/nav/xinwen.png"></span>公司新闻</a></li>
+								<li><a href="../news/activity-area.html"><span><img src="../images/nav/huodong.png"></span>活动专区</a></li>
+								<li><a href="../news/product-dynamic.html"><span><img src="../images/nav/dongtai.png"></span>产品动态</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+		
+		<div class="login-bg">
+			<div class="login-container">
+				<div class="login-container-bg"> 
+					<div class="title">
+						<h1>法律声明</h1>
+					</div>
+					<div class="law-congtent">
+						<h1>知识产权声明</h1>
+						<h2>[使用条款:]</h2>
+						<p>访问此网站的权利由威纶通科技有限公司根据下列条件授予。访问、流览或使用此网站,您即承认已阅读、理解并同意受下述条款的约束,并承诺遵守所有相应法律法规。如果您不同意接受这些访问条件,请不要使用此网站。</p>
+						<h2>[知识产权保护:]</h2>
+						<p>本站所登载发布的一切内容,包括但不限于文字、图片、音像、图表、标志、标识、广告、商标、域名、软件、程序、版面设计、专栏目录与名称、内容分类标准以及为使用者提供的任何信息,均受《中华人民共和国著作权法》、《中华人民共和国商标法》、《中华人民共和国专利法》等法律法规以及有关国际条约的保护,相应权利由威纶通科技有限公司或相关权利人享有。未经威纶通科技有限公司或相关权利人书面授权,任何人不得将本站所登载、发布的内容及相关服务用于商业性目的,亦不得改动、转载、链接、复制、发行、传播等本站的部分或全部内容或服务,或将之在非本站所属的服务器上作镜像。否则,威纶通科技有限公司将依法追究侵权者的法律责任。此网站使用和显示的商标、服务商标和标志(“商标”)是威纶通科技有限公司和其它权利人的注册和未注册商标,未经威纶通科技有限公司或其它权利人书面许可,您不得以任何方式使用上述商标或威纶通科技有限公司的企业名称。信息的提供并不意味着威纶通科技有限公司授予您任何著作权、专利或任何其它知识产权的许可。</p>
+						<h2>[使用者须知:]</h2>
+						<p>您发送或邮寄至本网站的所有信息或资料都将视为非保密和非专有的。将任何信息或资料发送至本网站,您即授予威纶通科技有限公司无限制的、不可撤销的许可,允许威纶通科技有限公司使用、复制、显示、执行、修改、传送和分发这些资料或信息,且您同意威纶通科技有限公司可以为任何目的免费使用您所发送的任何主意、概念或技术。但是,威纶通科技有限公司将不会公布您的姓名或以其它方式公布您向威纶通科技有限公司提交资料或信息这一事实,除非:(a)您许可威纶通科技有限公司使用您的姓名;或者(b)威纶通科技有限公司事先通知您提交至本站点某特定部分的资料或其它信息将被发布,或站点的该部分上将使用您的姓名;或者(c)法律要求威纶通科技有限公司执行此活动。您对本网站的使用不得违背法律法规及善良风俗。您不得利用本网站实施任何违法行为,不得向本网站邮寄或发送任何非法的信息或资料。</p>
+						<h2>[限制性保证:]</h2>
+						<p>此网站和连接此站点的其它网站所载的任何信息和资料,包括文本、图形或其它项目可被修改或更新而不另行通知,且均以"现有状况"提供。威纶通科技有限公司不保证这些信息和资料的准确性、可靠性或完整性;且不提供任何默示、明示或法定的陈述和保证,包括但不限于有关不侵权、所有权、适销性、品质、适合某种特定的用途和没有计算机病毒的保证。</p>
+						<h2>[免责声明:]</h2>
+						<p>在任何情况下,威纶通科技有限公司均无须对由于使用此网站或连接此站点的其它网站所引起的任何直接的、间接的、特别的或后果性的损失承担责任,包括但不限于任何利润损失、业务中断、程序或数据丢失,即使威纶通科技有限公司被明确告知此类损害的可能性。使用该等站点的风险,由使用者自行承担。</p>
+						<h2>[内容修改:]</h2>
+						<p>威纶通科技有限公司可在任何时候以更新此公告的方式修改此类条款,通过使用此Web站点,您同意受此类修订版的约束。您应定期访问此页面来确定当前约束您的条款。
+</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--底部-->
+		<div class="footer-bg">
+			<div class="footer-t">
+				<div class="footer-box footer-t-t">
+					<div class="footer-nav-dingyue">
+						<div class="footer-logo"><img src="../images/logo-footer.png"></div>
+						<form>
+							<label>订阅电子邮件</label>
+							<input type="email" name="email" id="email" />
+							<input type="submit" name="btn" id="dingyue" value="订阅" />
+						</form>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>关于我们</h1></li>
+							<li><a href="../about/video.html">公司简介</a></li>
+							<li><a href="../about/about.html">发展历程</a></li>
+							<li><a href="../about/culture.html">企业文化</a></li>
+							<li><a href="../about/jion.html">人才招聘</a></li>
+							<li><a href="../about/adress.html">联系我们</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>产品中心</h1></li>
+							<li><a href="../products/touch.html">触摸屏系列</a></li>
+							<li><a href="../products/screen.html">变频器系列</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>服务支持</h1></li>
+							<li><a href="../service/maintain.html">维修服务</a></li>
+							<li><a href="../service/download.html">下载中心</a></li>
+							<li><a href="../service/learning.html">培训中心</a></li>
+							<li><a href="../service/servicebrand.html">服务品牌</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>方案与案列</h1></li>
+							<li><a href="../case/solution.html">解决方案</a></li>
+							<li><a href="../case/usecase.html">应用案例</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>新闻中心</h1></li>
+							<li><a href="../news/news-center.html">公司新闻</a></li>
+							<li><a href="../news/activity-area.html">活动专区</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-contact">
+						<div class="footer-nav-tel">
+							<p>400-836-2000</p>
+						</div>
+						<ul>
+							<li>
+								<p>微博</p>
+								<span><img src="../images/erweima.png"></span>
+							</li>
+							<li style="margin-left: 30px;">
+								<p>微信</p>
+								<span><img src="../images/erweima.png"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-b">
+				<div class="footer-box footer-b-t">
+					<div class="footer-share">
+						<div class="bdsharebuttonbox" data-tag="share_1">
+							<a class="share_one" data-cmd="tsina"></a>
+							<a class="share_two" data-cmd="weixin"></a>
+							<a class="share_three" data-cmd="qzone"></a>
+							<a class="share_four" data-cmd="kaixin001"></a>
+							<a class="share_five" data-cmd="tqq"></a>
+						</div>
+						<script>
+							window._bd_share_config = {
+								share: [{
+									"bdSize": 32
+								}],
+							}
+							with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+						</script>
+					</div>
+					<div class="footer-copyright">
+						<ul>
+							<li>Copyright ©威纶通 All Rights Reserved</li>
+							<li><a href="../login/legalnotice.html">法律声明</a></li>
+							<li>|</li>
+							<li><a href="../login/privacy.html">隐私保护</a></li>
+							<li>|</li>
+							<li><a href="../login/feedback.html">意见反馈</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

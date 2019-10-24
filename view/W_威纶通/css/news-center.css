@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* CSS Document */
+
+.banner2{
+	position:relative;
+}
+.banner2 img{
+	position:relative;
+}
+
+.banner2-inner{
+	width:1200px;
+	height:122px;
+	position:absolute;
+	left:50%;
+	margin-left:-600px;
+	top:50%;
+	margin-top:-60px;
+	color:#1D447A;
+}
+
+.news-title{
+	width:100%;
+	text-align:center;
+}
+.news-big{
+	width:auto;
+	height:auto;
+	padding:0px 100px;
+	background:url(../images/line-center.png) 0px 28px no-repeat;
+	margin:0 auto;
+	overflow:hidden;
+	height:50px;
+	line-height:50px;
+	display:inline-block;
+}
+.news-word{
+	width:auto;
+	padding:0px 10px;
+	font-size:40px;
+	height:50px;
+	line-height:50px;
+	display:inline-block;
+}
+.news-word font{
+	font-family:Arial;
+	margin-left:10px;
+	letter-spacing:0px;
+}
+.news-title-sub{
+	width:100%;
+	text-align:center;
+	margin-top:35px;
+	font-size:30px;
+	color:#1d447a;
+}
+.search-box{
+	width:100%;
+	height:110px;
+	background:url(../images/line-sp.png) repeat-x;
+}
+.search-box-inner{
+	width:1200px;
+	height:110px;
+	margin:0 auto;
+}
+.search-a{
+	width:705px;
+	height:50px;
+	margin:0 auto;
+	padding-top:30px;
+}
+.search-input{
+	width:599px;
+	height:47px;
+	border:none;
+	float:left;
+	background:url(../images/search-box-01.png) no-repeat;
+	line-height:47px;
+	font-size:16px;
+	color:#666666;
+	text-align:center;
+	font-family:"\5FAE\8F6F\96C5\9ED1";
+}
+.search-input::-webkit-input-placeholder { /* WebKit browsers */
+    color:#666666;
+}
+.search-input::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+     color:#666666;
+}
+.search-input::-o-placeholder { /* Mozilla Firefox 19+ */
+    color:#666666;
+}
+.search-input::-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#666666;
+}
+.search-a a{
+	width:97px;
+	height:47px;
+	text-align:center;
+	display:inline-block;
+	float:right;
+	line-height:47px;
+	background:#F58029;
+	font-size:16px;
+	color:#f7f6f6;
+}
+.content{
+	width:100%;
+	background:#fff;
+	padding:30px 0px 40px 0px;
+}
+.content-inner{
+	width:1200px;
+	height:auto;
+	margin:0 auto;
+}
+.content-news{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+}
+.content-news ul li{
+	width:380px;
+	height:auto;
+	float:left;
+	margin-left:29px;
+	padding-bottom:22px;
+	border-bottom:dashed 1px #999999;
+	margin-bottom:30px;
+}
+.content-news ul li.li-sp{
+	margin-left:0px;
+}
+.content-news ul li img{
+	width:380px;
+	height:200px;
+	margin-bottom:20px;
+}
+.content-news ul li .n-title{
+	width:100%;
+	text-align:left;
+	font-size:18px;
+	color:#0e7eb7;
+	margin-bottom:8px;
+}
+.content-news ul li.add-word .n-title{
+	color:#f58029;
+}
+.n-content{
+	width:100%;
+	height:90px;
+	line-height:30px;
+	overflow:hidden;
+	font-size:14px;
+	color:#666666;
+}
+.n-bottom{
+	width:100%;
+	height:35px;
+	margin-top:8px;
+	line-height:35px;
+	font-size:16px;
+	color:#333333;
+}
+.content-news ul li .more-a{
+	width:86px;
+	height:35px;
+	line-height:35px;
+	text-align:left;
+	float:right;
+	display:inline-block;
+	padding-left:10px;
+	background:url(../images/more-a-02.png) no-repeat;
+	color:#0E7EB7;
+	font-size:14px;
+}
+.content-news ul li.add-word .more-a{
+	color:#f58029;
+	background:url(../images/more-a-01.png) no-repeat;
+}
+.pager{
+	width:100%;
+	height:46px;
+	margin-top:10px;
+}
+.pager span{
+	width:auto;
+	height:46px;
+	display:inline-block;
+	float:right;
+}
+.pager span a{
+	width:46px;
+	height:46px;
+	text-align:center;
+	font-size:16px;
+	color:#3e98c5;
+	line-height:46px;
+	display:inline-block;
+	float:left;
+	background:url(../images/page-a-02.png) no-repeat;
+	margin-left:10px;
+}
+.pager span a.active{
+	background:url(../images/page-a-01.png) no-repeat;
+	color:#f58029;
+}
+/*********产品动态*************/
+.pro-big{
+	background:url(../images/pro-dy-02.png) 0px 28px no-repeat;
+}
+.pro-big .news-word{
+	font-size:38px;
+	color:#fff;
+}
+.pro-sub{
+	color:#fff;
+}
+.model{
+	width:705px;
+	height:26px;
+	margin:0 auto;
+}
+.model ul{
+	width:705px;
+	height:26px;
+	overflow:hidden;
+}
+.model ul li{
+	width:auto;
+	height:26px;
+	line-height:26px;
+	float:left;
+	text-align:left;
+	margin-left:25px;
+	color:#f58029;
+	font-size:14px;	
+}
+.model ul li a{
+	color:#f58029;
+}

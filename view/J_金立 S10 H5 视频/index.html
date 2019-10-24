@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script>
+			// class
+			! function(navigator) {
+			var userAgent = navigator.userAgent;
+			documentElement = document.documentElement;
+			if(userAgent.match(/micromessenger\/5/gi)) {
+			documentElement.className += " mobile wx_mobile wx_mobile_5";
+			} else if(userAgent.match(/micromessenger/gi)) {
+			documentElement.className += " mobile wx_mobile";
+			} else if(userAgent.match(/ucbrowser/gi)) {
+			documentElement.className += " mobile uc_mobile";
+			} else if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())) {
+			documentElement.className += " mobile";
+			} else if(userAgent.toLowerCase().match(/msie/gi) && (parseFloat(userAgent.toLowerCase().match(/msie ([0-9]{1,}[\.0-9]{0,})/i)[1] || 999) < 9)) {
+			documentElement.className += " pc pc-ie pc-ie8";
+			} else if(userAgent.toLowerCase().match(/msie/gi) || navigator.msPointerEnabled || navigator.pointerEnabled) {
+			documentElement.className += " pc pc-ie";
+			} else {
+			documentElement.className += " pc";
+			}
+			}(navigator);
+			// meta
+			! function(userAgent) {
+			var screen_w = parseInt(window.screen.width),
+			scale = screen_w / 640;
+			if(/Android (\d+\.\d+)/.test(userAgent)) {
+			var version = parseFloat(RegExp.$1);
+			document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+			} else {
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+			}(navigator.userAgent);
+			</script>
+			<title>薛之谦带你看金立S10</title>
+			<link rel="stylesheet" href="css/S10.css?version=3.1" />
+				<script src='http://res.wx.qq.com/open/js/jweixin-1.0.0.js'></script>
+			</head>
+			<body>
+			<!--loading start-->
+			<section class="loading">
+				<span></span>
+				<span>loading</span>
+				<ul class="loadul">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+		</section>
+		<!--loading end-->
+		
+		<!--container start-->
+		<section class="container">
+			<div class="user-click">
+				<div class="filter-blur">
+					<img src="images/img-01.jpg">				
+				</div>
+				<div class="light">
+					<span></span>
+					<span></span>
+					<i><img src="images/hand-02.png"></i>
+				</div>
+			</div>
+			<div class="video-box">
+				<span><img src="images/img-logo.png"></span>
+				<video id="video" src="video/s10.mp4" width="640" preload="auto" webkit-playsinline="true" x-webkit-airplay="true"  playsinline="true"  x5-video-player-type="h5" x5-video-player-fullscreen="true"  x5-video-orientation="portraint" style="object-fit:fill;"></video>		
+			</div>
+			
+			<div class="s10-end">
+				<span><img src=""></span>
+				<span><img src=""></span>
+			</div>
+		</section>
+		<!--container end-->
+		
+		<!--share start-->
+		<section class="share"></section>
+		<!--share end-->
+		
+	</body>
+	<script src="js/jquery-3.1.1.min.js" ></script>
+	<script src="js/wxfx-zq-1.0.1.js" ></script>
+	<script src="js/wx-video-audio-hack.js" ></script>
+	<script src="js/pxloader-all.min.js" ></script>
+	<script src="js/S10.js?version=6.761"></script>
+</html>

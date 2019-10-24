@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Alipay:title" content="vivo X9s新品火爆首发，购机享多重豪礼"><!--分享标题-->
+		<meta name="Alipay:imgUrl" content="images/share.jpg"><!--分享图标-->
+		<meta name="Alipay:desc" content="前置2000万柔光双摄，让你的美无处可藏"><!--分享描述-->
+		<script>
+			// class
+			! function(navigator) {
+				var userAgent = navigator.userAgent;
+				documentElement = document.documentElement;
+				if(userAgent.match(/micromessenger\/5/gi)) {
+					documentElement.className += " mobile wx_mobile wx_mobile_5";
+				} else if(userAgent.match(/micromessenger/gi)) {
+					documentElement.className += " mobile wx_mobile";
+				} else if(userAgent.match(/ucbrowser/gi)) {
+					documentElement.className += " mobile uc_mobile";
+				} else if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())) {
+					documentElement.className += " mobile";
+				} else if(userAgent.toLowerCase().match(/msie/gi) && (parseFloat(userAgent.toLowerCase().match(/msie ([0-9]{1,}[\.0-9]{0,})/i)[1] || 999) < 9)) {
+					documentElement.className += " pc pc-ie pc-ie8";
+				} else if(userAgent.toLowerCase().match(/msie/gi) || navigator.msPointerEnabled || navigator.pointerEnabled) {
+					documentElement.className += " pc pc-ie";
+				} else {
+					documentElement.className += " pc";
+				}
+			}(navigator);
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>vivo&支付宝X9s首发活动</title>
+		<link rel="stylesheet" href="css/animate.css" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body>
+
+		<audio src="music/music.mp3" id="music" loop="loop" preload="auto"></audio>	
+		<span id="music_icon">
+			<i><img src="images/img_music_on.png"></i>
+			<i><img src="images/img_music_off.png"></i>
+		</span>
+		
+		<!--loading-->
+		<div class="loading-container">
+			<div class="loading">
+				<span><img src="images/img_02.jpg"></span>
+				<span class="loading-progress"><i></i></span>
+				<span><img src="images/img_01.jpg"></span>
+			</div>
+		</div>
+	
+		<div class="container">
+
+			<!--翻转提示-->
+			<div class="rotation-hint">
+				<span><img src=""></span>
+			</div>
+			
+			<!--跳过按钮-->
+			<div class="skip"><img src="images/img_66.png"></div>
+			
+			<!--首页-->
+			<div class="index">
+				<div class="slogan-txt">
+					<div class="slogan">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</div>
+				<div class="slogan-img"><img src=""></div>
+			</div>
+
+			<!--拍照-->
+			<div class="photo">
+				<div class="circle_group">
+					<div class="colors_circle"></div>
+					<span class="run_1"></span>
+					<span class="run_2"></span>
+					<span class="run_3"></span>
+				</div>
+				<h1 class="colors_bottom run_4"></h1>
+				<canvas id="canvas"></canvas>
+				<img src="" id="img_1" style="display: none;">
+				<img src="" id="img_2" style="display: none;">
+				<div class="photo-phone">
+					<div class="img-box">
+						<h1></h1>
+						<span><img src="" id="img_4"></span>
+						<span><img src="" id="img_5"></span>
+						<div class="photo-frame">
+							<i></i>
+							<i></i>
+							<i></i>
+							<i></i>
+							<i></i>
+						</div>
+						<div class="splash-screen"></div>
+					</div>
+				</div>
+
+				<!--拍照文案-->
+				<div class="photo-copy-1">
+					<span class="txt_1"></span>
+					<i class="txt_1_line_1"></i>
+					<i class="txt_1_line_2"></i>
+				</div>
+				<div class="photo-copy-2">
+					<span class="txt_2"></span>
+					<i class="txt_2_line_1"></i>
+					<i class="txt_2_line_2"></i>
+				</div>
+
+				<!--粉红手机-->
+				<div class="pink-phone"><img src=""></div>
+			</div>
+
+			<!--外观-->
+			<div class="appearance">
+				<div class="photo-copy-3">
+					<span class="three_1 txt_3"></span>
+					<span class="three_2 run_5"></span>
+					<span class="three_3 run_3"></span>
+					<span class="three_4 run_4"></span>
+					<i class="txt_3_line_1"></i>
+					<i class="txt_3_line_2"></i>
+				</div>
+				<div class="photo-copy-4">
+					<span class="three_1 txt_4"></span>
+					<span class="three_2 run_5 blue_point"></span>
+					<span class="three_3 run_3"></span>
+					<span class="three_4 run_4"></span>
+					<i class="txt_4_line_1"></i>
+					<i class="txt_4_line_2"></i>
+				</div>
+				<div class="rigth-phone"><img src=""></div>
+				<div class="left-phone"><img src=""></div>
+			</div>
+
+			<!--性能-->
+			<div class="performance">
+				<div class="photo-copy-5">
+					<span class="three_0"></span>
+					<span class="three_1 txt_5"></span>
+					<span class="three_2 run_5"></span>
+					<span class="three_3 run_3"></span>
+					<span class="three_4 run_4"></span>
+					<span class="three_5"><img src="images/img_22.png"></span>
+					<i class="txt_5_line_1"></i>
+					<i class="txt_5_line_2"></i>
+				</div>
+				<canvas id="playFrame"></canvas>
+			</div>
+
+			<!--最后定帧-->
+			<div class="poster">
+				<!--滑动页面-->
+				<div class="slide-container">
+					<div class="box">
+						<span><img src="images/img_50.jpg"></span>
+						<span style="padding: 35px 0 0 0;"><img src="images/img_52.png"></span>
+						<span style="padding: 35px 0 0 0;"><img src="images/img_53.jpg"></span>
+						<span style="padding: 35px 0 0 0;" class="bclick">
+							<img src="images/img_54.jpg">
+							<i></i>
+							<i></i>
+						</span>
+						<span style="padding: 35px 0 0 0;"><img src="images/img_55.jpg"></span>
+						<span style="padding: 35px 0 35px 0;"><img src="images/img_56.jpg"></span>
+						<div class="show-bigimages">
+							<div class="bigimages-box">
+								<ul>
+									<li><img src="" id="img_6"></li>
+									<li><img src="" id="img_7"></li>
+								</ul>
+								<i></i>
+							</div>
+						</div>
+						<div class="zfb-gift">
+							<h1 style="padding: 35px 0 0 0;"><img src="images/img_57.png"></h1>
+							<ul>
+								<li><img src="images/vivo_01.png"></li>
+								<li><img src="images/vivo_02.png"></li>
+								<li><img src="images/vivo_03.png"></li>
+								<li><img src="images/vivo_04.png"></li>
+								<li><img src="images/vivo_05.png"></li>
+								<li><img src="images/vivo_06.png"></li>
+								<li><img src="images/vivo_07.png"></li>
+								<li><img src="images/vivo_08.png"></li>
+								<li><img src="images/vivo_09.png"></li>
+								<li><img src="images/vivo_10.png"></li>
+								<li><img src="images/vivo_11.png"></li>
+								<li><img src="images/vivo_12.png"></li>
+							</ul>
+							<h1 style="padding: 20px 0 20px 0;">
+								<i><img src="images/img_64.png"></i>
+								<i><img src="images/img_65.png"></i>
+							</h1>
+						</div>
+						<span style="height: 750px; padding: 85px 0 0 0;" class="bottom_span"><img src="images/img_58.png"></span>
+					</div>
+					<div class="float-btn">
+						<a href="https://vivo.m.tmall.com/"></a><!--天猫-->
+						<a href="https://shop.vivo.com.cn/wap/sp/x9s?cid=z-1-alipay_fuwu0720"></a><!--官方商城-->
+					</div>
+					<h2 class="toTop"></h2>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/easeljs-0.8.2.min.js"></script>
+	<script type="text/javascript" src="js/pxloader-all.min.js"></script>
+	<script type="text/javascript" src="js/wx-alipay-audioPlay.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+		var oMusic = document.getElementById("music");
+		var music_btn = document.getElementById("music_icon");
+		var music_icon_play = document.querySelector("#music_icon i:nth-of-type(1)");
+		var music_icon_pause = document.querySelector("#music_icon i:nth-of-type(2)");
+		var isPlayMusic = false;
+		music_icon_play.style.opacity = 0;
+		music_icon_pause.style.opacity = 1;
+		music_icon_play.style.animationPlayState = 'paused';
+		music_icon_play.style.webkitAnimationPlayState = 'paused';
+		setTimeout(function() {
+			oMusic.src = 'music/music.mp3';
+			oMusic.play();
+			isPlayMusic=true;
+			music_icon_play.style.opacity = 1;
+			music_icon_pause.style.opacity = 0;
+			music_icon_play.style.animationPlayState = 'running';
+			music_icon_play.style.webkitAnimationPlayState = 'running';
+		}, 300);
+		$('html').one(touchEvents.touchstart,function(){
+			if(oMusic.paused){
+				oMusic.play();
+				isPlayMusic=true;
+				music_icon_play.style.opacity = 1;
+				music_icon_pause.style.opacity = 0;
+				music_icon_play.style.animationPlayState = 'running';
+				music_icon_play.style.webkitAnimationPlayState = 'running';
+			}		
+		});
+		music_btn.addEventListener(touchEvents.touchstart, function() {
+			if(isPlayMusic) {
+				oMusic.pause();				
+				music_icon_play.style.opacity = 0;
+				music_icon_pause.style.opacity = 1;
+				music_icon_play.style.animationPlayState = 'paused';
+				music_icon_play.style.webkitAnimationPlayState = 'paused';
+			} else {
+				oMusic.play();
+				music_icon_play.style.opacity = 1;
+				music_icon_pause.style.opacity = 0;				
+				music_icon_play.style.animationPlayState = 'running';
+				music_icon_play.style.webkitAnimationPlayState = 'running';
+			}
+			isPlayMusic = !isPlayMusic;
+		}, false);
+	</script>
+</html>

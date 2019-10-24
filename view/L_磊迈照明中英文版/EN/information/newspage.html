@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>LiteMatrix News</title>
+		<link rel="stylesheet" href="../css/litematrix.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+
+		<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+		<!---->
+		<script type="text/javascript" src="../js/nav.js"></script>
+
+		<script>
+			window.onload = function() {
+				setNav();
+			}
+			$(window).scroll(function(){
+		 		var original_left=$('.header_box').offset().left;
+			 
+				var new_left = -$(window).scrollLeft() + 'px' ;
+			
+				$('.header_fixed').css({left:new_left});
+
+		 	});
+		</script>
+
+	</head>
+
+	<body>
+
+		<!--导航-->
+		<div class="header_fixed header_inside" style="z-index: 8888; min-width: 1246px;">
+			<div class="header_box">
+				<div class="logo">
+					<a href="../index.html"><img src="../images/biglogo.jpg"></a>
+				</div>
+				<div class="nav_bg">
+					<!--导航nav-->
+					<div class="nav" id="nav">
+						<ul>
+							<li><a href="javascript:;" id="">LIGHT PLACE</a></li>
+							<li><a href="../products/product.html">PRODUCT</a></li>
+							<li><a href="javascript:;">PROJECT</a></li>
+							<li><a href="../technology/technology.html" id="">TECHNOLOGY</a></li>
+							<li id="nav_on2"><a href="../information/information.html">INFORMATION</a></li>
+						</ul>
+					</div>
+					<!--搜索-->
+					<div class="search">
+						<a href="../../CH/information/newspage.html">CH</a>
+						<form>
+							<div class="input">
+								<input type="text" name="" />
+								<span class="search_img"></span>
+							</div>
+							<input type="button" value="search" name="search" id="search_btn" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<!--下拉子菜单-->
+			<div class="sub_bg" id="lists">
+
+				<!--光影文化-->
+				<div class="sub_box ">
+					<h1>Light Place</h1>
+					<ul class="big_img">
+						<li>
+							<a href="../light/lightculture.html">
+								<span class="light_one"><img src="../images/light/nav01.png"></span>
+								<span class="p">>Light Culture</span>
+							</a>
+						</li>
+						<li>
+							<a href="../light/lighteconomy.html">
+								<span class="light_two"><img src="../images/light/nav02.png"></span>
+								<span class="p">>Light Cost-Effective</span>
+							</a>
+						</li>
+						<li>
+							<a href="../light/lightscene.html">
+								<span class="light_three"><img src="../images/light/nav03.png"></span>
+								<span class="p">>Light Environment</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--产品中心-->
+				<div class="sub_box sub_box2 " style="height: 620px;">
+					<span class="nav_product_title">
+						<h2 style="width: 300px;">Outdoor Lighting</h2>
+						<span style="width: 900px;"></span>
+					</span>
+					<ul class="small_img">
+						<li>
+							<a href="../products/product.html#hw1">
+								<span class="led_one"><img src="../images/product/hw-icon01.png"></span>
+								<span class="p">>LED Flood Light Series</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw2">
+								<span class="led_one"><img src="../images/product/hw-icon02.png"></span>
+								<span class="p">>LED Spot Light Series</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw3">
+								<span class="led_one"><img src="../images/product/hw-icon03.png"></span>
+								<span class="p">>LED Linear Light Series</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw4">
+								<span class="led_one"><img src="../images/product/hw-icon04.png"></span>
+								<span class="p">>LED Wall Grazing Light Series</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw5">
+								<span class="led_one"><img src="../images/product/hw-icon05.png"></span>
+								<span class="p">>LED Dot Light Series</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw6">
+								<span class="led_one"><img src="../images/product/hw-icon06.png"></span>
+								<span class="p">>LED Underwater Light Series</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw7">
+								<span class="led_one"><img src="../images/product/hw-icon07.png"></span>
+								<span class="p">>LED Pixel Light Series</span>
+							</a>
+						</li>
+					</ul>
+					<span class="nav_product_title">
+						<h2 style="width: 300px;">Control System</h2>
+						<span style="width: 900px;"></span>
+					</span>
+					<ul class="small_img">
+						<li>
+							<a href="../products/product.html#kz1">
+								<span class="led_one"><img src="../images/product/kz-icon01.png"></span>
+								<span class="p">>On-Line Master Controller</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz2">
+								<span class="led_one"><img src="../images/product/kz-icon02.png"></span>
+								<span class="p">>Off-Line Master Controller</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz3">
+								<span class="led_one"><img src="../images/product/kz-icon03.png"></span>
+								<span class="p">>Master Controller of Satellite Synchronization</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz4">
+								<span class="led_one"><img src="../images/product/kz-icon04.png"></span>
+								<span class="p">>Sub-Controller</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz5">
+								<span class="led_one"><img src="../images/product/kz-icon05.png"></span>
+								<span class="p">>Integrated Controller</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz6">
+								<span class="led_one"><img src="../images/product/kz-icon06.png"></span>
+								<span class="p">>Scene Selector</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--案例中心-->
+				<div class="sub_box ">
+					<h1>Project</h1>
+					<ul class="big_img">
+						<li>
+							<a href="../case/case.html">
+								<span class="light_one"><img src="../images/case/anli-icon01.png"></span>
+								<span class="p">>Oversea Market</span>
+							</a>
+						</li>
+						
+					</ul>
+				</div>
+
+				<!--技术中心-->
+				<div class="sub_box">
+					<h1>Technology</h1>
+					<ul class="big_img">
+						<li>
+							<a href="../technology/technologyfold.html">
+								<span class="light_one"><img src="../images/technology/pro-icon01.png"></span>
+								<span class="p">>Product Technology</span>
+							</a>
+						</li>
+						<li>
+							<a href="../technology/download.html">
+								<span class="light_two"><img src="../images/technology/pro-icon02.png"></span>
+								<span class="p">>Download</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--资讯中心-->
+				<div class="sub_box ">
+					<h1>Information</h1>
+					<ul class="big_img">
+						<li>
+							<a href="../information/introduce.html">
+								<span class="light_one"><img src="../images/information/info-nav-01.png"></span>
+								<span class="p">>Company Profile</span>
+							</a>
+						</li>
+						<li>
+							<a href="../information/honor.html">
+								<span class="light_two"><img src="../images/information/info-nav-02.png"></span>
+								<span class="p">>Certificates</span>
+							</a>
+						</li>
+						<li>
+							<a href="../information/news.html">
+								<span class="light_one"><img src="../images/information/info-nav-03.png"></span>
+								<span class="p">>LiteMatrix News</span>
+							</a>
+						</li>
+						<li>
+							<a href="../information/contact.html">
+								<span class="light_two"><img src="../images/information/info-nav-04.png"></span>
+								<span class="p">>Contact Us</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+		<!--/导航-->
+		<div class="clear"></div>
+
+		<!--banner-->
+		<div style="margin-top: 66px;"></div>
+
+		<!--box内容-->
+		<div class="info_page_bg">
+			<div class="new_page_title">
+				<h1>Lei lighting northwest trading center in the Midwest</h1>
+				<div class="new_page_info">
+					<span style="padding-right: 50px;">2015 / 08 / 09</span>
+					<span>browse：</span>
+					<span>9999</span>
+				</div>
+			</div>
+
+			<div class="new_page_content">
+
+				<!--right-->
+				<div class="right_share">
+					<ul>
+						<li class="return"><a href="news.html"><span style="font-size: 14px;">return</span></a></li>
+						<li>
+							<div class="bdsharebuttonbox" data-tag="share_1">
+								<a class="right_share_weixin" data-cmd="weixin"></a>
+								<a class="right_share_tsina" data-cmd="tsina"></a>	
+								<a class="right_share_tqq" data-cmd="tqq"></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<span class="new_page_img"><img src="../images/information/images/newsimg2.jpg"></span>
+				<p>The joint Asian lighting design is guoguang with light technology international (hereinafter referred to as the United Nations international light years) approval, is the most authoritative and influential Asia lighting design field of one of the awards.Major awards in Asia in the lighting industry with outstanding technology research and development, the concept of innovation, high efficiency and energy saving, designs and applications and successful practice, and is highly evaluated by the user, is for Asian lighting project in innovation and practice achievement of honorary awards.Asia lighting design aims to share more outstanding achievements and experience of the lighting project, enhance the overall strength of lighting industry in Asia, interactive communication platform and building industry, promote the lighting production enterprises, design companies, engineering companies, universities and research institutions in the niche of technical and professional development.Awards will also deepen cooperation with mass media, to the standard of mass communication really beautiful lighting, let people can by improving the quality of the light and improve the quality of life.</p>
+				<p>1. From the appearance, high efficiency and energy saving of lighting project design, implementation, responsible for the owners, innovative aspects to make a comprehensive evaluation of the project;</p>
+				<p>2. Invite senior industry experts as members of the panel of judges, the use of the user evaluation into the assessment standards;</p>
+				<p>3. Pay attention to lighting future talent, further encouraging and explore more good students engaged in lighting design field.</p>
+				<br />
+				<p>Declare the conditions</p>
+				<br />
+				<p>In the region during the period of 2012-2015, in lighting design, engineering and product application of innovative achievements, and obtain the users and the industry spoke highly of.</p>
+				<br />
+				<p>The selection method</p>
+				<br />
+				<p>"Asia lighting design award" of the declaration, recommend, review and award insist on seeking truth from facts, follow the principle of just, fair and open.Turn after the qualification review by the organizing committee working group, organized by the organizing committee of the panel (by the lighting industry experts at home and abroad, including university professors and research institutes of scientific research workers, industry association/association officials, architectural design, interior design teacher teacher and user) review, the last final appeal review committee, voted in conform to the requirements of the application program.</p>
+				<br />
+				<p>The selection of time</p>
+				<br />
+				<p>Awards to declare to begin in June 2015, April 2016 deadline to declare.</p>
+				<p>And to the social public in May 2016, held on June 8, 2016 awards.</p>
+			</div>
+		</div>
+
+		<!--底部-->
+		<div class="footer_bg" style="min-width: 1246px;">
+			<div class="footer en_h1">
+
+				<!--产品中心-->
+				<div class="footer_nav">
+					<h1>Prouduct</h1>
+					<ul>
+						<li><a href="../products/product.html">Outdoor Lighting</a></li>
+						<li><a href="../products/product.html">Indoor Lighting</a></li>
+						<li><a href="../products/product.html">Control System</a></li>
+					</ul>
+				</div>
+
+				<!--光影文化-->
+				<div class="footer_nav">
+					<h1>Light Place</h1>
+					<ul>
+						<li><a href="../light/lightculture.html">Light Culture</a></li>
+						<li><a href="../light/lighteconomy.html">Light Cost-Effective</a></li>
+						<li><a href="../light/lightscene.html">Light Environment</a></li>
+					</ul>
+				</div>
+
+				<!--技术支持-->
+				<div class="footer_nav">
+					<h1>Technology</h1>
+					<ul>
+						<li><a href="../technology/technology.html">Supports</a></li>
+						<li><a href="../technology/download.html">Download</a></li>
+					</ul>
+				</div>
+
+				<!--资讯中心-->
+				<div class="footer_nav">
+					<h1>Information</h1>
+					<ul>
+						<li><a href="../information/introduce.html">Company Profile</a></li>
+						<li><a href="../information/honor.html">Certificates</a></li>
+						<li><a href="../information/news.html">News</a></li>
+					</ul>
+				</div>
+
+				<!--售后服务-->
+				<div class="footer_nav serve">
+					<h1>After-Sales Service：</h1>
+					<div class="footer_tel">
+						<span class="tel_img"><img src="../images/tel.jpg"></span> 86-75526895498
+					</div>
+					<p>Follow Us</p>
+					<ul>
+
+						<div class="bdsharebuttonbox" data-tag="share_1">
+							<a class="share_one" data-cmd="fbook"></a>
+							<a class="share_two" data-cmd="fx"></a>
+							<a class="share_three" data-cmd="tsina"></a>
+							<a class="share_four" data-cmd="weixin"></a>
+							<a class="share_five" data-cmd="tqq"></a>
+						</div>
+					</ul>
+				</div>
+				<script>
+				//分享
+					window._bd_share_config = {
+						share: [{
+							"bdSize": 36
+						}],
+					}
+					with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+				</script>
+				
+			</div>
+			<div class="line"></div>
+			<div class="copyright">
+				<p> All Rights Reserved &copy;"LiteMatrix Technology 2012. Reserves All Rights</p>
+			</div>
+		</div>
+		<!--/底部-->
+
+	</body>
+
+</html>

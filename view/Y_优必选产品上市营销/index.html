@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script>
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>小Q智能生活乐园</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+		<script>
+		  	var _mtac = {"performanceMonitor":1};
+		  	(function() {
+		  		var mta = document.createElement("script");
+		  		mta.src = "http://pingjs.qq.com/h5/stats.js?v2.0.4";
+		  		mta.setAttribute("name", "MTAH5");
+		  		mta.setAttribute("sid", "500487943");
+		  		mta.setAttribute("cid", "500526920");
+		  		var s = document.getElementsByTagName("script")[0];
+		  		s.parentNode.insertBefore(mta, s);
+		  	})();
+		</script>
+	</head>
+
+	<body>
+		
+		<!--music-->
+		<audio src="music/music.mp3" class="music" loop="loop"></audio>
+		
+		<div class="musicIcon">
+			<i></i>
+			<span><img src="images/img-113.png"></span>
+		</div>
+		
+		<!--loading-->
+		<div class="loading">
+			<span><img src="images/img-62.png"></span>
+			<span><img src="images/img-61.png"></span>
+			<span><img src="images/img-60.png"></span>
+			<span><img src="images/img-60.png"></span>
+			<p>正在进入乐园</p>
+			<h1>0%</h1>
+		</div>
+		
+		<div class="container">
+
+			<div class="section">
+
+				<div class="scene_1">
+
+					<div class="scene_bg"><img src="images/img-01.png"></div>
+
+					<div class="scene_bg2"><img src="images/img-16.png"></div>
+					
+					<div class="scene_bg3"><img src="images/img-121.png"></div>
+
+					<div class="title">
+						<span><img src="images/img-104.png"></span>
+						<span>
+							<i><img src="images/img-105.png"></i>
+							<i><img src="images/img-106.png"></i>
+							<i><img src="images/img-107.png"></i>
+							<i><img src="images/img-108.png"></i>
+							<i><img src="images/img-109.png"></i>
+							<i><img src="images/img-110.png"></i>
+							<i><img src="images/img-111.png"></i>
+							<i><img src="images/img-112.png"></i>
+						</span>
+					</div>
+					
+					<div class="title-light">
+						<i><img src="images/img-123.png"></i>
+						<i><img src="images/img-123.png"></i>
+						<i><img src="images/img-123.png"></i>
+						<i><img src="images/img-123.png"></i>
+						<i><img src="images/img-123.png"></i>
+						<i><img src="images/img-123.png"></i>
+					</div>
+					
+					<div class="title-light2">
+						<i><img src="images/img-122.png"></i>
+						<i><img src="images/img-122.png"></i>
+						<i><img src="images/img-122.png"></i>
+						<i><img src="images/img-122.png"></i>
+					</div>
+					
+					<!--气球-->
+					<div class="balloon">
+						<span><img src="images/img-15.png"></span>
+						<span><img src="images/img-15.png"></span>
+						<span><img src="images/img-07.png"></span>
+					</div>
+
+					<!--电梯-->
+					<div class="elevator">
+						<span><img src="images/img-02.png"></span>
+						<span>
+							<i><img src="images/img-88.png"><img src="images/img-06.png"></i>
+							<i><img src="images/img-88.png"><img src="images/img-06.png"></i>
+						</span>
+					</div>
+
+					<!--飞机-->
+					<div class="plane"><img src="images/img-08.png"></div>
+
+					<!--云-->
+					<div class="cloud">
+						<span><img src="images/img-04.png"></span>
+						<span><img src="images/img-04.png"></span>
+						<span><img src="images/img-04.png"></span>
+						<span><img src="images/img-04.png"></span>
+					</div>
+
+					<!--楼梯-->
+					<div class="stairs">
+						<span><img src="images/img-48.png"></span>
+						<span><img src="images/img-48.png"></span>
+					</div>
+
+					<!--广告灯-->
+					<div class="advertising">
+						<span><img src="images/img-10.png"></span>
+						<span><img src="images/img-10.png"></span>
+						<span><img src="images/img-10.png"></span>
+						<span><img src="images/img-10.png"></span>
+					</div>
+
+					<!--齿轮-->
+					<div class="gear">
+						<span><img src="images/img-17.png"></span>
+						<span><img src="images/img-18.png"></span>
+					</div>
+
+				</div>
+
+				<div class="scene_2">
+
+					<div class="scene_bg"><img src="images/img-03.png"></div>
+
+					<!--电视光-->
+					<div class="light-tv"><img src="images/img-11.png"></div>
+
+					<!--气泡-->
+					<div class="bubble">
+						<span><img src="images/img-12.png"></span>
+						<span>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+						</span>
+					</div>
+
+					<!--齿轮-->
+					<div class="gear">
+						<span><img src="images/img-19.png"></span>
+						<span><img src="images/img-20.png"></span>
+						<span><img src="images/img-21.png"></span>
+					</div>
+
+					<!--云-->
+					<div class="cloud">
+						<span><img src="images/img-04.png"></span>
+					</div>
+
+					<!--楼梯-->
+					<div class="stairs">
+						<span><img src="images/img-48.png"></span>
+					</div>
+					
+					<!--球-->
+					<div class="ball ball_1">
+						<span><img src="images/img-27.png"></span>
+					</div>
+					
+					<!--点击区域-->
+					<div class="touch"><span><img src="images/img-49.png"></span></div>
+					
+					<!--对话框-->
+					<div class="dialog-box">						
+						<div class="dialog dialog-1">
+							<span><img src="images/img-70.png"></span>
+							<span></span>
+						</div>
+						<div class="dialog dialog-2 ">
+							<span><img src="images/img-71.png"></span>
+							<span></span>
+						</div>						
+					</div>
+					
+					<!--人物-->
+					<div class="person">
+						<span><img src="images/img-90.png"></span>
+						<span><img src="images/img-91.png"><i class="point_1"></i></span>
+					</div>
+					
+					
+				</div>
+
+				<div class="scene_3">
+
+					<div class="scene_bg"><img src="images/img-22.png"></div>
+
+					<!--齿轮-->
+					<div class="gear">
+						<span><img src="images/img-29.png"></span>
+						<span><img src="images/img-30.png"></span>
+					</div>
+					
+					<!--光-->
+					<div class="light">
+						<span><img src="images/img-28.png"></span>
+					</div>
+					
+					<!--电视灯-->
+					<div class="light-tv">
+						<i><img src="images/img-31.png"></i>
+						<i><img src="images/img-31.png"></i>
+						<i><img src="images/img-31.png"></i>
+					</div>
+					
+					<!--云-->
+					<div class="cloud">
+						<span><img src="images/img-04.png"></span>
+					</div>
+					
+					<!--球-->
+					<div class="ball ball_1">
+						<span><img src="images/img-48.png"></span>
+					</div>
+					<div class="ball ball_2">
+						<span><img src="images/img-15.png"></span>
+						<span><img src="images/img-48.png"></span>
+					</div>
+					
+					<!--气泡-->
+					<div class="bubble">
+						<span></span>
+						<span>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+						</span>
+					</div>
+					
+					<!--点击区域-->
+					<div class="touch"><span><img src="images/img-49.png"></span></div>
+					
+					<!--对话框-->
+					<div class="dialog-box">						
+						<div class="dialog dialog-3">
+							<span>
+								<img src="images/img-72.png">
+								<h1></h1>
+								<h2></h2>
+							</span>
+							<span></span>
+						</div>
+						<div class="dialog dialog-4 rotate">
+							<span>
+								<img src="images/img-73.png">
+								<h1></h1>
+								<h2></h2>
+							</span>
+							<span></span>
+						</div>						
+					</div>
+					
+					<!--人物-->
+					<div class="person">
+						<span><img src="images/img-92.png"></span>
+						<span><img src="images/img-93.png"><i class="point_2"></i></span>
+					</div>
+					
+				</div>
+
+				<div class="scene_4">
+
+					<div class="scene_bg"><img src="images/img-23.png"></div>
+					
+					<!--云-->
+					<div class="cloud">
+						<span><img src="images/img-04.png"></span>
+						<span><img src="images/img-04.png"></span>
+						<span><img src="images/img-04.png"></span>
+					</div>
+					
+					<!--齿轮-->
+					<div class="gear">
+						<span><img src="images/img-42.png"></span>
+						<span><img src="images/img-41.png"></span>
+					</div>
+					
+					<!--气泡-->
+					<div class="bubble">
+						<span></span>
+						<span>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+						</span>
+					</div>
+					
+					<!--光-->
+					<div class="light">
+						<span><img src="images/img-32.png"></span>
+						<span><img src="images/img-33.png"></span>
+						<span><img src="images/img-34.png"></span>
+					</div>
+					
+					<!--光球-->
+					<div class="light-ball">
+						<span><img src="images/img-35.png"></span>
+						<span><img src="images/img-36.png"></span>
+						<span><img src="images/img-37.png"></span>
+						<span><img src="images/img-38.png"></span>
+						<span><img src="images/img-39.png"></span>
+						<span><img src="images/img-40.png"></span>
+					</div>
+					
+					<!--温度-->
+					<div class="temperature">
+						<span><img src="images/img-89.png"></span>
+					</div>
+					
+					<!--点击区域-->
+					<div class="touch"><span><img src="images/img-49.png"></span></div>
+					
+					<!--对话框-->
+					<div class="dialog-box">						
+						<div class="dialog dialog-5">
+							<span><img src="images/img-74.png"></span>
+							<span></span>
+						</div>
+						<div class="dialog dialog-6 rotate">
+							<span><img src="images/img-75.png"></span>
+							<span></span>
+						</div>						
+					</div>
+					
+					<!--人物-->
+					<div class="person">
+						<span><img src="images/img-103.png"></span>
+						<span><img src="images/img-91.png"><i class="point_3"></i></span>
+					</div>
+
+				</div>
+
+				<div class="scene_5">
+
+					<div class="scene_bg"><img src="images/img-24.png"></div>
+					
+					<!--楼梯-->
+					<div class="stairs_1">
+						<span><img src="images/img-48.png"></span>
+					</div>
+					<div class="stairs_2">
+						<span><img src="images/img-48.png"></span>
+					</div>
+					
+					<!--光-->
+					<div class="light">
+						<span><img src="images/img-43.png"></span>
+					</div>
+					
+					<!--云-->
+					<div class="cloud">
+						<span><img src="images/img-04.png"></span>
+					</div>
+					
+					<!--球-->
+					<div class="ball">
+						<span><img src="images/img-27.png"></span>
+					</div>
+					
+					<!--气泡-->
+					<div class="bubble">
+						<span></span>
+						<span>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+							<i><img src="images/img-13.png"></i>
+						</span>
+					</div>
+					
+					<!--点击区域-->
+					<div class="touch"><span><img src="images/img-49.png"></span></div>
+					
+					<!--对话框-->
+					<div class="dialog-box">						
+						<div class="dialog dialog-7 rotate">
+							<span><img src="images/img-76.png"></span>
+							<span></span>
+						</div>
+						<div class="dialog dialog-8">
+							<span><img src="images/img-78.png"></span>
+							<span></span>
+						</div>
+						<div class="dialog dialog-9">
+							<span><img src="images/img-77.png"></span>
+							<span></span>
+						</div>
+						
+						<div class="dialog dialog-10">
+							<span><img src="images/img-79.png"></span>
+							<span></span>
+						</div>
+						<div class="dialog dialog-11 rotate">
+							<span><img src="images/img-80.png"></span>
+							<span></span>
+						</div>
+						<div class="dialog dialog-12">
+							<span><img src="images/img-81.png"></span>
+							<span></span>
+						</div>						
+					</div>
+					
+					<!--人物-->
+					<div class="person">
+						<span><img src="images/img-96.png"></span>
+						<span><img src="images/img-95.png"><i class="point_4"></i></span>
+						<span><img src="images/img-94.png"><i class="point_5"></i></span>
+						<span><img src="images/img-98.png"></span>
+						<span><img src="images/img-99.png"></span>
+					</div>
+					
+					<!--音符-->
+					<div class="note">
+						<span><img src="images/img-114.png"></span>
+						<span>
+							<i><img src="images/img-115.png"></i>
+							<i><img src="images/img-116.png"></i>
+							<i><img src="images/img-117.png"></i>
+							<i><img src="images/img-118.png"></i>
+						</span>
+					</div>
+					
+				</div>
+
+				<div class="scene_6">
+
+					<div class="scene_bg"><img src="images/img-25.png"></div>
+					
+					<!--光-->
+					<div class="light">
+						<span></span>
+						<span><img src="images/img-44.png"></span>
+						<span><img src="images/img-45.png"></span>
+						<span><img src="images/img-46.png"></span>
+					</div>
+					
+					<div class="light-2">
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-47.png"></i>
+					</div>
+					
+					<!--云-->
+					<div class="cloud">
+						<span><img src="images/img-04.png"></span>
+						<span><img src="images/img-04.png"></span>
+						<span><img src="images/img-04.png"></span>
+						<span><img src="images/img-04.png"></span>
+					</div>
+					
+					<!--楼梯-->
+					<div class="stairs">
+						<span><img src="images/img-48.png"></span>
+					</div>
+					
+					<!--气球-->
+					<div class="balloon">
+						<span><img src="images/img-15.png"></span>
+					</div>
+					
+					<!--对话框-->
+					<div class="dialog-box">						
+						<div class="dialog dialog-13 rotate">
+							<span><img src="images/img-82.png"></span>
+							<span></span>
+						</div>						
+					</div>
+					
+					<!--人物-->
+					<div class="person">
+						<span><img src="images/img-102.png"></span>
+						<span><img src="images/img-101.png"></span>
+					</div>
+
+				</div>
+
+				<div class="scene_7">
+
+					<div class="block">
+						<div class="scene_bg"><img src="images/img-26.png"></div>
+					
+						<!---->
+						<div class="box">
+							<span><img src="images/img-50.png"></span>
+							<span><img src="images/img-51.png"></span>
+							<span><img src="images/img-52.png"></span>
+							<span><img src="images/img-53.png"></span>
+							<span><img src="images/img-55.png"></span>
+							<span><img src="images/img-56.png"></span>
+							<span><img src="images/img-57.png"></span>
+						</div>
+						
+						<!--光点-->
+						<div class="point-light">
+							<i><img src="images/img-119.png"></i>
+							<i><img src="images/img-119.png"></i>
+							<i><img src="images/img-119.png"></i>
+							<i><img src="images/img-119.png"></i>
+							<i><img src="images/img-119.png"></i>
+							<i><img src="images/img-119.png"></i>
+							<i><img src="images/img-119.png"></i>
+							<i><img src="images/img-119.png"></i>
+							<i><img src="images/img-119.png"></i>
+							<i><img src="images/img-119.png"></i>
+						</div>
+						
+						<div class="point-light2">
+							<i><img src="images/img-120.png"></i>
+							<i><img src="images/img-120.png"></i>
+							<i><img src="images/img-120.png"></i>
+							<i><img src="images/img-120.png"></i>
+							<i><img src="images/img-120.png"></i>
+							<i><img src="images/img-120.png"></i>
+							<i><img src="images/img-120.png"></i>
+						</div>
+						
+						<!--气泡-->
+						<div class="bubble">
+							<span><img src="images/img-69.png"></span>
+							<span><img src="images/img-69.png"></span>
+							<span><img src="images/img-69.png"></span>
+							<span><img src="images/img-69.png"></span>
+							<span><img src="images/img-69.png"></span>
+							<span><img src="images/img-69.png"></span>
+							<span><img src="images/img-69.png"></span>
+							<span><img src="images/img-69.png"></span>
+						</div>
+						
+						<div class="alink">
+							<a href="javascript:;">
+								<img src="images/img-83-2.png">
+								<img src="images/img-83.png">							
+							</a>
+							<i><img src="images/img-49.png"></i>
+						</div>
+						
+					</div>
+					
+				</div>
+
+			</div>			
+			
+		</div>
+		
+		<!--弹窗-->
+		<div class="popup">
+			<div class="popup-container">
+				<div class="close"><img src="images/img-64.png"></div>
+				<div class="index-img"><img src="images/img-63.png"></div>
+				<div class="box">
+					<span><img src="images/img-65.png"></span>
+					<span><img src="images/img-66.png"></span>
+					<span><img src="images/img-67.png"></span>
+					<span><img src="images/img-68.png"></span>
+				</div>
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+	<script type="text/javascript" src="js/pxloader-all.min.js" ></script>
+	<script type="text/javascript" src="js/wx-video-audio-hack.js" ></script>
+	<script type="text/javascript" src="js/data.js" ></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="js/wxfx-zq-1.0.1.js" ></script>
+
+</html>

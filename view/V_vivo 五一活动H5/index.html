@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<script>
+			// class
+			! function(navigator) {
+				var userAgent = navigator.userAgent;
+				documentElement = document.documentElement;
+				if(userAgent.match(/micromessenger\/5/gi)) {
+					documentElement.className += " mobile wx_mobile wx_mobile_5";
+				} else if(userAgent.match(/micromessenger/gi)) {
+					documentElement.className += " mobile wx_mobile";
+				} else if(userAgent.match(/ucbrowser/gi)) {
+					documentElement.className += " mobile uc_mobile";
+				} else if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())) {
+					documentElement.className += " mobile";
+				} else if(userAgent.toLowerCase().match(/msie/gi) && (parseFloat(userAgent.toLowerCase().match(/msie ([0-9]{1,}[\.0-9]{0,})/i)[1] || 999) < 9)) {
+					documentElement.className += " pc pc-ie pc-ie8";
+				} else if(userAgent.toLowerCase().match(/msie/gi) || navigator.msPointerEnabled || navigator.pointerEnabled) {
+					documentElement.className += " pc pc-ie";
+				} else {
+					documentElement.className += " pc";
+				}
+			}(navigator);
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>vivo 五一活动H5</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+	</head>
+
+	<body>
+
+		<!--游戏页（快节奏）音乐-->
+		<audio src="music/game-fast.mp3" id="game_fast" loop="loop"></audio>
+
+		<!--首页背景音乐-->
+		<audio src="music/home.mp3" id="home_music" loop="loop"></audio>
+
+		<!--loading-->
+		<div class="loading">
+			<div class="loading-container">
+				<ul>
+					<li class="one"></li>
+					<li class="two"></li>
+					<li class="three"></li>
+				</ul>
+				<span></span>
+			</div>
+			<p>正在加载</p>
+			<ul class="loadul">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+		<!--container-->
+		<div class="container">
+
+			<!--开始玩-->
+			<div class="play">
+
+				<!---->
+				<div class="play-container">
+					<h1><img src="images/img-40.png"></h1>
+					<ul id="home" class="">
+						<li class="layer img9" data-depth-x="0.33" data-depth-y="-0.10"><img src="images/img-59.png"></li>
+						<li class="layer img1" data-depth-x="0.50" data-depth-y="-0.20"><img src="images/img-51.png"></li>
+						<li class="layer img12" data-depth-x="0.40" data-depth-y="-0.30"><img src="images/img-51.png"></li>
+						<li class="layer img8" data-depth-x="0.25" data-depth-y="-0.20"><img src="images/img-58.png"></li>
+						<li class="layer img2" data-depth-x="0.50" data-depth-y="-0.15"><img src="images/img-52.png"></li>
+						<li class="layer img15" data-depth-x="0.20" data-depth-y="-0.15"><img src="images/img-63.png"></li>
+						<li class="layer img14" data-depth-x="0.50" data-depth-y="-0.15"><img src="images/img-62.png"></li>
+						<li class="layer img13" data-depth-x="0.40" data-depth-y="-0.10"><img src="images/img-51.png"></li>
+						<li class="layer img17" data-depth-x="0.40" data-depth-y="-0.16"><img src="images/img-64.png"></li>
+						<li class="layer img3" data-depth-x="0.10" data-depth-y="-0.20"><img src="images/img-53.png"></li>
+						<li class="layer img4" data-depth-x="0.50" data-depth-y="-0.18"><img src="images/img-54.png"></li>
+						<li class="layer img5" data-depth-x="0.60" data-depth-y="-0.15"><img src="images/img-55.png"></li>
+						<li class="layer img6" data-depth-x="0.35" data-depth-y="-0.13"><img src="images/img-56.png"></li>
+						<li class="layer img7" data-depth-x="0.50" data-depth-y="-0.30"><img src="images/img-57.png"></li>
+						<li class="layer img10" data-depth-x="0.55" data-depth-y="-0.20"><img src="images/img-60.png"></li>
+						<li class="layer img11" data-depth-x="0.40" data-depth-y="-0.26"><img src="images/img-61.png"></li>
+						<li class="layer img16" data-depth-x="0.55" data-depth-y="-0.40"><img src="images/img-50.png"></li>
+					</ul>
+				</div>
+				<span class="active-rule">活动锦囊</span>
+				<span class="luck-btn">幸运榜单</span>
+				<div class="two-open">
+					<span class="playgame"><img src="images/img-03.png"></span>
+				</div>
+
+				<!--活动锦囊弹窗-->
+				<div class="rule-popup">
+					<div class="rule-box">
+						<div class="rule-title">
+							<p>活动锦囊</p>
+						</div>
+						<div class="rule-container">
+							<h1>游戏规则</h1>
+							<p>进入游戏后，按住并移动小v接红包，8秒内接到<br>8个以上红包的用户即可获得抽奖机会。</p>
+							<h1>奖项设置</h1>
+							<p>一等奖 vivo X9 手机 </p>
+							<p>二等奖 vivo 移动电源</p>
+							<p>三等奖 现金红包</p>
+							<h1>温馨提醒</h1>
+							<p>活动时间为4月26日-5月1日</p>
+							<p>获得一等奖/二等奖的用户将需要提供真实有效的<br>个人信息以便活动方发放奖品。</p>
+						</div>
+						<div class="rule-close">
+							<span></span>
+						</div>
+					</div>
+				</div>
+
+				<!--幸运榜单弹窗-->
+				<div class="win-popup">
+					<div class="win-box">
+						<div class="win-title">
+							<!--没有参与活动打开-->
+							<div class="no-join">
+								<div class="img"><img src="images/img-28.png"></div>
+								<div class="txt">
+									<h2>别羡慕了，快去抢X9！</h2>
+								</div>
+							</div>
+
+							<!--中手机-->
+							<div class="win-vivophone">
+								<div class="img"><img src="images/img-22.png"></div>
+								<div class="txt">
+									<p>恭喜您获得</p>
+									<h1>vivo X9手机</h1>
+								</div>
+							</div>
+
+							<!--中移动电源-->
+							<div class="win-vivopower">
+								<div class="img"><img src="images/img-25.png"></div>
+								<div class="txt">
+									<p>恭喜您获得</p>
+									<h1>vivo 移动电源</h1>
+								</div>
+							</div>
+
+							<!--中现金红包-->
+							<div class="win-vivomoney">
+								<div class="img"><img src="images/img-26.png"></div>
+								<div class="txt">
+									<p>恭喜您获得</p>
+									<h1>微信红包<i>88</i>元</h1>
+								</div>
+							</div>
+						</div>
+						<div class="win-container">
+							<div class="win-container-title">
+								<span>幸运榜单</span>
+								<span>已有<i>2376234</i>人中奖</span>
+							</div>
+							<div class="win-container-detail">
+								<ul>
+									<li>
+										<span class="user-name">林大街林大街林大街林大街</span>
+										<span class="user-win">奖品 X9 vivo 手机</span>
+										<span class="user-tel">13714562052</span>
+									</li>
+									<li class="hongbao">
+										<span class="user-name">林大街</span>
+										<span class="user-win">获得88元红包</span>
+									</li>
+									<li>
+										<span class="user-name">林大街</span>
+										<span class="user-win">奖品 X9 vivo 手机</span>
+										<span class="user-tel">13714562052</span>
+									</li>
+									<li>
+										<span class="user-name">林大街</span>
+										<span class="user-win">奖品 X9 vivo 手机</span>
+										<span class="user-tel">13714562052</span>
+									</li>
+									<li>
+										<span class="user-name">林大街</span>
+										<span class="user-win">奖品 X9 vivo 手机</span>
+										<span class="user-tel">13714562052</span>
+									</li>
+									<li>
+										<span class="user-name">林大街</span>
+										<span class="user-win">奖品 X9 vivo 手机</span>
+										<span class="user-tel">13714562052</span>
+									</li>
+									<li>
+										<span class="user-name">林大街</span>
+										<span class="user-win">奖品 X9 vivo 手机</span>
+										<span class="user-tel">13714562052</span>
+									</li>
+									<li>
+										<span class="user-name">林大街</span>
+										<span class="user-win">奖品 X9 vivo 手机</span>
+										<span class="user-tel">13714562052</span>
+									</li>
+									<li class="hongbao">
+										<span class="user-name">林大街</span>
+										<span class="user-win">获得88元红包</span>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+						<div class="win-close">
+							<span></span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!--场景-->
+			<div class="scene">
+				<canvas id="scene"></canvas>
+				<div class="top-state">
+					<span class="score">x0</span>
+					<!--倒计时-->
+					<span class="count-down">8</span>
+				</div>
+			</div>
+
+			<!--结果-->
+			<div class="result">
+
+				<!--完成-->
+				<div class="finish">
+					<p class="redpack-txt"></p>
+					<span class=""></span>
+					<span class="setframes"></span>
+				</div>
+
+				<!--未完成-->
+				<div class="unfinished">
+					<div class="unfinished-box">
+						<div class="unfinished-title">
+							<div class="img"><img src="images/img-30.png"></div>
+							<div class="txt">
+								<h2>闯关失败</h2>
+							</div>
+						</div>
+						<div class="unfinished-container">
+							<p>要抢够8个红包才有机会赢大奖哦！<br>再接再厉！X9手机在向你招手～</p>
+							<span class="unfinished-again"><img src="images/img-06.png"></span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!--打开红包-->
+			<div class="openRedPacket">
+
+				<!--没有中奖  鼓励文案-->
+				<div class="encourage">
+					<div class="encourage-box">
+						<div class="encourage-title">
+							<div class="img"><img src="images/img-30.png"></div>
+							<div class="txt">
+								<h2>很遗憾，没抽中！</h2>
+							</div>
+						</div>
+						<div class="encourage-container">
+							<p></p>
+							<span class="again"><img src="images/img-06.png"></span>
+						</div>
+					</div>
+				</div>
+
+				<!--中奖了，现金红包-->
+				<div class="money">
+					<div class="money-box">
+						<span></span>
+						<span><img src="images/img-31.png"></span>
+						<span><img src="images/img-12.jpg"></span>
+					</div>
+					<div class="money-info">
+						<span><i>88</i>元</span>
+						<span>请到您的微信钱包查看</span>
+					</div>
+					<div class="money-btn">
+						<a href="javascript:;"><img src="images/img-10.png"></a>
+					</div>
+				</div>
+
+				<!--中奖了，实物奖品-->
+				<div class="prize">
+					<div class="prize-box">
+						<div class="prize-title">
+							<!--中手机-->
+							<div class="win-vivophone ">
+								<div class="img"><img src="images/img-22.png"></div>
+								<div class="txt">
+									<p>恭喜您获得</p>
+									<h1>vivo X9手机</h1>
+								</div>
+							</div>
+
+							<!--中移动电源-->
+							<div class="win-vivopower">
+								<div class="img"><img src="images/img-25.png"></div>
+								<div class="txt">
+									<p>恭喜您获得</p>
+									<h1>vivo 移动电源</h1>
+								</div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="prize-container">
+								<p>恭喜您获得了一个<i>vivo 移动电源</i>。请在下方准确填写您的个人信息以便奖品发放。</p>
+								<form>
+									<label><input type="text" class="t_name" placeholder="请输入您的姓名"/></label>
+									<label><input type="tel" class="t_tel" placeholder="请输入您的手机号码"/></label>
+									<label><input type="text" class="t_add" placeholder="请输入您的地址"/></label>
+									<label class="u-sub"><input type="submit" value="&nbsp;" class="sub-btn"/></label>
+								</form>
+								<!--<span class="sub-btn"><img src="images/img-15.png"></span>-->
+							</div>
+
+							<!--提交成功-->
+							<div class="prize-sub-succeed">
+								<span class=""><img src="images/img-14.png"></span>
+								<p class="">提交成功</p>
+								<a href="javascript:;"><img src="images/img-10.png"></a>
+								<b></b>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</body>
+	<script type="text/javascript" src="js/pxloader-all.min.js"></script>
+	<script type="text/javascript" src="js/easeljs-0.8.2.min.js"></script>
+	<script type="text/javascript" src="js/tweenjs-0.6.2.min.js"></script>
+	<script type="text/javascript" src="js/soundjs-0.6.2.min.js"></script>
+	<script type="text/javascript" src="js/wx-video-audio-hack.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</html>

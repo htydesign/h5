@@ -1,0 +1,5 @@
+.container{background: #f3f3f3; width: 100%;min-width: 1200px;max-width: 1920px;position: relative;margin: 0px auto;padding-bottom: 50px;background: url(../images/about/bg4.jpg);}
+.content{width: 1200px;position: relative;margin: 0px auto;text-align: center;}
+
+.nav-h3{color: #333;line-height: 50px;font-size: 36px;padding: 60px 0px; }
+.in-ban{width: 100%;min-width: 1200px;background: url(../images/about/ban1.jpg);max-width: 1920px;position: relative;margin: 0px auto;background-repeat: no-repeat;background-position: center center;height:834px; }

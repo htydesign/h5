@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script>
+        // meta
+        ! function (userAgent) {
+            var screen_w = parseInt(window.screen.width),
+                scale = screen_w / 640;
+            if (/Android (\d+\.\d+)/.test(userAgent)) {
+                var version = parseFloat(RegExp.$1);
+                document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+            } else {
+                document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+            }
+        }(navigator.userAgent);
+    </script>
+    <title>余文乐冯小刚给你送新年祝福啦</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+    <!--解锁音效-->
+    <audio src="music/unlock.mp3" class="unlock"></audio>
+    <!--信息提示音效-->
+    <audio src="music/message.mp3" class="message" id="message"></audio>
+    <!--打字音效-->
+    <audio src="music/click.mp3" class="click"></audio>
+
+    <!--文字发送-->
+    <audio src="music/send.mp3" class="send"></audio>
+
+    <!--loading-->
+    <div class="loading">
+        <p>祝大家新年快乐</p>
+        <!--<p>薪想事成</p>-->
+        <!--<div class="spinner">
+
+            <span class="spinner-container container1">
+                <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            </span>
+
+            <span class="spinner-container container2">
+                <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            </span>
+
+            <span class="spinner-container container3">
+                <span class="circle1"></span>
+            <span class="circle2"></span>
+            <span class="circle3"></span>
+            <span class="circle4"></span>
+            </span>
+        </div>-->
+        <i><img src="images/gif.gif"></i>
+    </div>
+    <div class="container">
+        <!--滑动页面-->
+        <div class="section slide">
+            <!--时间-->
+            <div class="m-time">
+                <span class="u-time"></span>
+                <span class="u-date"></span>
+            </div>
+            <!--信息-->
+            <div class="m-info info-active">
+                <div class="m-wx-icon">
+                    <span><img src="images/weixin_icon.png"></span>
+                </div>
+                <div class="m-wx-info">
+                    <span>收到好友验证信息</span>
+                    <span>请点击查看</span>
+                </div>
+            </div>
+            <!--提示滑动-->
+            <!--<div class="m-slide">
+                <span>滑动解锁</span>
+            </div>-->
+        </div>
+        <!--添加新朋友-->
+        <div class="section request">
+            <!--搜索栏-->
+            <div class="m-search">
+                <span><i><img src="images/img-03.jpg"></i>微信号/手机号</span>
+            </div>
+            <!--添加手机联系人-->
+            <div class="m-add">
+                <span><img src="images/img-05.jpg"></span>
+                <span>添加手机联系人</span>
+            </div>
+            <p class="new_frinde">新的朋友</p>
+            <!--请求好友list-->
+            <div class="m-request">
+                <ul>
+                    <li>
+                        <div class="request-img">
+                            <img src="images/img-24.jpg">
+                        </div>
+                        <div class="request-info">
+                            <span>余文乐</span>
+                            <span>请求添加你为好友</span>
+                        </div>
+                        <div class="accept abtn-1">
+                            <span>接受</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="request-img">
+                            <img src="images/img-23.jpg">
+                        </div>
+                        <div class="request-info">
+                            <span>冯小刚</span>
+                            <span>请求添加你为好友</span>
+                        </div>
+                        <div class="accept abtn-1">
+                            <span>接受</span>
+                        </div>
+                    </li>
+                </ul>
+                <!--提示遮罩层-->
+                <div class="m-hint-box requestHint">
+                    <div class="requestHint-btn">
+                        <span class="abtn-2"></span>
+                        <span class="abtn-2"></span>
+                    </div>
+                    <span><img src="images/img-hint-02.png"></span>
+                    <div class="u-accept">
+                        <ul>
+                            <li>
+                                <div class="accept ">
+                                    <span>接受</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="accept">
+                                    <span>接受</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="m-hintbg"></div>
+                </div>
+            </div>
+        </div>
+        <!--详细资料-->
+        <div class="section detailed">
+            <!--用户姓名-->
+            <div class="m-user">
+                <div class="u-user-img"><img src=""></div>
+                <div class="u-user-name">
+                    <div class="u-name-txt">
+                        <span></span>
+                        <span><img src="images/img-04.jpg"></span>
+                    </div>
+                    <div class="u-name-wx">
+                        <span>微信号：</span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+            <!--设置备注和标签-->
+            <div class="m-set">
+                <span>设置备注和标签</span>
+                <span><img src="images/img-06.jpg"></span>
+            </div>
+            <!--用户信息-->
+            <div class="m-user-info">
+                <div class="m-info-box">
+                    <div class="u-region">
+                        <span>地区</span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="u-user-photo">
+                        <span>个人相册</span>
+                        <span><img src=""></span>
+                        <span><img src="images/img-06.jpg"></span>
+                    </div>
+                    <div class="u-more">
+                        <span>更多</span>
+                        <span></span>
+                        <span><img src="images/img-06.jpg"></span>
+                    </div>
+                </div>
+                <!--用户提示-->
+                <!--<i><img src="images/hand-02.png"></i>-->
+            </div>
+
+            <!--提示遮罩层-->
+            <div class="m-hint-box detailedHint">
+                <div class="detailedHint-btn"></div>
+                <span><img src="images/img-hint-03.png"></span>
+                <div class="u-detailed">
+                    <div class="u-user-photo">
+                        <span>个人相册</span>
+                        <span><img src=""></span>
+                        <span><img src="images/img-06.jpg"></span>
+                    </div>
+                </div>
+                <div class="m-hintbg"></div>
+            </div>
+
+            <!--按钮-->
+            <div class="m-user-btn">
+                <span>发消息</span>
+                <span>视频聊天</span>
+            </div>
+        </div>
+        <!--朋友圈-->
+        <div class="section friends" id="friend">
+            <div class="m-friends">
+                <!--个人海报-->
+                <div class="m-user-poster">
+                    <span><img src=""></span>
+                    <span></span>
+                    <span><img src=""></span>
+                </div>
+                <!--内容-->
+                <div class="m-user-container">
+                    <div class="m-box">
+                        <div class="m-info-headImg"><img src="images/img-09.jpg"></div>
+                        <div class="m-info-container">
+                            <h1>金立</h1>
+                            <p>小金祝大家过个安全幸福的新年</p>
+                            <div class="m-info-illustration"><img src="images/img-10.jpg"></div>
+                            <div class="u-info-time">
+                                <span>2分钟前</span>
+                                <span><img src="images/img-11.jpg"></span>
+                            </div>
+                            <div class="u-user-comment"></div>
+                        </div>
+                    </div>
+                    <div class="m-box user-friends">
+                        <div class="m-info-headImg"><img src=""></div>
+                        <div class="m-info-container">
+                            <h1></h1>
+                            <p>给大家拜年啦，新年快乐</p>
+                            <div class="m-info-illustration"><img src="images/img-12_1.jpg"></div>
+                            <div class="u-info-time">
+                                <span>2分钟前</span>
+                                <span><img src="images/img-11.jpg"></span>
+                            </div>
+                            <div class="u-user-comment">
+                                <div class="u-user-like">
+                                    <span><i>余文乐，</i><i class="userID">用户</i><i>，冯小刚</i></span>
+                                </div>
+                                <div class="u-comment-box">
+                                    <span>
+                                        <p><i>余文乐：</i>我手上这春联谁来对？<img src="images/img-icon-04_1.jpg"></p>
+                                    </span>
+                                    <span>
+                                        <p><i>冯小刚：</i>和顺一家添百福<img src="images/img-icon-05_1.jpg"></p>
+                                    </span>
+                                    <span>
+                                        <p><i>余文乐</i><i class="u-hf">回复</i><i>冯小刚：</i>冯导猴塞雷<img src="images/img-icon-06_1.jpg"></p>
+                                    </span>
+                                    <span>
+                                        <p><i class="userID">用户：</i>六叔六爷真男神<img src="images/img-icon-07_1.jpg"></p>
+                                    </span>
+                                    <span>
+                                        <p><i>冯小刚</i><i class="u-hf">回复</i><i class="userID">用户：</i>老夫不及六弟鲜<img src="images/img-icon-08_1.jpg"></p>
+                                    </span>
+                                    <span>
+                                        <p><i>余文乐</i><i class="u-hf">回复</i><i>冯小刚：</i>后生还需前辈牵<img src="images/img-icon-09_1.jpg"></p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-input-box">
+                        <span>横批，来干一杯！<i><img src="images/img-pj_1.png"></i></span>
+                        <h1><img src="images/hand.png"></h1>
+                        <h2></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--给好友发祝福-->
+        <div class="section benediction">
+            <span><img src="images/img-bg1.jpg"></span>
+            <div class="m-benediction-container">
+                <h3><img src="images/img-bg2.png"></h3>
+                <h2></h2>
+                <div class="u-benediction-input">
+                    <input id="benediction-txt" placeholder="输入好友名字,余文乐和冯小刚帮你送祝福" />
+                    <a href="javascript:;">确认</a>
+
+                </div>
+                <div class="m-highlight">
+                    <span><img src="images/highlight.png"></span>
+                </div>
+                <div class="u-red-packet">
+                    <span>把祝福春联送出去吧</span>
+                    <!--<span>领取红包</span>-->
+                </div>
+                <div class="user-benediction">
+                    <p><i>黄晓明</i><span class="new_text">新年快乐</span></p>
+                </div>
+                <h1>注意：请输入4个字以内的中文名字！</h1>
+            </div>
+        </div>
+        <!--错误弹窗-->
+        <div class="error-popup">
+            <div class="error-container">
+                <div class="error-title">
+                    <span>温馨提示</span>
+                    <span></span>
+                </div>
+                <div class="error-info">
+                    <p>请输入4个字以内的中文名字！</p>
+                </div>
+                <a href="javascript:;">确定</a>
+            </div>
+        </div>
+        <!--对联生成弹窗-->
+        <div class="duilian_tan">
+            <img src="./images/zhegai.png" alt=""/>
+        </div>
+        <!--提示分享-->
+        <div class="m-hint-share">
+            <span><img src="images/img-share-icon.png"></span>
+        </div>
+
+    </div>
+    <!--遮罩层-->
+    <div class="m-zzc"></div>
+
+</body>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/soundjs-NEXT.combined.js"></script>
+<script type="text/javascript" src="js/pxloader-all.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+    function onckjsname() {}
+</script>
+</html>

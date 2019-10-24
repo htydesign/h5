@@ -1,0 +1,215 @@
+/*------------公司简介---------------*/
+.about-us-bg{
+	width: 100%;
+	min-width: 1200px;
+	height: 600px;
+	background: url(../images/about/about-bg01.jpg) center no-repeat;
+}
+.about-us-box{
+	width: 1200px;
+	height: 100%;
+	margin: auto;
+}
+.about-box-title{
+	padding-top: 80px;
+	width: 100%;
+	height: 86px;
+	background: url(../images/about/about-title-bg.jpg) center bottom no-repeat;
+}
+.about-box-title h1{
+	font-size: 28px;
+	text-align: center;
+}
+.about-box-title p{
+	font-size: 20px;
+	color: #0a72a7;
+	text-align: center;
+	line-height: 40px;
+	font-family: arial;
+}
+.about-video-box{
+	width: 100%;
+	height: 340px;
+	margin-top: 30px;
+}
+.left-video{
+	width: 530px;
+	height: 315px;
+	float: left;
+	display: block;
+	overflow: -hidden;
+	position: relative;
+}
+.left-video .video-active{
+	display: block;
+}
+.video_box{
+	position: absolute;
+	overflow: -hidden;
+	width: 100%;
+	height: 100%;
+}
+.video_box ul{
+	height: 100%;
+	width: 530px;
+	position: absolute;
+}
+.video_box ul li{
+	width: 530px;
+	height: 315px;
+	display: block;
+	
+}
+.video_box ul li:hover{
+	cursor: pointer;
+}
+.video_box ul li a{
+	display: block;
+	width: 530px;
+	height: 315px;
+	position: relative;
+}
+.video_box ul li p{
+	width: 530px;
+	height: 40px;
+	background: rgba(0,0,0,0.4);
+	line-height: 40px;
+	text-indent: 20px;
+	color: #FFFFFF;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.video-playimg{
+	display: block;
+	width: 88px;
+	height: 88px;
+	position: absolute;
+	top: 50%;
+	left: 211px;
+	margin: -44px 0 0 0;
+	background: url(../images/about/video-play.png) center no-repeat;
+}
+.right-content{
+	width: 580px;
+	height: 320px;
+	float: left;
+	display: block;
+	margin: 0 0 0 60px;
+}
+
+#video_bg{
+	display:none;
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:1100;
+	background:rgba(0,0,0,0.8);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8000000,endColorstr=#c8000000);	
+}
+#video{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:-300px 0 0 -560px;
+	width:1120px;
+	height:600px;
+}
+
+#player{
+	z-index:1209;
+}
+
+.video-info{
+	width: 100%;
+	height: 260px;
+	overflow: hidden;
+	position: relative;
+}
+.video-info .info-active{
+	display: block;
+}
+.info_box{
+	width: 100%;
+	height: 255px;
+	overflow: -hidden;
+	position: relative;
+}
+.info_box ul{
+	height: 255px;
+	position: absolute;
+}
+.info_box ul li{
+	width: 100%;
+	height: 255px;
+	display: block;
+}
+.info_box ul li a{
+	width: 100%;
+	height: 255px;
+	display: block;
+	position: absolute;
+}
+.info_box ul li h1{
+	width: 100%;
+	height: 40px;
+	font-size: 26px;
+	color: #f58029;
+	background: url(../images/red-point.jpg) left center no-repeat;
+	text-indent: 20px;
+}
+.info_box ul li p{
+	width: 100%;
+	height: 170px;
+	overflow: hidden;
+	font-size: 14px;
+	color: #444;
+	line-height: 24px;
+	margin: 20px 0 0 0;
+}
+.right-info-btn{
+	width: 100%;
+	height: 34px;
+}
+.right-info-btn a{
+	display: block;
+	float: left;
+	width: 58px;
+	height: 30px;
+	margin: 0 8px 0 0;
+	border: 1px solid #b7bbbf;
+}
+.right-info-btn a span{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.about-us-prev{
+	background: url(../images/about/up.png) center no-repeat;
+}
+.about-us-next{
+	background: url(../images/about/down.png) center no-repeat;
+}
+.right-info-btn a:hover{
+	border-color: #F58029;
+}
+.right-info-btn a:hover .about-us-prev{
+	background: url(../images/about/up-on.png) center no-repeat;
+}
+.right-info-btn a:hover .about-us-next{
+	background: url(../images/about/down-on.png) center no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+

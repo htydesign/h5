@@ -1,0 +1,193 @@
+ <!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+		<title>方太·劲魔方 圣诞消烟记</title>
+		<link rel="stylesheet" href="css/main.css" />
+
+	</head>
+
+	<body>
+		
+		<audio src="music/music1.mp3" id="bgMusci" loop="loop" preload="auto"></audio>
+		
+		<div class="running-sdlr">
+			<span></span>
+			<p>努力奔跑中...</p>
+		</div>
+		
+		<div class="user-hint">
+			<div class="user-hint-box">
+				<p>横屏观看，效果更佳</p>
+				<span><img src="images/userhint.png"></span>
+			</div>
+		</div>
+		
+		<div id="scene">
+			
+			<div class="loading">
+				<div class="loading-box">
+					<div class="m-start"></div>
+					<div class="m-load-txt">
+						<p><img src="images/text/img-txt-01.png"></p>
+					</div>
+				</div>
+			</div>
+			
+			<!--提示用户是否开启声音-->
+			<div class="m-user-openMusic">
+				<div class="u-openMusic">
+					<span></span>
+				</div>
+			</div>
+			
+			<div class="container c_active">
+				
+				<!--旁白-->
+				<div class="m-aside-txt">
+					<p></p>
+					<p></p>
+					<p></p>
+				</div>
+				
+				<!--厨房-->
+				<div class="m-kitchen">
+					<div class="u-FatherChristmas-one"></div>
+					<div class="u-FatherChristmas-two"></div>
+					<div class="u-start"></div>
+					<div class="u-cate"><img src="images/img-03.png"></div>
+					<span class="img-04"><img src="images/img-07.png"></span>
+				</div>
+				
+				<!--烟雾-->
+				<div class="m-smog-box">
+					<div class="m-smog">
+						<!--<span><img src="images/smog/Smoke-CJ_00000.png"></span>-->
+						<canvas id="canvas"></canvas>
+					</div>
+				</div>
+				
+				<!--提示用户帮圣诞老人消烟-->
+				
+				<div class="u-hint-EliminateSmoke">
+					<p><img src="images/text/img-txt-03.png"></p>
+				</div>
+				
+				<!--点击吸管 反馈-->
+				<div class="u-hint-xiguan hintStyle">
+					<p><img src="images/text/img-txt-04.png"></p>
+				</div>
+				
+				<!--摇动手机 反馈-->
+				<div class="u-hint-shanzi hintStyle">
+					<p><img src="images/text/img-txt-06.png"></p>
+				</div>
+				
+				<!--风扇 反馈-->
+				<div class="u-hint-fengshan hintStyle">
+					<p><img src="images/text/img-txt-08.png"></p>
+				</div>
+				
+				<!--道具提示-->
+				<div class="m-prop-hint">
+					<ul>
+						<li class="hint-xg">
+							<span><img src="images/img-touch.png"></span>
+							<p><img src="images/text/img-txt-05.png"></p>
+						</li>
+						<li class="hint-sz">
+							<span><img src="images/img-touch.png"></span>
+							<p><img src="images/text/img-txt-07.png"></p>
+						</li>
+						<li class="hint-fs">
+							<span><img src="images/img-slide.png"></span>
+							<p><img src="images/text/img-txt-09.png"></p>
+						</li>
+					</ul>
+				</div>
+				
+				<!--道具-->
+				<div class="m-prop">
+					<div class="m-prop-box">
+						<ul>
+							<li class="u-prop-one">
+								<span>
+									<i></i>
+								</span>
+							</li>
+							<li class="u-prop-two">
+								<span class="shanzi">
+									<img src="images/shanzi/SZ_00000.png">
+								</span>
+							</li>
+							<li class="u-prop-three ">
+								<span><img src="images/img-06-3.png"></span>
+								<span class="fs">
+									<i><img src="images/img-06-2.png"></i>
+								</span>
+								<span><img src="images/img-06-1.png"></span>
+							</li>
+							<li class="u-prop-four ">
+								<span></span>
+								<i><img src="images/text/img-txt-10.png"></i>
+							</li>
+						</ul>
+					</div>
+					<a href="javascript:;"><img src="images/img-01.png"></a>
+				</div>
+				
+				<div class="m-ftyyj">
+					<img src="images/img-07.png">
+					<p></p>
+				</div>
+				
+			</div>
+		
+			<div class="finish">
+				
+				<h1>用方太“劲魔方”，厨房油烟劲尽净，<br/>让圣诞老人快乐送礼物！就是现在，出发！</h1>
+				<div class="finish-FatherChristmas">
+					<span><img src="images/img-12.jpg"></span>
+					<span><i></i></span>
+					<span><img src="images/img-11.jpg"><i></i></span>
+				</div>
+				<div class="finish-btn">
+					<div class="btn-box">
+						<a></a>
+						<a></a>
+						<!--<a></a>-->
+					</div>
+					<span></span>
+				</div>
+			</div>
+			
+			<!---->
+			<div class="m-store">
+				<div class="m-store-container">
+					<span></span>
+					
+				</div>
+			</div>
+			
+			<!--分享-->
+			<div class="m-share">
+				<span><img src="images/img-share.png"></span>
+			</div>
+			
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+	<script>$.noConflict();</script>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/touch.js" ></script>
+	<script type="text/javascript" src="js/easeljs-0.8.2.min.js"></script>
+	<script type="text/javascript" src="js/soundjs-NEXT.combined.js" ></script>
+	<script type="text/javascript" src="js/pxloader-all.min.js" ></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+
+</html>

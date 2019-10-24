@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>意见反馈</title>
+	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="stylesheet" href="../css/about2.css" />
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/style.js" ></script>
+	<script type="text/javascript" src="../js/jquery.SuperSlide.2.1.2.js" ></script>
+	<script>
+		$(document).ready(function() {
+			//导航
+			setNav();
+			//首页我们的产品tab
+			setIndexTab();
+			//导航顶部搜索
+			setTopsearch();
+		});
+		//滚动页面 头部导航浮动在顶部
+		$(window).bind('scroll', function() {
+				if ($(window).scrollTop() > 30) {
+					$(".header-bottom-bg").addClass('header_fixed');
+					$('.header-bottom-bg').css({position:'fixed',top:0,left:0});
+				} else {
+					$(".header-bottom-bg").removeClass('header_fixed');
+					$('.header-bottom-bg').css({position:'relative'});
+					$('.header-bottom-bg').css({
+						left: 0
+					});
+				}
+			});
+		//更改浮动导航，出现滚动条
+		$(window).scroll(function() {
+			var original_left = $('.header-bottom').offset().left;
+			var new_left = -$(window).scrollLeft() + 'px';
+			$('.header_fixed').css({
+				left: new_left
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+<div class="container">
+	<!--顶部导航-->
+	<div class="header">
+		<div class="header-top-bg">
+			<div class="header-top">
+				<div class="change">
+					<a href="javascript:;">English</a>/
+					<a href="javascript:;">中文</a>
+				</div>
+				<div class="other">
+					<ul>
+						<li class="luntan"><span><img src="../images/img-info.png"></span><a href="javascript:;">进入论坛</a></li>
+						<li class="search ">
+							<form class="">
+								<div class="search-bg">
+									<span class="search-topimg"></span>
+									<p>搜索</p>
+									<input type="text" name="text" id="txt" />
+								</div>
+							</form>
+						</li>
+						<li class="login"><span><img src="../images/img-gologin.png"></span><a href="../login/login.html">登录</a>/<a href="../login/register.html">注册</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom-bg">
+			<div class="header-bottom">
+				<div class="logo">
+					<a href="../index.html">
+						<img src="../images/logo.png" />
+					</a>
+				</div>
+				<div class="navbar">
+					<ul>
+						<li class=""><a href="../index.html">首页</a></li>
+						<li class="nav-li nav-on"><a href="javascript:;">关于我们</a></li>
+						<li class="nav-li"><a href="javascript:;">产品系列</a></li>
+						<li class="nav-li"><a href="javascript:;">服务支持</a></li>
+						<li class="nav-li"><a href="javascript:;">方案案例</a></li>
+						<li class="nav-li"><a href="javascript:;">新闻动态</a></li>
+					</ul>
+				</div>
+			</div>
+			<!--下拉菜单-->
+			<div class="sub-bg">
+
+					<!--关于我们-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../about/video.html"><span><img src="../images/nav/jianjie.png"></span>公司简介</a></li>
+								<li><a href="../about/about.html"><span><img src="../images/nav/fazhan.png"></span>发展历程</a></li>
+								<li><a href="../about/culture.html"><span><img src="../images/nav/wenhua.png"></span>企业文化</a></li>
+								<li><a href="../about/jion.html"><span><img src="../images/nav/zhaopin.png"></span>人才招聘</a></li>
+								<li><a href="../about/adress.html"><span><img src="../images/nav/lianxi.png"></span>联系我们</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--产品系列-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../products/touch.html"><span><img src="../images/nav/chumoing.png"></span>触摸屏系列</a></li>
+								<li><a href="../products/screen.html"><span><img src="../images/nav/bianpinqi.png"></span>变频器系列</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--服务支持-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../service/maintain.html"><span><img src="../images/nav/weixiu.png"></span>维修服务</a></li>
+								<li><a href="../service/download.html"><span><img src="../images/nav/xiazai.png"></span>下载中心</a></li>
+								<li><a href="../service/training.html"><span><img src="../images/nav/peixun.png"></span>培训中心</a></li>
+								<li><a href="../service/servicebrand.html"><span><img src="../images/nav/fuwu.png"></span>服务品牌</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--方案与案例-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../case/solution.html"><span><img src="../images/nav/fangan.png"></span>解决方案</a></li>
+								<li><a href="../case/usecase.html"><span><img src="../images/nav/anli.png"></span>应用案例</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--新闻中心-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../news/news-center.html"><span><img src="../images/nav/xinwen.png"></span>公司新闻</a></li>
+								<li><a href="../news/activity-area.html"><span><img src="../images/nav/huodong.png"></span>活动专区</a></li>
+								<li><a href="../news/product-dynamic.html"><span><img src="../images/nav/dongtai.png"></span>产品动态</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+	<div class="container bg1">
+		<div class="content">
+			<h3 class="titl-h3">关于威纶通<span>About Us</span><i></i> </h3>
+			<div class="video">
+				<img src="../images/about/video1.jpg" />
+				<p class="video-p">威纶通科技有限公司</p>
+			</div>
+			<div class="slideBox">
+				<span class="arrow"><a class="next"></a><a class="prev"></a></span>
+				<div class="bannerPanel bd" id="bannerPanel">	
+			        <ul class="banner">
+			            <li>
+			            	<h4 class="h4-ban">触控世界    传动未来</h4>
+			            	<p class="p-ban">威纶通科技有限公司(WEINVIEW CO.,LTD)是集研发、生产、制造、销售于一体的金牌人机界面供应商,基于先进的人机沟通技巧和品牌化发展理念,在生产自动化、过程自动化领域提供多种选择的优质人机界面产品、解决方案及服务。WEINVIEW品牌专注于中国HMI市场,已广泛应用于机械、纺织、电气、包装、化工等行业。、过程自动化领域提供多种选择的优质人机界面产品、解决方案及服务。WEINVIEW品牌专注于中国HMI市场,已广泛应用于机械、纺织、电气、包装、化工等行业。</p>
+						</li>
+			        </ul>
+			    </div>
+			</div>	
+		</div>
+	</div>
+	<div class="container bg2">
+		<div class="content">
+			<h3 class="titl-h3">旗下品牌<span> Brands</span><i></i> </h3>
+			<div class="pai">
+				<span><img src="../images/about/pai1.png" /></span>
+				<h4>美好生活  一触可及！</h4>
+				<p>
+					威纶通科技有限公司(WEINVIEW CO.,LTD)是集研发、生产、制造、销售于一体的金牌人机界面供应商,基于先进的人机沟通技巧和品牌化发...
+				</p>
+			</div>	
+			<div class="pai fr">
+				<span><img src="../images/about/pai2.png" /></span>
+				<h4>让科技插上艺术的翅膀！</h4>
+				<p>
+					威纶通科技有限公司(WEINVIEW CO.,LTD)是集研发、生产、制造、销售于一体的金牌人机界面供应商,基于先进的人机沟通技巧和品牌化发...
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="container bg3">
+		<div class="content">
+			<h3 class="titl-h3">全球网络<span> Brands</span><i></i> </h3>
+			<div class="all">
+				<img src="../images/about/pai3.png" />
+				
+			</div>	
+			<div class="all fr">
+				<h4 class="h4-all">遍布全球的服务网络</h4>
+			    <p class="p-all">威纶通在中国大陆成立了10家公司以及40多个办事处，中国经销商营销服务网络300余家、海外经销商营销服务网络200家，500余人的销售团队覆盖全球营销网络、为客户提供更迅速、更优质的售后服务！</p>
+			</div>
+		</div>
+	</div>
+	<!--底部-->
+	<div class="footer-bg">
+			<div class="footer-t">
+				<div class="footer-box footer-t-t">
+					<div class="footer-nav-dingyue">
+						<div class="footer-logo"><img src="../images/logo-footer.png"></div>
+						<form>
+							<label>订阅电子邮件</label>
+							<input type="email" name="email" id="email" />
+							<input type="submit" name="btn" id="dingyue" value="订阅" />
+						</form>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>关于我们</h1></li>
+							<li><a href="../about/video.html">公司简介</a></li>
+							<li><a href="../about/about.html">发展历程</a></li>
+							<li><a href="../about/culture.html">企业文化</a></li>
+							<li><a href="../about/jion.html">人才招聘</a></li>
+							<li><a href="../about/adress.html">联系我们</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>产品中心</h1></li>
+							<li><a href="../products/touch.html">触摸屏系列</a></li>
+							<li><a href="../products/screen.html">变频器系列</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>服务支持</h1></li>
+							<li><a href="../service/maintain.html">维修服务</a></li>
+							<li><a href="../service/download.html">下载中心</a></li>
+							<li><a href="../service/learning.html">培训中心</a></li>
+							<li><a href="../service/servicebrand.html">服务品牌</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>方案与案列</h1></li>
+							<li><a href="../case/solution.html">解决方案</a></li>
+							<li><a href="../case/usecase.html">应用案例</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>新闻中心</h1></li>
+							<li><a href="../news/news-center.html">公司新闻</a></li>
+							<li><a href="../news/activity-area.html">活动专区</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-contact">
+						<div class="footer-nav-tel">
+							<p>400-836-2000</p>
+						</div>
+						<ul>
+							<li>
+								<p>微博</p>
+								<span><img src="../images/erweima.png"></span>
+							</li>
+							<li style="margin-left: 30px;">
+								<p>微信</p>
+								<span><img src="../images/erweima.png"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-b">
+				<div class="footer-box footer-b-t">
+					<div class="footer-share">
+						<div class="bdsharebuttonbox" data-tag="share_1">
+							<a class="share_one" data-cmd="tsina"></a>
+							<a class="share_two" data-cmd="weixin"></a>
+							<a class="share_three" data-cmd="qzone"></a>
+							<a class="share_four" data-cmd="kaixin001"></a>
+							<a class="share_five" data-cmd="tqq"></a>
+						</div>
+						<script>
+							window._bd_share_config = {
+								share: [{
+									"bdSize": 32
+								}],
+							}
+							with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+						</script>
+					</div>
+					<div class="footer-copyright">
+						<ul>
+							<li>Copyright ©威纶通 All Rights Reserved</li>
+							<li><a href="../login/legalnotice.html">法律声明</a></li>
+							<li>|</li>
+							<li><a href="../login/privacy.html">隐私保护</a></li>
+							<li>|</li>
+							<li><a href="../login/feedback.html">意见反馈</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+<div class="loginW">
+	<div id="pb" class="pb"></div>
+	<div id="loginWindow" class="loginwindow">
+		<p class="close">威纶通科技有限公司<span>X</span></p>
+		<div id="loginVideo" class="loginVideo"></div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="../js/jwplayer/jwplayer.js"></script>
+<script type="text/javascript">
+jwplayer.key = "J0+IRhB3+LyO0fw2I+2qT2Df8HVdPabwmJVeDWFFoplmVxFF5uw6ZlnPNXo=";
+	$(".slideBox").slide({
+		mainCell:".bd ul",
+		easing:"swing",
+		effect:"topLoop",
+		autoPlay:true,
+        vis:"auto",
+        prevCell:".prev",
+        nextCell:".next"
+	});
+	$(".video").click(function(event) {
+		$(".loginW").show();
+		$(".loginWindow").show();
+	});
+	$(".pb,.close").click(function(event) {
+		thisplayer.stop();
+		$(".loginW").hide();
+		$(".loginWindow").hide();
+	});
+	   
+		//banner 开启轮播
+
+		var thisplayer= jwplayer("loginVideo").setup ({
+	        flashplayer : "../js/jwplayer/jwplayer.flash.swf" ,
+	        file : "http://consumer.huawei.com/en/ucmf/groups/public/documents/consumer_video/hw_366570.mp4" ,
+	        image: '../images/about/video.jpg',
+	        height : 600,
+	        width : 1120,
+	        dock: false, 
+			repeat: true 
+		});
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="Tencent-TGideas">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>企鹅</title>
+		<link rel="stylesheet" href="css/main.css" />
+
+	</head>
+
+	<body>
+		<p class="txt">0%</p>
+		<div class="loading">
+			<img src="images/loading_128.gif">
+		</div>	
+		
+		<div class="controls">
+			<span><img src="images/img.jpg"></span>
+			<span><img src="images/img-00.png"</span>
+		</div>
+		<div class="container">
+			<canvas id="canvas"></canvas>
+		</div>
+		<div class="popup-box">
+			<span></span>
+		</div>
+	</body>
+	<script src="js/pxloader-all.min.js"></script>
+	<script src="js/referenced.js"></script>	
+	<script src="js/load-images.js" ></script>
+	<script src="js/main.js" ></script>
+	<script type="text/javascript" src="http://open.mobile.qq.com/sdk/qqapi.js?_bid=152"></script>
+	<script>
+	    window.mqq.invoke("data","setShareInfo", {
+	        share_url: window.OPEN_DATA && window.OPEN_DATA.shareurl || window.location.href,
+	        title: 'H5应用',
+	        desc: 'H5开放平台',
+	        image_url: 'http://i.gtimg.cn/open/app_icon/05/58/35/77/1105583577_100_m.png'
+	    });
+	</script>
+</html>

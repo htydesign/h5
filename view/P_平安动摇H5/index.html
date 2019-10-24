@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script>
+			// class
+			! function(navigator) {
+				var userAgent = navigator.userAgent;
+				documentElement = document.documentElement;
+				if(userAgent.match(/micromessenger\/5/gi)) {
+					documentElement.className += " mobile wx_mobile wx_mobile_5";
+				} else if(userAgent.match(/micromessenger/gi)) {
+					documentElement.className += " mobile wx_mobile";
+				} else if(userAgent.match(/ucbrowser/gi)) {
+					documentElement.className += " mobile uc_mobile";
+				} else if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())) {
+					documentElement.className += " mobile";
+				} else if(userAgent.toLowerCase().match(/msie/gi) && (parseFloat(userAgent.toLowerCase().match(/msie ([0-9]{1,}[\.0-9]{0,})/i)[1] || 999) < 9)) {
+					documentElement.className += " pc pc-ie pc-ie8";
+				} else if(userAgent.toLowerCase().match(/msie/gi) || navigator.msPointerEnabled || navigator.pointerEnabled) {
+					documentElement.className += " pc pc-ie";
+				} else {
+					documentElement.className += " pc";
+				}
+			}(navigator);
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>做完这个测试， 他们竟然集体跳槽了！</title>
+		<link rel="stylesheet" href="css/animate.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<!--获取展E宝用户信息-->
+		<!--<script type="text/javascript" src="https://salescdn.pa18.com/salesinfo/eLifeAssist/common/getAgentInfomation.js"></script>-->
+		<!--测试-->
+		<script type="text/javascript" src="https://salestest-dmzstg3.pa18.com:30443/salesinfo/eLifeAssist/common/getAgentInfomation.js"></script>
+
+	</head>
+
+	<body>
+		<!--music-->
+		<audio src="music/music.mp3" id="music" loop="loop"></audio>
+		<audio src="music/click.mp3" id="click_music"></audio>
+		<div class="music_icon" id="music_icon">
+			<img src="images/music-on.png" class="music_on" />
+			<img src="images/music-off.png" class="music_off" />
+		</div>
+
+		<!--loading-->
+		<div class="loading">
+			<div class="loading-box">
+				<div class="loading-bill b3">
+					<h1>人情来往账单</h1>
+					<span class="b3-1">同学聚会：<i>1240</i>元</span>
+					<span class="b3-2">节日红包：<i>2000</i>元</span>
+					<span class="b3-3">探望长辈：<i>8680</i>元</span>
+					<span class="b3-4">婚庆礼金：<i>10万</i>元</span>
+					<span class="b3-5">......</span>
+				</div>
+				<div class="loading-bill b2">
+					<h1>孩子兴趣班</h1>
+					<span class="b2-1">钢琴培训：<i>9850</i>元</span>
+					<span class="b2-2">芭蕾舞蹈：<i>8000</i>元</span>
+					<span class="b2-3">视唱练耳：<i>5560</i>元</span>
+					<span class="b2-4">书法艺术：<i>3200</i>元</span>
+					<span class="b2-5">......</span>
+				</div>
+				<div class="loading-bill b1">
+					<h1>生活账单</h1>
+					<span class="b1-1">生活杂费：<i>8690</i>元</span>
+					<span class="b1-2">房屋贷款：<i>280万</i>元</span>
+					<span class="b1-3">养育子女：<i>52万</i>元</span>
+					<span class="b1-4">赡养父母：<i>20万</i>元</span>
+					<span class="b1-5">......</span>
+				</div>
+				<div class="loading-pen"><img src="images/img_01.png"></div>
+			</div>
+			<img src="images/img_01.png" id="img_01" style="display: none;" />
+			<canvas id="loadCanvas"></canvas>
+		</div>
+
+		<!--首页-->
+		<div class="index">
+			<span><img src="images/loader/img_04.png"></span>
+			<span><img src="images/loader/img_05.png"></span>
+			<span><img src="images/loader/img_06.png"></span>
+		</div>
+
+		<!--选择页-->
+		<div class="select">
+			<h1><img src="images/loader/img_34.png"></h1>
+			<div class="select-box">
+				<h4>性别</h4>
+				<ul class="sex">
+					<li>
+						<span class="man-img"><img src="images/loader/img_36.png"></span>
+						<p class="man-btn">男性</p>
+					</li>
+					<li>
+						<span class="woman-img"><img src="images/loader/img_37.png"></span>
+						<p class="woman-btn">女性</p>
+					</li>
+				</ul>
+				<h4>居住城市</h4>
+				<ul class="city">
+					<li>
+						<span></span>
+						<p>一线城市</p>
+					</li>
+					<li>
+						<span></span>
+						<p>二线城市</p>
+					</li>
+					<li>
+						<span></span>
+						<p>三线城市</p>
+					</li>
+				</ul>
+			</div>
+			<h2>接下来定制个人专属品质生活</h2>
+			<h3 class="clickTest"><img src="images/loader/img_58.png"></h3>
+		</div>
+
+		<!--测试页-->
+		<div class="test-container">
+			<div class="scene">
+				<div class="user-photo">
+					<img src="images/loader/63.png">
+					<img src="images/loader/62.png">
+					<img src="images/loader/61.png">
+				</div>
+				<div class="user-sex">
+					<img src="">
+					<img src="">
+					<img src="">
+				</div>
+				<div class="user-house">
+					<img src="images/loader/img_16-3.jpg">
+					<img src="images/loader/img_16-2.jpg">
+					<img src="images/loader/img_16-1.jpg">
+				</div>
+				<div class="user-education">
+					<img src="images/loader/img_19-3.png">
+					<img src="images/loader/img_19-2.png">
+					<img src="images/loader/img_19-1.png">
+				</div>
+				<div class="user-money">
+					<img src="images/loader/img_22-20.png">
+					<img src="images/loader/img_22-10.png">
+					<img src="images/loader/img_22-5.png">
+				</div>
+				<div class="light">
+					<img src="images/loader/light-3.png">
+					<img src="images/loader/light-2.png">
+					<img src="images/loader/light-1.png">
+				</div>
+				<div class="brush"><img src="images/loader/img_62.png"></div>
+				<div class="user-base"><img src="images/loader/img_54.png"></div>
+			</div>
+			<div class="test-choose">
+				<div class="progress-bar"><i></i></div>
+				<div class="choose-box">
+					<!--月消费-->
+					<div class="choose-pay">
+						<h1><img src="images/loader/img_13.png"></h1>
+						<ul class="pay">
+							<li>
+								<span></span>
+								<p>9000元</p>
+							</li>
+							<li>
+								<span></span>
+								<p>6000元</p>
+							</li>
+							<li>
+								<span></span>
+								<p>3000元</p>
+							</li>
+						</ul>
+						<div class="test-btn pay-btn">
+							<img src="images/loader/img_60.png" class="bg">
+							<span class="retreat"></span>
+							<span class="advance"></span>
+						</div>
+					</div>
+
+					<!--购置房型-->
+					<div class="choose-house">
+						<h1><img src="images/loader/img_17.jpg"></h1>
+						<ul class="house">
+							<li>
+								<span></span>
+								<p>豪华小区</p>
+							</li>
+							<li>
+								<span></span>
+								<p>高档小区</p>
+							</li>
+							<li>
+								<span></span>
+								<p>中档小区</p>
+							</li>
+						</ul>
+						<div class="test-btn house-btn">
+							<img src="images/loader/img_60.png" class="bg">
+							<span class="retreat"></span>
+							<span class="advance"></span>
+						</div>
+					</div>
+
+					<!--教育模式-->
+					<div class="choose-education">
+						<h1><img src="images/loader/img_20.jpg"></h1>
+						<ul class="education">
+							<li>
+								<span></span>
+								<p>出国留学</p>
+							</li>
+							<li>
+								<span></span>
+								<p>私立学校</p>
+							</li>
+							<li>
+								<span></span>
+								<p>公立学校</p>
+							</li>
+						</ul>
+						<div class="test-btn education-btn">
+							<img src="images/loader/img_60.png" class="bg">
+							<span class="retreat"></span>
+							<span class="advance"></span>
+						</div>
+					</div>
+					<!--备用金-->
+					<div class="choose-money">
+						<h1><img src="images/loader/img_24.jpg"></h1>
+						<ul class="money">
+							<li>
+								<span></span>
+								<p>20万元</p>
+							</li>
+							<li>
+								<span></span>
+								<p>10万元</p>
+							</li>
+							<li>
+								<span></span>
+								<p>5万元</p>
+							</li>
+						</ul>
+						<div class="test-btn money-btn">
+							<img src="images/loader/img_59.png" class="bg">
+							<span class="retreat"></span>
+							<span class="advance"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--理想生活清单-->
+		<div class="liveInventory">
+			<div class="saveImage"><img src=""></div>
+			<div id="qrcodeCanvas" style="display: none;"></div>
+			<p>长按上方账单生成图片，分享好友围观一起测试。</p>
+			<div class="test-btn liveInventory-btn">
+				<img src="images/loader/img_56.png" />
+				<span class="retreat"></span>
+				<span class="advance"></span>
+			</div>
+		</div>
+
+		<!--过度页-->
+		<div class="excessive">
+			<span><img src="images/loader/img_31.png"></span>
+			<span><img src="images/loader/img_32.png"></span>
+			<span><img src="images/loader/img_33.png"></span>
+		</div>
+
+		<!--职业指南分析-->
+		<div class="jobAnalysis">
+			<div class="job-container">
+				<div class="job-list">
+					<i class="close"></i>
+					<div class="job-ul">
+						<div class="job-info">
+							<h1><img src="images/loader/img_50.png"></h1>
+						</div>
+						<div class="job-info">
+							<h1><img src="images/loader/img_51.png"></h1>
+						</div>
+						<div class="job-info">
+							<h1><img src="images/loader/img_52.png"></h1>
+						</div>
+						<div class="job-info">
+							<h1>
+								<img src="images/loader/img_53.png">
+								<p>*专业人士包括：律师、牙医、财务师等</p>
+							</h1>
+						</div>
+						<div class="job-info">
+							<h1><img src="images/loader/img_49.png"></h1>
+
+							<!--<h2 class="more"><img src="images/loader/img_48.jpg"></h2>-->
+						</div>
+					</div>
+				</div>
+				<ul class="job-points">
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+
+		<!--导流页-->
+		<div class="endPage">
+			<div class="poster-container">
+				<div class="poster">
+					<div class="poster-job">
+						<span><img src="images/loader/img_41.jpg"></span>
+						<ul class="jobAnalysis-class">
+							<li><i></i><img src="images/loader/img_57.png"></li>
+							<li><i></i><img src="images/loader/img_42.jpg"></li>
+							<li><i></i><img src="images/loader/img_43.jpg"></li>
+							<li><i></i><img src="images/loader/img_44.jpg"></li>
+							<li><i></i><img src="images/loader/img_45.jpg"><img src="images/loader/img_63.png"></li>
+						</ul>
+						<span><img src="images/loader/img_47.png"></span>
+					</div>
+				</div>
+				<div class="poster"><span><img src="images/loader/poster1.jpg"></span></div>
+				<div class="poster"><span><img src="images/loader/poster2.jpg"></span></div>
+				<div class="poster"><span><img src="images/loader/poster3.jpg"></span></div>
+				<div class="poster">
+					<span><img src="images/loader/poster4.jpg"></span>
+					<div class="poster-user-info">
+						<h1><img src=""></h1>
+						<h2><i><img src="images/loader/img_25.png"></i><a href=""></a></h2>
+						<h3>关注我，获取专业保险服务</h3>
+						<h4><a href="javascript:;"><img src="images/loader/img_26.png"></a></h4>
+						<h3>加入我，成为保险代理人一员</h3>
+					</div>
+					<div class="poster-btn"><img src="images/loader/img_27.png"></div>
+				</div>
+			</div>
+			<ul class="job-points">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+		<!--分享-->
+		<div class="shaer">
+			<span><img src="images/loader/img_30.png"></span>
+			<i><img src="images/loader/img_61.png"></i>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/utf.js"></script>
+	<script type="text/javascript" src="js/jquery.qrcode.js"></script>
+	<script type="text/javascript" src="js/pxloader-all.js"></script>
+	<script type="text/javascript" src="js/wx-alipay-audioPlay.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="//salescdn.pa18.com/salesinfo/eLifeAssist/common/wxRecord.js"></script>
+	<script>
+		var oMusic = document.getElementById("music");
+		var music_btn = document.getElementById("music_icon");
+		var isPlayMusic = false;
+		setTimeout(function() {
+			oMusic.src = 'music/music.mp3';
+			oMusic.play();
+			isPlayMusic = true;
+		}, 300);
+		$('html').one("touchstart", function() {
+			if(oMusic.paused) {
+				oMusic.play();
+				isPlayMusic = true;
+				$('.music_on').show();
+				$('.music_off').hide();
+			}
+		});
+		music_btn.addEventListener("touchstart", function() {
+			if(isPlayMusic) {
+				oMusic.pause();
+				$('.music_off').show();
+				$('.music_on').hide();
+			} else {
+				oMusic.play();
+				$('.music_on').show();
+				$('.music_off').hide();
+			}
+			isPlayMusic = !isPlayMusic;
+		}, false);
+	</script>
+
+</html>

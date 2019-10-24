@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script>
+			// class
+			! function(navigator) {
+				var userAgent = navigator.userAgent;
+				documentElement = document.documentElement;
+				if(userAgent.match(/micromessenger\/5/gi)) {
+					documentElement.className += " mobile wx_mobile wx_mobile_5";
+				} else if(userAgent.match(/micromessenger/gi)) {
+					documentElement.className += " mobile wx_mobile";
+				} else if(userAgent.match(/ucbrowser/gi)) {
+					documentElement.className += " mobile uc_mobile";
+				} else if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())) {
+					documentElement.className += " mobile";
+				} else if(userAgent.toLowerCase().match(/msie/gi) && (parseFloat(userAgent.toLowerCase().match(/msie ([0-9]{1,}[\.0-9]{0,})/i)[1] || 999) < 9)) {
+					documentElement.className += " pc pc-ie pc-ie8";
+				} else if(userAgent.toLowerCase().match(/msie/gi) || navigator.msPointerEnabled || navigator.pointerEnabled) {
+					documentElement.className += " pc pc-ie";
+				} else {
+					documentElement.className += " pc";
+				}
+			}(navigator);
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>东莞旅游地图</title>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+
+	<body>
+
+		<!--loading-->
+		<div class="loading">
+			<p></p>
+		</div>
+		<!--主要内容-->
+		<div class="container">
+			<canvas id="map"></canvas>
+		</div>
+
+		<!--底部图片-->
+		<div class="images-container">
+			<div class="scale-container">
+				<span class="magnify"><i></i></span>
+				<span class="shrink"><i></i></span>
+			</div>
+			<div class="image-btn-container"><div class="image-btn"><i></i><i></i><i></i><i></i><i></i></div></div>
+			<div class="image-box">
+				<div class="image-ul">
+					<ul>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--景点信息-->
+		<div class="scenicSpotInfo-container">
+			<div class="scenicSpotInfo-box">
+				<h1>景点信息</h1>
+				<div class="scenicSpotInfo">
+					<p>东莞丽城隐贤山庄旅游风景区位于东莞市常平镇。地处东莞交通枢纽中心地域，东莞东火车站、常平火车站、常平汽车站到达隐贤山庄仅需5分钟车程地理位置优越。1998年全面对外开放，原国家主席杨尚昆先生为隐贤山庄做了亲笔题名。占地面积1800亩，山灵水秀，风景怡人，因明末贤臣李觉斯于此隐居而得名。隐贤山庄景区布局优美雅致，浑然而成。星罗棋布的人文景观;大肚弥勒佛，大清宫，月华泉，独脚天蟾，佛香塔，仙人床等集中反映了我国儒、佛、道各家傅统文化的寓意内涵。每年一度的荔枝节吸引了国内外上百万的游客。</p>
+					<div class="infoImage">
+						<!--<span><img src="" /></span>
+						<span><img src="" /></span>-->
+					</div>
+					<a href="" class="scenicSpotLink">查看更多</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/easeljs-0.8.2.min.js"></script>
+	<script type="text/javascript" src="js/tweenjs-0.6.2.min.js"></script>
+	<script type="text/javascript" src="js/pxloader-all.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</html>

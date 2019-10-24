@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<!--<meta name="viewport" content="width=640, target-densitydpi=device-dpi, user-scalable=no"/>-->
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
+		<title>vivo x9</title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+
+	<body>
+		
+		<!--music-->
+		<audio src="music/vivox9h5.mp3"  id="music" loop="loop"></audio>
+		
+		<!--loading-->
+		<div class="loading" id="loader">
+			<div class="progress_box">
+				<!--<div class="load-box">
+				        <div class="l1 a"><span></span></div>
+				        <div class="l2 a"><span></span></div>
+				        <div class="l3 a"><span></span></div>
+				        <div class="l4 a"><span></span></div>
+				        <div class="l5 a"><span></span></div>
+				        <div class="l6 a"><span></span></div>
+				</div>-->
+				<img src="images/loding_3.gif" />
+			</div>
+			
+		</div>
+		<!--开始页面-->
+		<div class="box">
+			<div class="section-1" id="section_1">	
+				<div class="light">
+					<span></span>
+					<span></span>
+				</div>
+				<img src="images/1.jpg" id="animation" />
+			</div>
+		</div>
+
+		<!--提示用户上下滑-->
+		<div class="hint-user">
+			<img src="images/hint-scale.png">
+		</div>
+		
+		<!--显示文字-->
+		<div class="show-txt">
+			<img src="images/wasai.png">
+		</div>
+		
+		<!--场景-->
+		<div id="container"></div>
+
+		<!--按钮-->
+		<div class="show-box">
+			<div class="btn">
+				<span><img src="images/2000w.png"></span>
+				<span class="btn_xuhua"><img src="images/800w.png"></span>
+				<span><img src="images/biaoyu.png"></span>
+			</div>
+			<div class="btn2">
+				<span><img src="images/play.png"></span>
+				<span><a href=""><img src="images/yuyue.png"></a></span>
+			</div>
+			<div class="btn3">
+				<span><img src="images/queding.png"></span>
+			</div>
+		</div>
+
+	</body>
+
+	<script src="js/three.min.js"></script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/pxloader-all.js"></script>
+	<script src="js/facepp-sdk.min.js" ></script>
+	<script src="js/data.js"></script>
+	<script src="js/tween.min.js"></script>
+	<script src="js/index2.js"></script>
+	
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script>
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 750;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=750, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=750 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=750, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>2017ELLE美妆之星年度大奖</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+	</head>
+	<body>
+		
+		<!--music-->
+		<div class="music-icon" style="display: block;"><i><img src="images/img-02.png"></i></div>
+		
+		<audio src="music/music.m4a" id="music" loop="loop"></audio>
+		
+		<!--主体-->
+		<div class="container">
+			
+			<!--背景-->
+			<div class="background-container">
+				<span class="bg bg-1"></span>
+				<span class="bg bg-2"></span>
+				<span class="bg bg-3"></span>
+				<span class="bg bg-4"></span>
+				<span class="bg bg-5"></span>
+				<span class="bg bg-6"></span>
+			</div>
+			
+			<!--主体画面-->
+			<div class="main-container">
+				<div class="block sence-1">
+					<span><img src="images/img-03.jpg"></span>
+					<span><img src="images/img-05.png"></span>
+					<span><img src="images/img-06.png"></span>
+					<span><img src="images/img-04.png"></span>
+				</div>
+				<div class="block sence-2">
+					<span><img src="images/img-09.jpg"></span>
+					<span><img src="images/img-08.jpg"></span>
+					<span><img src="images/img-10.png"></span>
+					<span><img src="images/img-11.png"></span>
+					<span><img src="images/img-12.png"></span>
+					<span><img src="images/img-13.png"></span>
+				</div>
+				<div class="block sence-3">
+					<span><img src="images/img-14.jpg"></span>
+					<span><img src="images/img-15.png"></span>
+					<span><img src="images/img-16.png"></span>
+					<span><img src="images/img-17.png"></span>
+					<span><img src="images/img-18.png"></span>
+					<span><img src="images/img-19.png"></span>
+					<span><i></i></span>
+					<span><i></i></span>
+				</div>
+				<div class="block sence-4 on">
+					<span><img src="images/img-22.png"></span>
+					<span><img src="images/img-23.png"></span>
+					<span><img src="images/img-24.png"></span>
+					<span><img src="images/img-25.png"></span>
+					<span><img src="images/img-26.png"></span>
+					<span><i><b></b><img src="images/img-27.png"></i></span>
+					<span><i><b></b><img src="images/img-28.png"></i></span>
+					<span><i><b></b><img src="images/img-29.png"></i></span>
+					<span><img src="images/img-32.png"></span>
+					<span><img src="images/img-31.png"></span>
+				</div>
+				<div class="block sence-5">
+					<span><img src="images/img-34.png"></span>
+					<span><img src="images/img-35.png"></span>
+					<span><img src="images/img-36.png"></span>
+					<div class="images-container">
+						<i class="prev"><img src="images/img-42.png"></i>
+						<i class="next"><img src="images/img-42.png"></i>
+						<div class="images-box">
+							<ul>
+								<li><img src="images/img-37.png"></li>
+								<li><img src="images/img-38.jpg"></li>
+								<li><img src="images/img-39.jpg"></li>
+								<li><img src="images/img-40.jpg"></li>
+								<li><img src="images/img-41.png"></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="block sence-6">
+					<span><img src="images/img-44.png"></span>
+					<span><img src="images/img-45.png"></span>
+					<span><img src="images/img-52.png"></span>
+					<span><img src="images/img-53.png"></span>
+					<div class="s6-text">
+						<i><img src="images/img-47.png"></i>
+						<i><img src="images/img-48.png"></i>
+						<i><img src="images/img-49.png"></i>
+						<i><img src="images/img-50.png"></i>
+						<i><img src="images/img-51.png"></i>
+					</div>
+				</div>
+			</div>
+			
+			<!--提示箭头-->
+			<div class="hint"><span><img src="images/img-01.png"></span></div>
+			
+		</div>
+		
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+	<script type="text/javascript" src="js/wx-video-audio-hack.js" ></script>
+	<script type="text/javascript" src="js/main.js?v12313" ></script>
+	
+</html>

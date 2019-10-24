@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+
+.ul-word .btnbox{
+	margin-top: 10px;
+}
+.ul-word .btnbox a{
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+}
+.ul-word .btnbox .f-one{
+	background: url(../images/biao-01.png) center no-repeat;
+}
+.ul-word .btnbox .f-two{
+	position: relative;
+	background: url(../images/biao-02.png) center no-repeat;
+}.ul-word .btnbox .f-three{
+	background: url(../images/biao-03.png) center no-repeat;
+}
+.f-two span{
+	position: absolute;
+	top:-210px;
+	left: -70px;
+	width: 160px;
+	height: 160px;
+	display: none;
+	border: 10px solid #fff;
+	box-shadow: 2px 5px 10px rgba(0,0,0,0.5);
+}
+.f-two span img{
+	width: 100%;
+	height: 100%;
+}
+.f-two span:before{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 162px;
+	left: 66px;
+	width:0; 
+    height:0; 
+    border-left:16px solid transparent;
+    border-right:16px solid transparent;
+    border-top:16px solid #fff;
+}
+/*************头部banner样式**********************/
+
+.slideBox {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.slideBox .hd {
+	width: 200;
+	height: 63px;
+	overflow: hidden;
+	position: absolute;
+	right: 19%;
+	bottom: 0;
+	z-index: 1;
+}
+@media  screen  and (max-width: 1200px) {
+	.slideBox .hd {
+		right: 5%;
+	}
+}
+@media  screen  and (max-width: 1600px) {
+	.slideBox .hd {
+		right: 10%;
+	}
+}
+
+
+.slideBox .hd .hd-inner {
+	overflow: hidden;
+	zoom: 1;
+	width: 100%;
+	height: 63px;
+	margin: 0 auto;
+}
+
+.slideBox .hd ul {
+	overflow: hidden;
+	zoom: 1;
+	height: 63px;
+	float: right;
+}
+
+.slideBox .hd ul li {
+	float: left;
+	margin-left: 15px;
+	margin-top: 25px;
+	width: 28px;
+	height: 11px;
+	cursor: pointer;
+	background: url(../images/ul-li-01.png) no-repeat;
+	position: relative;
+}
+
+.slideBox .hd ul li.on {
+	background: url(../images/ul-li-02.png) no-repeat;
+}
+
+.slideBox .bd {
+	position: relative;
+	height: 100%;
+	z-index: 0;
+	width: 100%;
+}
+
+.slideBox .bd ul li {
+	zoom: 1;
+	width: 100%;
+	min-width: 1200px;
+	margin: auto;
+	vertical-align: middle;
+	position: relative;
+}
+
+.slideBox .bd ul li img {
+	width: 100%;
+	height: auto;
+	display: block;
+	height: auto;
+	position: relative;
+}
+
+.bottom-show {
+	width: 100%;
+	min-width: 1200px;
+	bottom: 0px;
+	height: 63px;
+	position: absolute;
+	background: url(../images/slide-bottom.png) repeat-x;
+}
+.bottom-show-box{
+	width: 1200px;
+	height: 100%;
+	margin: auto;
+}
+.bottom-show-inner {
+	/*width: 600px;*/
+	min-width: 600px;
+	height: 63px;
+	margin: 0 auto;
+	float: left;
+	display: block;
+	z-index: 9990;
+}
+
+.bottom-show-inner span {
+	display: inline-block;
+	height: 63px;
+	line-height: 63px;
+	font-size: 16px;
+	color: #f4f6f9;
+}
+
+.bottom-show-inner .one {
+	margin-left: 18px;
+	line-height: 63px;
+	color: #FFF;
+}
+
+.bottom-show-inner .two {
+	margin-left: 65px;
+}
+
+.ul-word {
+	width: 120px;
+	height: 63px;
+	z-index: 9999;
+	display: block;
+	position: absolute;
+	left: 60%;
+	top: 0;
+}
+
+.ul-word a {
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-left: 12px;
+	margin-top: 8px;
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	display: table;
+	background: url(../images/biao-04.png) no-repeat;
+}
+
+.ul-word a:hover {
+	background: url(../images/biao-05.png) no-repeat;
+}
+
+
+
+.ul-word a:first-child {
+	margin-left: 0px;
+}
+
+.content {
+	width: 100%;
+	height: auto;
+	position: relative;
+}

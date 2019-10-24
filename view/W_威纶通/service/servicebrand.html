@@ -1,0 +1,373 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>服务品牌</title>
+
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/service-css.css" />
+
+		<link rel="stylesheet" href="../css/jquery.slideBox.css" />
+
+		<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.slideBox.min.js"></script>
+		<script type="text/javascript" src="../js/jq_scroll.js"></script>
+		<script type="text/javascript" src="../js/jquery.cxscroll.min.js"></script>
+		<script type="text/javascript" src="../js/style.js"></script>
+		<script>
+			$(document).ready(function() {
+				//导航
+				setNav();
+				//首页我们的产品tab
+				setIndexTab();
+				//导航顶部搜索
+				setTopsearch();
+				
+				setAdvantageUlWidth();
+			});
+			//滚动页面 头部导航浮动在顶部
+			$(window).bind('scroll', function() {
+				if ($(window).scrollTop() > 30) {
+					$(".header-bottom-bg").addClass('header_fixed');
+					$('.header-bottom-bg').css({
+						position: 'fixed',
+						top: 0,
+						left: 0
+					});
+				} else {
+					$(".header-bottom-bg").removeClass('header_fixed');
+					$('.header-bottom-bg').css({
+						position: 'relative'
+					});
+					$('.header-bottom-bg').css({
+						left: 0
+					});
+				}
+			});
+			//更改浮动导航，出现滚动条
+			$(window).scroll(function() {
+				var original_left = $('.header-bottom').offset().left;
+				var new_left = -$(window).scrollLeft() + 'px';
+				$('.header_fixed').css({
+					left: new_left
+				});
+			});
+		</script>
+
+	</head>
+
+	<body>
+
+		<!--顶部导航-->
+		<div class="header">
+			<div class="header-top-bg">
+				<div class="header-top">
+					<div class="change">
+						<a href="javascript:;">English</a>/
+						<a href="javascript:;">中文</a>
+					</div>
+					<div class="other">
+						<ul>
+							<li class="luntan"><span><img src="../images/img-info.png"></span><a href="javascript:;">进入论坛</a></li>
+							<li class="search ">
+								<form class="">
+									<div class="search-bg">
+										<span class="search-topimg"></span>
+										<p>搜索</p>
+										<input type="text" name="text" id="txt" />
+									</div>
+								</form>
+							</li>
+							<li class="login"><span><img src="../images/img-gologin.png"></span><a href="../login/login.html">登录</a>/<a href="../login/register.html">注册</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="header-bottom-bg">
+				<div class="header-bottom">
+					<div class="logo">
+						<a href="../index.html">
+							<img src="../images/logo.png" />
+						</a>
+					</div>
+					<div class="navbar">
+						<ul>
+							<li class=""><a href="../index.html">首页</a></li>
+							<li class="nav-li"><a href="javascript:;">关于我们</a></li>
+							<li class="nav-li"><a href="javascript:;">产品系列</a></li>
+							<li class="nav-li nav-on"><a href="javascript:;">服务支持</a></li>
+							<li class="nav-li"><a href="javascript:;">方案案例</a></li>
+							<li class="nav-li"><a href="javascript:;">新闻动态</a></li>
+						</ul>
+					</div>
+
+				</div>
+				<!--下拉菜单-->
+				<div class="sub-bg">
+
+					<!--关于我们-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../about/video.html"><span><img src="../images/nav/jianjie.png"></span>公司简介</a></li>
+								<li><a href="../about/about.html"><span><img src="../images/nav/fazhan.png"></span>发展历程</a></li>
+								<li><a href="../about/culture.html"><span><img src="../images/nav/wenhua.png"></span>企业文化</a></li>
+								<li><a href="../about/jion.html"><span><img src="../images/nav/zhaopin.png"></span>人才招聘</a></li>
+								<li><a href="../about/adress.html"><span><img src="../images/nav/lianxi.png"></span>联系我们</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--产品系列-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../products/touch.html"><span><img src="../images/nav/chumoing.png"></span>触摸屏系列</a></li>
+								<li><a href="../products/screen.html"><span><img src="../images/nav/bianpinqi.png"></span>变频器系列</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--服务支持-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../service/maintain.html"><span><img src="../images/nav/weixiu.png"></span>维修服务</a></li>
+								<li><a href="../service/download.html"><span><img src="../images/nav/xiazai.png"></span>下载中心</a></li>
+								<li><a href="../service/training.html"><span><img src="../images/nav/peixun.png"></span>培训中心</a></li>
+								<li><a href="../service/servicebrand.html"><span><img src="../images/nav/fuwu.png"></span>服务品牌</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--方案与案例-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../case/solution.html"><span><img src="../images/nav/fangan.png"></span>解决方案</a></li>
+								<li><a href="../case/usecase.html"><span><img src="../images/nav/anli.png"></span>应用案例</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--新闻中心-->
+					<div class="sub-nav">
+						<div class="sub-lists">
+							<ul>
+								<li><a href="../news/news-center.html"><span><img src="../images/nav/xinwen.png"></span>公司新闻</a></li>
+								<li><a href="../news/activity-area.html"><span><img src="../images/nav/huodong.png"></span>活动专区</a></li>
+								<li><a href="../news/product-dynamic.html"><span><img src="../images/nav/dongtai.png"></span>产品动态</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="service-banner"></div>
+
+		<!---->
+		<div class="hotline-bg">
+			<div class="hotline">
+				<span class="hotline-telimg"><img src="../images/service/img-tel.jpg"></span>
+				<span class="hotline-num">
+					24小时服务热线<p>400-836-2000</p>
+				</span>
+			</div>
+		</div>
+		
+		<div class="ser-box-bg">
+			<div class="ser-box">
+				<div class="servicebrand">
+					<div class="l-ser-img">
+						<p class="l-ser-p">服务品牌<span>service brand</span></p>
+						<img src="../images/service/img-01.jpg">
+					</div>
+					<div class="l-ser">
+						<div class="l-ser-text">
+							<h1>于细微处，无微不至</h1>
+							<p>威纶通整合20年优势资源，只为用户提供“于细微处，无微不至”的A+级服务。</p>
+							<p>服务亦产品。A+care服务体系是由威纶通旗下低压交流传动品牌Artrich提出，并整合WEINVIEW品牌HMI产品的全方位整体服务解决方案。</p>
+							<p>由于威纶通制造了硬件、系统及众多配套应用软件，威纶通产品是真正意义上的集成系统。只有A+Care 产品可为你提供来自威纶通专家的一站式服务和技术支持，只要任选一种服务接入方式即可解决大部分问题。</p>
+						</div>
+					</div>
+					<div class="r-ser">
+						<div class="r-ser-img">
+							<img src="../images/service/img-02.jpg">
+						</div>
+					</div>
+				</div>
+				<div class="ser-block">
+					<div class="ser-block-title">
+						<h1>全方位 成长型 一站式 A+级 服务解决方案*</h1>
+					</div>
+					<div class="ser-block-text">
+						<ul>
+							<li>
+								<span><img src="../images/service/pic-01.jpg"></span>
+								<p>Ultimate-全方位：从您开始了解产品到整个产品生命周期结束，A+care的技术服务专家都全程为您提供资讯与帮助。
+								</p>
+							</li>
+							<li>
+								<span><img src="../images/service/pic-02.jpg"></span>
+								<p>Onestop-一站式：A+care优化流程，减少流转节点，用户只需一次接入即可搞定全部需求。</p>
+							</li>
+							<li>
+								<span><img src="../images/service/pic-03.jpg"></span>
+								<p>A+level – A+级 : A+care依托威纶通20年累积，必定更加理解用户需求，更加迅速、敏捷。</p>
+							</li>
+							<li>
+								<span><img src="../images/service/pic-04.jpg"></span>
+								<p>Growthtype-成长型 : A+care乐于倾听，从百变需求中获取经验，不断实现自我完善、成长。</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="ser-block">
+					<div class="ser-block-title ">
+						<h1>Ａ＋ＣＡＲＥ有什么？</h1>
+					</div>
+					<div class="ser-block-text text-indent">
+						<p>A+care深度剖析用户需求，7大模块各有分工，又可以交叉引用，无所不包。</p>
+					</div>
+				</div>
+				<div class="ser-block">
+					<div class="ser-block-title">
+						<h1>Ａ＋ＣＡＲＥ9大接口</h1>
+					</div>
+					<div class="ser-block-text text-indent text-img ">
+						<img src="../images/service/pic-05.jpg" />
+						<p>A+care现有9大接入方式，可以确保用户在任何时间、任何地点都能以其最习惯、最舒适的方式与威纶通取得联络。</p>
+					</div>
+				</div>
+				<div class="ser-block">
+					<div class="ser-block-title">
+						<h1>Ａ＋ＣＡＲＥ9有哪些优势项目？ </h1>
+					</div>
+					<div class="ser-block-text text-ul" id="advantage">
+						<ul>
+							<li>A+care特别注重用户体验，每个环节都力求做到极致。</li>
+							<li>免费共享资料（如案例集、调研报告等）A+ &Super A+ ：定期资源推送服务*</li>
+							<li>A+care客户服务热线流程优化，更及时、方便、快捷 </li>
+							<li>维修进度查询服务,方便用户进行时间规划微信公众号、总机、A+care Hotline </li>
+							<li>更高频度的新品试用体验活动。渠道更多、报名方式更加多样，惠及更多用户。 </li>
+							<li>免费/付费延保服务。目前可用：新品试用机转购买后，将享受6个月的延保服务。 </li>
+							<li>更加丰富的客服接入 图片、语音消息、远程视频</li>
+							<li>敏捷响应计划：快速响应，快人一步。 </li>
+							<li>遍布全球的服务网络</li>
+							<li>紧急换机服务*，确保终端用户生产连续。仅限A+ 及Super A+ 用户享有。 </li>
+							<li>培训、分享：共同学习、成长 </li>
+							<li>未来，每天都在成长完善的A+care将提供更多值得期待的高性价比服务敬请期待…… </li>
+							<li>用户分级数据库A+ &Super A+ ：新品试用优先权Super A+ ：专人接入、追踪 </li>
+						</ul>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+		
+		<!--底部-->
+		<div class="footer-bg">
+			<div class="footer-t">
+				<div class="footer-box footer-t-t">
+					<div class="footer-nav-dingyue">
+						<div class="footer-logo"><img src="../images/logo-footer.png"></div>
+						<form>
+							<label>订阅电子邮件</label>
+							<input type="email" name="email" id="email" />
+							<input type="submit" name="btn" id="dingyue" value="订阅" />
+						</form>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>关于我们</h1></li>
+							<li><a href="../about/video.html">公司简介</a></li>
+							<li><a href="../about/about.html">发展历程</a></li>
+							<li><a href="../about/culture.html">企业文化</a></li>
+							<li><a href="../about/jion.html">人才招聘</a></li>
+							<li><a href="../about/adress.html">联系我们</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>产品中心</h1></li>
+							<li><a href="../products/touch.html">触摸屏系列</a></li>
+							<li><a href="../products/screen.html">变频器系列</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>服务支持</h1></li>
+							<li><a href="../service/maintain.html">维修服务</a></li>
+							<li><a href="../service/download.html">下载中心</a></li>
+							<li><a href="../service/learning.html">培训中心</a></li>
+							<li><a href="../service/servicebrand.html">服务品牌</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>方案与案列</h1></li>
+							<li><a href="../case/solution.html">解决方案</a></li>
+							<li><a href="../case/usecase.html">应用案例</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-ul">
+						<ul>
+							<li><h1>新闻中心</h1></li>
+							<li><a href="../news/news-center.html">公司新闻</a></li>
+							<li><a href="../news/activity-area.html">活动专区</a></li>
+						</ul>
+					</div>
+					<div class="footer-nav-contact">
+						<div class="footer-nav-tel">
+							<p>400-836-2000</p>
+						</div>
+						<ul>
+							<li>
+								<p>微博</p>
+								<span><img src="../images/erweima.png"></span>
+							</li>
+							<li style="margin-left: 30px;">
+								<p>微信</p>
+								<span><img src="../images/erweima.png"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-b">
+				<div class="footer-box footer-b-t">
+					<div class="footer-share">
+						<div class="bdsharebuttonbox" data-tag="share_1">
+							<a class="share_one" data-cmd="tsina"></a>
+							<a class="share_two" data-cmd="weixin"></a>
+							<a class="share_three" data-cmd="qzone"></a>
+							<a class="share_four" data-cmd="kaixin001"></a>
+							<a class="share_five" data-cmd="tqq"></a>
+						</div>
+						<script>
+							window._bd_share_config = {
+								share: [{
+									"bdSize": 32
+								}],
+							}
+							with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+						</script>
+					</div>
+					<div class="footer-copyright">
+						<ul>
+							<li>Copyright ©威纶通 All Rights Reserved</li>
+							<li><a href="../login/legalnotice.html">法律声明</a></li>
+							<li>|</li>
+							<li><a href="../login/privacy.html">隐私保护</a></li>
+							<li>|</li>
+							<li><a href="../login/feedback.html">意见反馈</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

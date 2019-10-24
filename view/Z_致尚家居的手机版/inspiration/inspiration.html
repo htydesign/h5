@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>灵感之家</title>
+		<link rel="stylesheet" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/lamaisonmaode.css" />
+	</head>
+	<body>
+		<!--header-->
+		<div class="header">
+			<div class="logo">
+				<a href="../index.html"><img src="../images/logo.png"></a>
+			</div>
+			<div class="header-box">
+				<div class="search">
+					<span><img src="../images/search-btn.png"></span>
+				</div>
+				<div class="nav">
+					<span><img src="../images/nav-btn.png"></span>
+				</div>
+			</div>
+			<!--search-->
+			<div class="search-box">
+				<form>
+					<input type="text" placeholder="请输入您好搜索的内容" />
+					<input type="button" class="search_btn" />
+				</form>
+			</div>
+		</div>
+		
+		<!--左侧导航-->
+		<div class="nav-box">
+			<span class="close-btn"><img src="../images/close.png"></span>
+			<span><img src="../images/logo.png"></span>
+			<div class="nav-container">
+				<ul>
+					<li><a href="../life/brand.html">生活精品</a></li>
+					<li><a href="../inspiration/inspiration.html">灵感之家</a></li>
+					<li><a href="../home/inspiration.html">家居形象</a></li>
+					<li><a href="../lifesalon/lifesalon.html">生活沙龙</a></li>
+					<li><a href="../project/project.html">项目介绍</a></li>
+					<li><a href="../gift/giftservices.html">礼品服务</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="padding-top">1</div>
+		
+		<div class="s-img">
+			<img src="../images/inspiration/img-01.jpg">
+		</div>
+		
+		<div class="container o-padding">
+			<div class="insp-info his-info">
+				<span>
+					<h2>HOME STYLE CONCEPT</h2>
+					<h1>What A Wonderful World !</h1>
+					<p>A timeless golden Jazz through generations and all age. “What a wonderful world” is a beautiful and meaningful Jazz song by magnificent Jazz master Louis</p>
+				</span>
+				<a href="productclass.html">查看更多</a>
+			</div>
+			<div class="his-img">
+				<span><img src="../images/inspiration/img-17.jpg"></span>
+			</div>
+			
+			<div class="insp-home">
+				<span>
+					<h2>THE JAZZ MOOD</h2>
+					<h1>INSPIRATION</h1>
+				</span>
+				<span><img src="../images/inspiration/img-18.jpg"></span>
+				<div class="v-video insp-video">
+					<video id="video6" controls="controls" preload="metadata" poster="../images/inspiration/img-09.jpg">
+						<source src="http://consumer.huawei.com/en/ucmf/groups/public/documents/consumer_video/mediapadm2-10-prod-en.mp4" type="video/mp4"></source>
+					</video>
+				</div>
+			</div>
+			
+			<div class="insp-info his-info">
+				<span>
+					<h2>B主题</h2>
+					<h1>FERRÉOL BABIN</h1>
+					<p>With Lunaire light responds to the smallest gesture: by lifting its central disk the light fills the room; tilt it down, and the light is reflected on the wall.</p>
+				</span>
+				<a href="productclass.html">查看更多</a>
+			</div>
+			<div class="his-img">
+				<span><img src="../images/inspiration/img-20.jpg"></span>
+			</div>
+			
+			<div class="insp-theme">
+				<span><img src="../images/inspiration/img-21.jpg"></span>
+				<span class="insp-link">
+					<a href="">
+						<h2>B主题</h2>
+						<h1>灵感企划</h1>
+					</a>
+				</span>
+				<span><img src="../images/inspiration/img-22.jpg"></span>
+				<div class="v-video insp-video">
+					<video id="video5" controls="controls" preload="metadata" poster="../images/inspiration/img-23.jpg">
+						<source src="http://consumer.huawei.com/en/ucmf/groups/public/documents/consumer_video/mediapadm2-10-prod-en.mp4" type="video/mp4"></source>
+					</video>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--底部-->
+		<div class="footer">
+			<!--分享-->
+			<div class="shaer-box">
+				<span>关注我们：</span>
+				<div class="bdsharebuttonbox" data-tag="share_1">
+					<ul>
+
+						<li>
+							<a href="javascript:;" data-cmd="weixin"></a>
+						</li>
+						<li>
+							<a href="javascript:;" data-cmd="sqq"></a>
+						</li>
+						<li>
+							<a href="javascript:;" data-cmd="qzone"></a>
+						</li>
+						<li>
+							<a href="javascript:;" data-cmd="tqq"></a>
+						</li>
+						<li>
+							<a href="javascript:;" data-cmd="tsina"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!---->
+			<div class="footer-nav">
+				<ul>
+					<li><a href="../about/company.html">关于我们</a></li>
+					<li>|</li>
+					<li><a href="../about/originator.html">品牌服务</a></li>
+					<li>|</li>
+					<li><a href="../about/contactUS.html">商业合作</a></li>
+				</ul>
+			</div>
+			<!---->
+			<div class="footer-p">
+				<p>2015 深圳市致尚家居有限公司版权所有 </p>
+				<p>粤ICP备11015869号-1</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+
+	<script>
+		$(window).resize(function(){
+			$('.insp-link').css({
+				height:$('.insp-theme img').height()+'px'
+			});
+		});
+		$(document).ready(function() {
+			$('.insp-link').css({
+				height:$('.insp-theme img').height()+'px'
+			});
+		});
+		
+	</script>
+	<script>
+		window._bd_share_config = {
+			//此处添加分享具体设置
+			common: {
+				bdText: '自定义分享内容',
+				bdDesc: '自定义分享摘要',
+				bdUrl: '自定义分享url地址',
+				bdPic: '自定义分享图片'
+			},
+			share: [{
+				"bdSize": 16
+			}]
+		}
+		//以下为js加载部分
+		with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+	</script>
+</html>

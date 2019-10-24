@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta name="format-detection" content="telephone=no" />
+		<script>
+			// class
+			! function(navigator) {
+				var userAgent = navigator.userAgent;
+				documentElement = document.documentElement;
+				if(userAgent.match(/micromessenger\/5/gi)) {
+					documentElement.className += " mobile wx_mobile wx_mobile_5";
+				} else if(userAgent.match(/micromessenger/gi)) {
+					documentElement.className += " mobile wx_mobile";
+				} else if(userAgent.match(/ucbrowser/gi)) {
+					documentElement.className += " mobile uc_mobile";
+				} else if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())) {
+					documentElement.className += " mobile";
+				} else if(userAgent.toLowerCase().match(/msie/gi) && (parseFloat(userAgent.toLowerCase().match(/msie ([0-9]{1,}[\.0-9]{0,})/i)[1] || 999) < 9)) {
+					documentElement.className += " pc pc-ie pc-ie8";
+				} else if(userAgent.toLowerCase().match(/msie/gi) || navigator.msPointerEnabled || navigator.pointerEnabled) {
+					documentElement.className += " pc pc-ie";
+				} else {
+					documentElement.className += " pc";
+				}
+			}(navigator);
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>三星曲面智能电视KUC30S</title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/samsung.css" />
+		<link rel="stylesheet" href="css/jquery.fullPage.css" />
+		<script>
+			window.onload = function() {
+				var oMusic = document.getElementById("music");
+				var oBtn = document.getElementById("music-btn");
+				oMusic.pause();
+				setTimeout(function() {
+					$(".loading-box").fadeOut();
+					initPage();
+					$(".box").fadeIn();
+					$('.page1').addClass('on');
+					$('.hint').show();
+					oBtn.style.display = 'block';
+					oBtn.className = 'music' + ' ' + 'musicRunning';
+
+				}, 2000);
+				var bBtn = true;
+				oBtn.addEventListener('touchstart', function(e) {
+					e.preventDefault();
+					if(bBtn) {
+						oBtn.className = 'music';
+						oMusic.pause();
+					} else {
+						oBtn.className = 'music' + ' ' + 'musicRunning';
+						oMusic.play();
+					}
+					bBtn = !bBtn;
+				}, false);
+
+				oMusic.addEventListener("playing", function() {
+					console.log('playing');
+				});
+				oMusic.addEventListener("pause", function() {
+					console.log('pause');
+				});
+
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<!--loading-->
+		<div class="loading-box" id="LoadingBar">
+			<span><img src="images/H5-loading.gif"></span>
+			<i><img src="images/loading-bg.jpg"></i>
+		</div>
+
+		<!--向下滚动提示-->
+		<div class="hint">
+			<img src="images/todown.png">
+		</div>
+		
+		<!--music-->	
+		<audio src="music/H5_60S.mp3" loop preload="auto" id="music"></audio>
+		
+		<div class="box">
+			<!--浮动的电视-->
+			<div class="float-container">
+				<div class="tv-inside">
+					<ul>
+						<li class="animation-qiao"><span></span></li>
+						<li class="animation-youyong"><span></span></li>
+						<li class="animation-sky">
+							<span class="sky1"><img src="images/scroll-bg4-02.png"></span>
+							<div class="sky-cloud">
+								<span class="sky-c1"><img src="images/cloud-01.png"></span>
+								<span class="sky-c2"><img src="images/cloud-02.png"></span>
+								<span class="sky-c3"><img src="images/cloud-04.png"></span>
+							</div>
+							<span class="sky2"><img src="images/scroll-bg4-01.png"></span>
+						</li>
+						<li class="animation-leaf">
+							<span><img src="images/leaf-img-01.png"></span>
+							<div class="leaf-box">
+								<span class="a1"><img src="images/leaf-img-02.png"></span>
+								<span class="a2"><img src="images/leaf-img-02.png"></span>
+								<span class="a3"><img src="images/leaf-img-02.png"></span>
+								<span class="a4"><img src="images/leaf-img-02.png"></span>
+								<span class="a5"><img src="images/leaf-img-02.png"></span>
+							</div>
+						</li>
+						<li class="animation-desert"><span></span></li>
+						<li class="animation-light">
+							<span><img src="images/light-01.png"></span>
+							<span><img src="images/light-05.png"></span>
+							<span><img src="images/light-02.png"></span>
+							<span><img src="images/light-03.png"></span>
+							<span><img src="images/light-04.png"></span>
+						</li>
+						<li>
+							<img src="images/scroll-bg8.png">
+							<span class="scroll8-tv"><img src="images/scroll-tv.jpg"></span>
+							<span class="scroll8-tv2"><img src="images/scroll-tv.jpg"></span>
+						</li>
+						<li class="animation-game">
+							<span class="game-1"><img src="images/scroll9-03.png"></span>
+							<span class="game-2"><img src="images/scroll9-01 (2).png"></span>
+							<span class="game-3"><img src="images/scroll9-04.png"></span>
+							<span class="game-4"><img src="images/scroll9-02.png"></span>
+						</li>
+					</ul>
+				</div>
+				<div class="tv-bg"><img src="images/tv-bg.png"></div>
+			</div>
+
+			<!--第二屏的人物-->
+			<div class="protagonist">
+				<img src="images/s-p2-01.png">
+			</div>
+
+			<!--第三屏的浪花-->
+			<div class="spindrift">
+				<img src="images/spindrift.png">
+			</div>
+
+			<!--music图标-->
+			<div class="music" id="music-btn">
+				<span><img src="images/music-icon.png"></span>
+			</div>
+
+			
+			<!--内容-->
+			<div class="container" id="onBox">
+				<!--第一屏-->
+				<div class="section page1">
+					<div class="text">
+						<span><img src="images/s-t10-01.png"></span>
+						<span><img src="images/s-t10-02.png"></span>
+						<span><img src="images/s-t10-03.png"></span>
+						<span><img src="images/s-t1-04.png"></span>
+					</div>
+					<div class="cloud">
+						<span class="c1"><img src="images/cloud-01.png"></span>
+						<span class="c2"><img src="images/cloud-02.png"></span>
+						<span class="c3"><img src="images/cloud-03.png"></span>
+						<span class="c4"><img src="images/cloud-04.png"></span>
+						<span class="c5"><img src="images/cloud-05.png"></span>
+					</div>
+				</div>
+				<!--第二屏-->
+				<div class="section page2">
+					<div class="text animation-text position">
+						<span><img src="images/s-t2-01.png"></span>
+						<span><img src="images/s-t2-02.png"></span>
+						<span><img src="images/s-t2-03.png"></span>
+					</div>
+					<div class="cloud">
+						<span class="c1"><img src="images/cloud-01.png"></span>
+						<span class="c2"><img src="images/cloud-02.png"></span>
+						<span class="c3"><img src="images/cloud-03.png"></span>
+						<span class="c4"><img src="images/cloud-04.png"></span>
+						<span class="c5"><img src="images/cloud-05.png"></span>
+					</div>
+				</div>
+				<!--第三屏-->
+				<div class="section page3">
+					<div class="text animation-text">
+						<span><img src="images/s-t3-01.png"></span>
+						<span><img src="images/s-t3-02.png"></span>
+						<span><img src="images/s-t3-03.png"></span>
+					</div>
+					<div class="water">
+						<span><img src="images/shuiwen.jpg"></span>
+						<img src="images/shuiwen.jpg">
+					</div>
+				</div>
+				<!--第四屏-->
+				<div class="section page4">
+					<div class="text animation-text">
+						<span><img src="images/s-t4-01.png"></span>
+						<span><img src="images/s-t4-02.png"></span>
+						<span><img src="images/s-t4-03.png"></span>
+					</div>
+				</div>
+				<!--第五屏-->
+				<div class="section page5">
+					<div class="text animation-text">
+						<span><img src="images/s-t5-01.png"></span>
+						<span><img src="images/s-t5-02.png"></span>
+						<span><img src="images/s-t5-03.png"></span>
+					</div>
+					<div class="cloud">
+						<span class="c1"><img src="images/cloud-01.png"></span>
+						<span class="c2"><img src="images/cloud-02.png"></span>
+						<span class="c3"><img src="images/cloud-03.png"></span>
+						<span class="c4"><img src="images/cloud-04.png"></span>
+						<span class="c5"><img src="images/cloud-05.png"></span>
+					</div>
+				</div>
+				<!--第六屏-->
+				<div class="section page6">
+					<div class="text animation-text">
+						<span><img src="images/s-t6-01.png"></span>
+						<span><img src="images/s-t6-02.png"></span>
+						<span><img src="images/s-t6-03.png"></span>
+					</div>
+				</div>
+				<!--第七屏-->
+				<div class="section page7">
+					<div class="text animation-text">
+						<span><img src="images/s-t7-01.png"></span>
+						<span><img src="images/s-t7-02.png"></span>
+						<span><img src="images/s-t7-03.png"></span>
+					</div>
+				</div>
+				<!--第八屏-->
+				<div class="section page8">
+					<div class="text animation-text">
+						<span><img src="images/s-t8-01.png"></span>
+						<span><img src="images/s-t8-02.png"></span>
+						<span><img src="images/s-t8-03.png"></span>
+					</div>
+				</div>
+				<!--第九屏-->
+				<div class="section page9">
+					<div class="text animation-text">
+						<span><img src="images/s-t9-01.png"></span>
+						<span><img src="images/s-t9-02.png"></span>
+						<span><img src="images/s-t9-03.png"></span>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="a" id="touch"></div>
+		<!--第十屏-->
+		<div class="page10" id="page_10">
+			<span>
+				<img src="images/share.png">
+				<a class="close"><img src="images/share-close.png"></a>
+				<a class="more" href="http://sale.jd.com/m/act/dUrFeoKWkB.html"><img src="images/share-btn1.png"></a>
+				<a class="share"><img src="images/share-btn2.png"></a>
+			</span>
+		</div>
+		<div class="arrows"><img src="images/arrows.png"></div>
+	</body>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+	<script>
+		$(document).ready(function() {
+
+			$('.container').fullpage({
+				navigation: false,
+				verticalCentered: false,
+				easing: 'easeInQuart',
+				onLeave: function(index, nextIndex, direction) {
+					var x, nextX, dir;
+					x = index;
+					nextX = nextIndex;
+					dir = direction;
+
+					if(nextX == 8 && dir == 'up') {
+						$('.a').hide();
+					} else if(nextX == 9) {
+						$('.a').show();
+					}
+
+					var liHeight = $('.tv-inside ul li').height();
+
+					if(nextX > 1 && nextX < 10) {
+						$('.float-container').css({
+							'transform': 'translate3d(' + -50 + '%' + ',' + 0 + 'px' + ',' + 0 + 'px' +
+								')',
+							'-webkit-transform': 'translate3d(' + -50 + '%' + ',' + 0 + 'px' + ',' + 0 + 'px' +
+								')',
+							opacity: 1
+						});
+					} else {
+						$('.float-container').css({
+							'transform': 'translate3d(' + -50 + '%' + ',' + 0 + 'px' + ',' + 0 + 'px' +
+								')',
+							'-webkit-transform': 'translate3d(' + -50 + '%' + ',' + 0 + 'px' + ',' + 0 + 'px' +
+								')',
+							opacity: 0
+						});
+					}
+
+					$('.tv-inside ul').css({
+						'transform': 'translate3d(' + 0 + 'px' + ',' + -liHeight * (nextX - 2) + 'px' + ',' + 0 + 'px' +
+							')',
+						'-webkit-transform': 'translate3d(' + 0 + 'px' + ',' + -liHeight * (nextX - 2) + 'px' + ',' + 0 + 'px' +
+							')'
+					});
+
+					if(nextX == 2) {
+						$('.protagonist').addClass('onShow');
+					} else {
+						$('.protagonist').removeClass('onShow');
+					}
+					if(nextX == 3) {
+						$('.spindrift').addClass('onShow');
+					} else {
+						$('.spindrift').removeClass('onShow');
+					}
+					if(nextX != 1) {
+						$('.page1').removeClass('on');
+
+					} else {
+						$('.page1').addClass('on');
+					}
+					if(nextX != 9) {
+						$('.hint').show();
+
+					} else {
+						$('.hint').hide();
+					}
+
+					console.log(x + '+' + nextX + '+' + dir);
+				}
+			});
+
+			var oTouch = document.getElementById("touch");
+			var page10 = document.getElementById("page_10");
+			var nStratY = 0;
+			oTouch.addEventListener('touchstart', onTouchStart, false);
+			oTouch.addEventListener('touchmove', onTouchMove, false);
+			page10.addEventListener('touchmove', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+			}, false);
+
+			function onTouchStart(e) {
+				e.preventDefault();
+				var y = e.touches[0].pageY;
+				nStratY = y;
+				console.log(nStratY);
+			}
+
+			function onTouchMove(e) {
+				e.preventDefault();
+				var y = e.touches[0].pageY;
+				if(y - nStratY < 0) {
+					console.log('向下滑');
+					$('.page10').css({
+						'display': 'block',
+						'opacity': 1
+					});
+				}
+
+			}
+
+			$('.close').on('touchstart', function() {
+				$('.page10').css({
+					'display': 'none',
+					'opacity': 0
+				});
+				//$('.a').hide();
+			});
+
+			$('.share').on('touchstart', function() {
+				$('.arrows').show();
+			});
+			$('.arrows').on('touchstart', function() {
+				$(this).hide();
+			});
+		});
+
+		$(window).resize(function() {
+			var oHeight = $(window).height();
+			$('.section').css({
+				height: oHeight + 'px'
+			});
+		});
+
+		function initPage() {
+			var objLoading = document.getElementById("LoadingBar");
+			var oMusic = document.getElementById("music");
+			if(objLoading != null) {
+				objLoading.style.display = "none";
+				oMusic.play();
+			}
+
+		}
+	</script>
+
+</html>

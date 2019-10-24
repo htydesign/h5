@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta name="format-detection" content="telephone=no" />
+		<script>
+			// class
+			! function(navigator) {
+				var userAgent = navigator.userAgent;
+				documentElement = document.documentElement;
+				if(userAgent.match(/micromessenger\/5/gi)) {
+					documentElement.className += " mobile wx_mobile wx_mobile_5";
+				} else if(userAgent.match(/micromessenger/gi)) {
+					documentElement.className += " mobile wx_mobile";
+				} else if(userAgent.match(/ucbrowser/gi)) {
+					documentElement.className += " mobile uc_mobile";
+				} else if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())) {
+					documentElement.className += " mobile";
+				} else if(userAgent.toLowerCase().match(/msie/gi) && (parseFloat(userAgent.toLowerCase().match(/msie ([0-9]{1,}[\.0-9]{0,})/i)[1] || 999) < 9)) {
+					documentElement.className += " pc pc-ie pc-ie8";
+				} else if(userAgent.toLowerCase().match(/msie/gi) || navigator.msPointerEnabled || navigator.pointerEnabled) {
+					documentElement.className += " pc pc-ie";
+				} else {
+					documentElement.className += " pc";
+				}
+			}(navigator);
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>口袋理赔</title>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+
+	<body>
+		<div class="container2">
+			<div class="page-container" id="page">
+				<div class="page-box">
+					<div class="j-box ">
+						<div class="section">
+
+							<div class="works-box">
+								<div class="works-1">
+									<span><img src="../images/work-bg1.png"></span>
+									<span><img src="images/koudailipei-1.jpg"></span>
+								</div>
+								<div class="works-2">
+									<span><img src="../images/work-bg2.png"></span>
+									<span><img src="images/zhengxuejun.jpg"></span>
+								</div>
+							</div>
+
+							<div class="works-info">
+								<h1>《口袋理赔》简介</h1>
+								<p>口袋理赔于2016年1月7日发布上线。作为一款突破传统车险理赔流程，从客户角度出发，解决客户痛点的产品，口袋理赔的诞生使客户体验了全新的理赔流程，全案周期从传统的20多天缩减为1.03天。</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="j-box ">
+						<div class="section">
+
+							<div class="works-box">
+								<div class="works-1">
+									<span><img src="../images/work-bg1.png"></span>
+									<span><img src="images/xiaoanzhineng-1.jpg"></span>
+								</div>
+								<div class="works-2">
+									<span><img src="../images/work-bg2.png"></span>
+									<span><img src="images/zhengxuejun2.jpg"></span>
+								</div>
+							</div>
+
+							<div class="works-info">
+								<h1>《小安移动智能指引》简介</h1>
+								<p>小安移动智能指引，一款基于NPS贬损、针对性解决客户问题的产品。深入场景，为用户提供进度指引、查勘位置可视化、查勘点评等多项贴心功能。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--左右箭头-->
+			<div class="arrows">
+				<div class="perv"><img src="../images/jiantou.png"></div>
+				<div class="next"><img src="../images/jiantou.png"></div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/wxfx.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+
+	<script>
+		window.onload = function() {
+
+			$('.perv').hide();
+			$('.next').show();
+			var m = 1; //页数
+
+			var aBox = $('.j-box');
+			var aBoxWidth = aBox.width();
+			var windowHeight = $(window).height();
+			$('.page-box').css({
+				'width': aBox.width() * aBox.length + 'px'
+			});
+			document.addEventListener('touchstart', onTouchStart, false);
+			document.addEventListener('touchend', onTouchEnd, false);
+
+			var startX, endX, targetX, num = 0;
+
+			function onTouchStart(e) {
+				startX = e.touches[0].screenX;
+				e.preventDefault();
+			}
+
+			function onTouchEnd(e) {
+				endX = e.changedTouches[0].screenX;
+				targetX = endX - startX;
+
+				if(targetX > 100) {
+					if(num <= 0) {
+						num = 0;
+					} else {
+						num--;
+					}
+					$('.page-box').css({
+						'transform': 'translate3d(' + -aBoxWidth * num + 'px' + ',0,0 )',
+						'-webkit-transform': 'translate3d(' + -aBoxWidth * num + 'px' + ',0,0 )'
+					});
+					console.log('向右' + num);
+				} else if(targetX < -100) {
+					if(num >= m) {
+						num = m;
+					} else {
+						num++;
+					}
+					$('.page-box').css({
+						'transform': 'translate3d(' + -aBoxWidth * num + 'px' + ',0,0 )',
+						'-webkit-transform': 'translate3d(' + -aBoxWidth * num + 'px' + ',0,0 )'
+					});
+					console.log('向左' + num);
+				} else if(targetX == 0) {
+					num = num;
+					console.log(num);
+				}
+				$('.j-box').eq(num).addClass('active').siblings().removeClass('active');
+				if(num == 0) {
+					$('.perv').fadeOut();
+
+				} else {
+					$('.perv').fadeIn();
+				}
+				if(num == m) {
+					$('.next').fadeOut();
+				} else {
+					$('.next').fadeIn();
+				}
+				var $body = $('body');
+				if(num == 0) {
+					
+					document.title = '口袋理赔';
+					var $iframe = $('<iframe src="/favicon.ico"></iframe>').on('load', function() {
+						setTimeout(function() {
+							$iframe.off('load').remove();
+						}, 0)
+					}).appendTo($body);
+				} else {
+					document.title = '小安移动智能指引';
+					var $iframe = $('<iframe src="/favicon.ico"></iframe>').on('load', function() {
+						setTimeout(function() {
+							$iframe.off('load').remove();
+						}, 0)
+					}).appendTo($body);
+					// $("title").html("小安移动智能指引");
+				}
+			}
+
+		}
+	</script>
+
+</html>

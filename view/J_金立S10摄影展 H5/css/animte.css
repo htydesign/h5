@@ -1,0 +1,100 @@
+
+.fade-in{
+	animation: fadeIn 0.5s ease forwards;
+	-webkit-animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+@-webkit-keyframes fadeIn{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+.fade-out{
+	animation: fadeOut 0.5s ease forwards;
+	-webkit-animation: fadeOut 0.5s ease forwards;
+}
+
+@keyframes fadeOut{
+	from{opacity: 1;}
+	to{opacity: 0;}
+}
+@-webkit-keyframes fadeIn{
+	from{opacity: 1;}
+	to{opacity: 0;}
+}
+
+.arrow{
+	animation: ar 2s linear infinite;
+	-webkit-animation: ar 2s linear infinite;
+}
+
+@keyframes ar{
+	0%{
+		transform: translateY(0px);
+	}
+	25%{
+		transform: translateY(30px);
+	}
+	50%{
+		transform: translateY(0px);
+	}
+	75%{
+		transform: translateY(-30px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

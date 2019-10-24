@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+		<title>test</title>
+		<style>
+			p{font-size: 36px;}
+			button{
+				width: 300px;
+				height: 200px;
+				margin: 20px;
+				font-size: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="txt">1</p>
+		<button class="btn1" value="1">1</button>
+		<button class="btn2" value="2">2</button>
+		<button class="btn3" value="3">3</button>
+	</body>
+	<script>
+		window.onload=function(){
+			(function() {
+				var lastTime = 0;
+				var vendors = ['webkit', 'moz'];
+				for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+					window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+					window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || // Webkit中此取消方法的名字变了
+						window[vendors[x] + 'CancelRequestAnimationFrame'];
+				}
+			
+				if(!window.requestAnimationFrame) {
+					window.requestAnimationFrame = function(callback, element) {
+						var currTime = new Date().getTime();
+						var timeToCall = Math.max(0, 16.7 - (currTime - lastTime));
+						var id = window.setTimeout(function() {
+							callback(currTime + timeToCall);
+						}, timeToCall);
+						lastTime = currTime + timeToCall;
+						return id;
+					};
+				}
+				if(!window.cancelAnimationFrame) {
+					window.cancelAnimationFrame = function(id) {
+						clearTimeout(id);
+					};
+				}
+			}());
+			
+			
+			var stop = null;
+			var oTxt=document.querySelector('.txt');
+			setAnimation(10);
+			var index = 0;
+			function setAnimation(t) {
+				
+				stop = requestAnimationFrame(setAnimation);
+				oTxt.innerHTML=index;
+				console.log(t);
+				if(index >= t) {
+					window.cancelAnimationFrame(stop);
+					index = 0;
+				} else {
+					index++;
+				}
+			}
+			var oBtn_1=document.querySelector('.btn1');
+			var oBtn_2=document.querySelector('.btn2');
+			var oBtn_3=document.querySelector('.btn3');
+			
+			oBtn_1.addEventListener('touchstart',function(){
+				
+			},false);
+			
+			oBtn_2.addEventListener('touchstart',function(){
+				
+			},false);
+			
+			oBtn_3.addEventListener('touchstart',function(){
+				
+			},false);
+			
+			
+		}
+	</script>
+</html>

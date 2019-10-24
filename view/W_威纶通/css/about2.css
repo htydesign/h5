@@ -1,0 +1,46 @@
+.container{width: 100%;min-width: 1200px;position: relative;margin: 0px auto;}
+.content{width: 1200px;position: relative;margin: 0px auto;padding-top: 82px;}
+.bg1{background: url(../images/about/bg1.jpg);background-position: center center;background-repeat: no-repeat;height: 600px}
+.bg2{background: url(../images/about/bg2.jpg);background-position: center center;background-repeat: no-repeat;height: 596px}
+.bg3{background: url(../images/about/bg3.jpg);background-position: center center;background-repeat: no-repeat;height: 600px}
+.titl-h3{margin-bottom: 60px; text-align: center;font-size: 22px;color: #333;line-height: 30px;}
+.titl-h3 span{text-align: center;font-size: 20px; color: #0a72a7;line-height:30px;display: block;}
+.titl-h3 i{display: inline-block;width: 50px;height: 1px;background-color: #333;margin-top: 10px;}
+.video{cursor: pointer; display: inline-block;float: left;width: 530px;height:315px;overflow: hidden;position: relative; }
+.video-p{display: none; position: absolute;left: 0px;bottom: 0px; background-color: rgba(0,0,0,.4);color:#fff;font-size: 14px;line-height: 40px;padding-left: 30px;width: 500px; }
+.video:hover .video-p{display: block;}
+.fr{float: right;}
+.slideBox{position: relative; width: 590px;height: 315px;display: inline-block;float: right;}
+.banner li{position:relative; float:left;width: 590px;height: 270px; overflow: hidden;}
+.arrow{position:absolute; left:0px; bottom:0;z-index: 666;width: 300px;}
+.arrow a{display:inline-block; width:69px; height:32px;cursor: pointer; border: 1px solid #898989; margin-right: 20px;}
+.arrow a:hover{
+	border: 1px solid #f58029;
+}
+.arrow a.next{background: url(../images/about/ioc3_on.png) center;background-repeat: no-repeat;}
+.arrow a.prev{background: url(../images/about/ioc3.png) center;background-repeat: no-repeat;}
+.arrow a:hover.next{background: url(../images/about/ioc4.png) center;background-repeat: no-repeat;}
+.arrow a:hover.prev{background: url(../images/about/ioc4_on.png) center;background-repeat: no-repeat;}
+
+.h4-ban{color: #f58029;font-size: 26px;background: url(../images/about/ioc5.png);background-position: left center;background-repeat: no-repeat;padding-left: 26px;}
+.h4-all{color: #333;font-size: 22px;background: url(../images/about/ioc2.png);background-position: left center;background-repeat: no-repeat;padding-left: 26px;text-align: left;}
+.p-ban{color: #444;font-size: 14px;line-height: 24px;margin-top: 20px;}
+.p-all{text-align: left; color: #666;font-size: 14px;line-height: 24px;margin-top: 20px;text-indent: 2em;text-align: left;}
+.pai{text-align: center;width: 590px;display: inline-block;}
+.all{text-align: center;width: 590px;display: inline-block;}
+.pai h4{font-size: 24px;color: #333;line-height: 40px;}
+.pai p{font-size: 14px;color: #666;line-height: 24px;margin-top: 30px;width: 380px;display: inline-block;}
+.loginW{display: none; position: fixed;top: 0px;left: 0px;width: 100%;height: 100%;background: rgba(0,0,0,.5);z-index: 1111}
+.pb{position: fixed;top: 0px;left: 0px;width: 100%;height: 100%;background: #000;filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+-moz-opacity:0.5; 
+opacity:0.5;z-index: 9998}
+.loginwindow{z-index: 9999; position: absolute;top: 50%;margin-top: -300px;left: 50%;margin-left: -560px;width: 1120px;height: 600px;}
+.close{width: 100%;text-indent: 4em;z-index: 999; position: absolute;top: 0px;left: 0px;height: 40px;background-color: rgba(0,0,0,.5);color: #fff;font-size: 14px;line-height: 40px;}
+.close span{position: absolute;right:50px;cursor: pointer; display: inline-block;font-size: 18px;width: 40px;text-align: center;color: #fff;}
+
+
+.pai span{
+	display: block;
+	width: auto;
+	height: 80px;
+}

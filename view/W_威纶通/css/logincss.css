@@ -1,0 +1,318 @@
+/*------------登录框-----------*/
+.login-bg{
+	width: 100%;
+	min-width: 1200px;
+	height: auto;
+	background: #eeeeee;
+	padding: 60px 0;
+}
+.login-container{
+	width: 1200px;
+	height: auto;
+	margin: auto;
+	background: #FFFFFF;
+	
+}
+.login-height{
+	height: 624px;
+}
+.login-container-bg{
+	width: 100%;
+	
+	background: url(../images/login/login-bg.jpg) no-repeat center bottom;
+}
+.login-img{
+	width: 746px;
+	height: 100%;
+	float: left;
+	display: block;
+}
+.login-img p{
+	font-size: 16px;
+	margin-left: 90px;
+}
+.login-box{
+	width: 365px;
+	height: 530px;
+	float: left;
+	display: block;
+	border: 1px solid #d2d2d2;
+	margin-top: 65px;
+}
+.login-box span{
+	display: block;
+	height: 84px;
+	width: 300px;
+	border-bottom: 1px dashed #d2d2d2;
+	margin: auto;
+}
+.login-box h1{
+	line-height: 84px;
+	font-size: 18px;
+	color: #f58029;
+	text-align: center;
+}
+.login-box form{
+	width: 270px;
+	height: 220px;
+	margin:30px auto 0 auto;
+}
+.login-box form input{
+	width: 248px;
+	height: 38px;
+	border: 1px solid #D2D2D2;
+	border-radius: 5px;
+	padding: 0 10px;
+	font-size: 16px;
+	margin: 15px 0;
+	line-height: 38px;
+	line-height: 1;
+	line-height: 38px\9;
+	
+	display: block;
+}
+.login-box form .btn{
+	width: 120px;
+	background: #F58029;
+	color: #FFFFFF;
+	text-align: center;
+	border: 0;
+}
+.form-z ul{
+	float: right;
+	display: block;
+}
+.form-z ul li{
+	float: left;
+	margin: 0 5px;
+	display: block;
+	line-height: 80px;
+}
+.form-z ul li a:hover{
+	text-decoration: underline;
+}
+.login-box p{
+	width: 100%;
+	height: 40px;
+	background: #e5e5e5;
+	font-size: 12px;
+	color: #666666;
+	line-height: 40px;
+	text-align: center;
+	margin-top: 15px;
+}
+
+
+/*---------------法律声明---------------*/
+.title{
+	padding-top: 20px;
+	width: 1120px;
+	margin: auto;
+	height: 70px;
+	overflow: hidden;
+	line-height: 70px;
+	border-bottom: 1px solid #898989;
+}
+.title h1{
+	width: 500px;
+	font-size: 18px;
+	color: #f58029;
+	padding-left: 35px;
+	float: left;
+	display: block;
+}
+.title h2{
+	width: auto;
+	line-height: 100px;
+	font-size: 12px;
+	color: #f58029;
+	float: right;
+	display: block;
+	padding-right: 10px;
+}
+.title h2 a{
+	color: #0000cc;
+}
+.title h2 a:hover{
+	text-decoration: underline;
+}
+.law-congtent{
+	width: 1050px;
+	height: auto;
+	margin: auto;
+	padding-bottom: 100px;
+}
+.law-congtent h1{
+	font-size: 18px;
+	color: #20467c;
+	line-height: 72px;
+}
+.law-congtent h2{
+	font-size: 14px;
+	color: #ff8932;
+	line-height: 30px;
+}
+.law-congtent p{
+	text-indent: 28px;
+	line-height: 24px;
+}
+
+.law-congtent form{
+	width: 540px;
+	height: 540px;
+	margin: auto;
+	padding: 70px 0 200px 0;
+}
+.law-congtent form label{
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	display: block;
+	margin-bottom: 22px;
+}
+.red{
+	color: red;
+}
+.law-congtent form span{
+	width: 100px;
+	height: 100%;
+	line-height: 36px;
+	display: inline-block;
+	text-align: right;
+	margin-right: 20px;
+}
+.law-congtent form span h2{
+	width: 20px;
+	height: 100%;
+	line-height: 36px;
+	display: inline-block;
+	text-align: center;
+}
+.law-congtent form input{
+	border: 1px solid #acacac;
+	height: 34px;
+	width: 257px;
+	padding: 0 10px;
+	line-height: 34px;
+	line-height: 1;
+	line-height: 34px\9;
+	
+}
+
+.law-congtent form textarea{
+	width: 380px;
+	height: 100px;
+	border: 1px solid #acacac;
+	padding: 5px 10px;
+	display: inline-block;
+	resize: none;
+}
+.law-congtent .describe{
+	clear: both;
+	height: 102px;
+}
+.law-congtent .describe span{
+	float: left;
+}
+.law-congtent .remark{
+	height: 60px;
+	margin: 0;
+}
+.law-congtent .remark span{
+	float: left;
+}
+.law-congtent .remark p{
+	height: 60px;
+	width: 400px;
+	float: left;
+	line-height: 30px;
+	display: block;
+	overflow: hidden;
+	text-indent: 0;
+}
+.law-congtent label p{
+	width: 400px;
+	height: 36px;
+	display:inline-block;
+	text-indent: 0;
+	line-height: 36px;
+}
+.law-congtent label h3{
+	display:inline-block;
+	width: 20px;
+	height: 36px;
+	line-height: 36px;
+	margin-left: 120px;
+}
+.law-congtent .feedback-btn{
+	width: 270px;
+	height: 36px;
+	margin: auto;
+}
+.law-congtent .feedback-btn input{
+	width: 120px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	border: 0;
+	background: #c4c4c4;
+	color: #FFFFFF;
+	margin: 0 10px 0 5px;
+}
+.law-congtent .feedback-btn .submit{
+	background: #f58029;
+}
+.law-congtent .feedback-btn .reset{
+	
+}
+
+.findpass{
+	width: 650px;
+}
+.findpass form{
+	width: 650px;
+}
+.findpass form .find-email{
+	width: 340px;
+	height: 34px;
+}
+.findpass form .find-submit{
+	width: 80px;
+	height: 36px;
+	margin-left: 10px;
+	background: #F58029;
+	border: 0;
+	color: #FFFFFF;
+}
+.register form .code-label span{
+	display: block;
+	float: left;
+}
+.register form .code-input{
+	width: 90px;
+	display: block;
+	float: left;
+}
+.register form .code-img{
+	width: 110px;
+	background: #C0C5CB;
+	display: block;
+	float: left;
+	margin: 0 10px 0 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

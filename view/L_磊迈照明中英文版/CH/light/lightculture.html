@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>光影中心--光文化</title>
+		<link rel="stylesheet" href="../css/litematrix.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+
+		<!--banner需要引进的1个文件bannerstyle-->
+		<link rel="stylesheet" href="../css/bannerstyle.css" />
+
+		<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+
+		<!--banner需要引进的3个文件jquery-1.8.3.min.js,banner，jquery.banner.revolution.min.js-->
+		<script type="text/javascript" src="../js/jquery.banner.revolution.min.js"></script>
+		<script type="text/javascript" src="../js/banner.js"></script>
+
+		<!---->
+		<script type="text/javascript" src="../js/nav.js"></script>
+		<script>
+			window.onload = function() {
+				
+				//设置菜单导航
+				setNav();
+								
+			}
+			$(window).scroll(function(){
+		 		var original_left=$('.header_box').offset().left;
+			 
+				var new_left = -$(window).scrollLeft() + 'px' ;
+			
+				$('.header_fixed').css({left:new_left});
+
+		 	});
+		</script>
+	</head>
+
+	<body>
+
+		<!--导航-->
+		<div class="header_fixed header_inside" style="z-index: 8888;">
+			<div class="header_box">
+				<div class="logo">
+					<a href="../index.html"><img src="../images/biglogo.jpg"></a>
+				</div>
+				<div class="nav_bg">
+					<!--导航nav-->
+					<div class="nav" id="nav">
+						<ul>
+							<li id="nav_on2"><a href="javascript:;">光影文化</a></li>
+							<li><a href="../products/product.html">产品中心</a></li>
+							<li><a href="javascript:;">案例中心</a></li>
+							<li><a href="../technology/technology.html">技术中心</a></li>
+							<li><a href="../information/information.html">资讯中心</a></li>
+						</ul>
+					</div>
+					<!--搜索-->
+					<div class="search">
+						<a href="../../EN/light/lightculture.html">EN</a>
+						<form>
+							<div class="input">
+								<input type="text" name="" />
+								<span class="search_img"></span>
+							</div>
+							<input type="button" value="搜索" name="search" id="search_btn" />
+						</form>
+					</div>
+				</div>
+			</div>
+			<!--下拉子菜单-->
+			<div class="sub_bg" id="lists">
+
+				<!--光影文化-->
+				<div class="sub_box ">
+					<h1>光影文化</h1>
+					<ul class="big_img">
+						<li>
+							<a href="../light/lightculture.html">
+								<span class="light_one"><img src="../images/light/nav01.png"></span>
+								<span class="p">>光文化</span>
+							</a>
+						</li>
+						<li>
+							<a href="../light/lighteconomy.html">
+								<span class="light_two"><img src="../images/light/nav02.png"></span>
+								<span class="p">>光经济</span>
+							</a>
+						</li>
+						<li>
+							<a href="../light/lightscene.html">
+								<span class="light_three"><img src="../images/light/nav03.png"></span>
+								<span class="p">>光环境</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--产品中心-->
+				<div class="sub_box sub_box2">
+					<span class="nav_product_title">
+						<h2>户外照明</h2>
+						<span></span>
+					</span>
+					<ul class="small_img">
+						<li>
+							<a href="../products/product.html#hw1">
+								<span class="led_one"><img src="../images/product/hw-icon01.png"></span>
+								<span class="p">>LED泛光灯</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw2">
+								<span class="led_one"><img src="../images/product/hw-icon02.png"></span>
+								<span class="p">>LED射灯系列</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw3">
+								<span class="led_one"><img src="../images/product/hw-icon03.png"></span>
+								<span class="p">>LED线条射灯灯系列</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw4">
+								<span class="led_one"><img src="../images/product/hw-icon04.png"></span>
+								<span class="p">>LED洗墙灯系列</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw5">
+								<span class="led_one"><img src="../images/product/hw-icon05.png"></span>
+								<span class="p">>LED点状灯系列</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw6">
+								<span class="led_one"><img src="../images/product/hw-icon06.png"></span>
+								<span class="p">>LED水底灯系列</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#hw7">
+								<span class="led_one"><img src="../images/product/hw-icon07.png"></span>
+								<span class="p">>LED柔性灯系列</span>
+							</a>
+						</li>
+					</ul>
+					<span class="nav_product_title">
+						<h2>控制系统</h2>
+						<span></span>
+					</span>
+					<ul class="small_img">
+						<li>
+							<a href="../products/product.html#kz1">
+								<span class="led_one"><img src="../images/product/kz-icon01.png"></span>
+								<span class="p">>联机主控器</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz2">
+								<span class="led_one"><img src="../images/product/kz-icon02.png"></span>
+								<span class="p">>脱机主控器</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz3">
+								<span class="led_one"><img src="../images/product/kz-icon03.png"></span>
+								<span class="p">>卫星同步主控器</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz4">
+								<span class="led_one"><img src="../images/product/kz-icon04.png"></span>
+								<span class="p">>分控器</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz5">
+								<span class="led_one"><img src="../images/product/kz-icon05.png"></span>
+								<span class="p">>一体式主控器</span>
+							</a>
+						</li>
+						<li>
+							<a href="../products/product.html#kz6">
+								<span class="led_one"><img src="../images/product/kz-icon06.png"></span>
+								<span class="p">>场景选择器</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--案例中心-->
+				<div class="sub_box ">
+					<h1>案例中心</h1>
+					<ul class="big_img">
+						<li>
+							<a href="../case/oversea.html">
+								<span class="light_one"><img src="../images/case/anli-icon01.png"></span>
+								<span class="p">>国际市场</span>
+							</a>
+						</li>
+						<li>
+							<a href="../case/domestic.html">
+								<span class="light_two"><img src="../images/case/anli-icon02.png"></span>
+								<span class="p">>国内市场</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--技术中心-->
+				<div class="sub_box">
+					<h1>技术中心</h1>
+					<ul class="big_img">
+						<li>
+							<a href="../technology/technologyfold.html">
+								<span class="light_one"><img src="../images/technology/pro-icon01.png"></span>
+								<span class="p">>产品技术</span>
+							</a>
+						</li>
+						<li>
+							<a href="../technology/download.html">
+								<span class="light_two"><img src="../images/technology/pro-icon02.png"></span>
+								<span class="p">>资料下载</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<!--资讯中心-->
+				<div class="sub_box ">
+					<h1>资讯中心</h1>
+					<ul class="big_img">
+						<li>
+							<a href="../information/introduce.html">
+								<span class="light_one"><img src="../images/information/info-nav-01.png"></span>
+								<span class="p">>公司简介</span>
+							</a>
+						</li>
+						<li>
+							<a href="../information/honor.html">
+								<span class="light_two"><img src="../images/information/info-nav-02.png"></span>
+								<span class="p">>资质荣誉</span>
+							</a>
+						</li>
+						<li>
+							<a href="../information/news.html">
+								<span class="light_one"><img src="../images/information/info-nav-03.png"></span>
+								<span class="p">>磊迈新闻</span>
+							</a>
+						</li>
+						<li>
+							<a href="../information/contact.html">
+								<span class="light_two"><img src="../images/information/info-nav-04.png"></span>
+								<span class="p">>联系磊迈</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+		<!--/导航-->
+		<div class="clear" style="height: 66px;"></div>
+		<div class="light_banner light_culture"></div>
+		<!--面包线-->
+		<div class="link_bg">
+			<div class="link_box">
+				<div class="link_line">
+					<ul>
+						<li><a href="../index.html">Litematrix</a></li>
+						<li>></li>
+						<li><a href="#">光影文化</a></li>
+						<li>></li>
+						<li><a href="light.html">光文化</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!--产品列表-->
+		
+		<div class="light_page_box">
+			<div class="light_page_block">
+				<div class="light_page_title">
+					<h1>光是我们的最终产品</h1>
+				</div>
+				<div class="light_page_blockimg">
+					<img src="../images/light/light01.jpg">
+				</div>
+				<div class="light_page_imgtext">
+					<p>一个好的灯具源于优良的设计、陷阱的照明科技与制造系统，但最终呈现的是精准的、有质量的光。把光作为产品价值追求，是链接灯具与人的最重要纽带。</p>
+				</div>
+			</div>
+			<div class="light_page_block">
+				<div class="light_page_title">
+					<h1>灯具与建筑的融合</h1>
+				</div>
+				<div class="light_page_blockimg">
+					<img src="../images/light/light02.jpg">
+				</div>
+				<div class="light_page_imgtext">
+					<p>让建筑照明灯具成为建筑的一部分是我们的追求，像材料一样隐藏事选择之一，或者大方的露出来，成为建筑有机的一部分，这也是另外一种"隐".通过多方合作，实现合理的工业设计，再加上技术的创新，灯具与建筑的关系，将会变得更加和谐。</p>
+				</div>
+			</div>
+		</div>
+	
+		<!--底部-->
+		<div class="footer_bg">
+			<div class="footer">
+
+				<!--产品中心-->
+				<div class="footer_nav">
+					<h1>产品中心</h1>
+					<ul>
+						<li><a href="../products/product.html">户外照明</a></li>
+						<li><a href="../products/product.html">室内产品</a></li>
+						<li><a href="../products/product.html">控制系统</a></li>
+					</ul>
+				</div>
+
+				<!--光影文化-->
+				<div class="footer_nav">
+					<h1>光影文化</h1>
+					<ul>
+						<li><a href="../light/lightculture.html">光文化</a></li>
+						<li><a href="../light/lighteconomy.html">光经济</a></li>
+						<li><a href="../light/lightscene.html">光环境</a></li>
+					</ul>
+				</div>
+
+				<!--技术支持-->
+				<div class="footer_nav">
+					<h1>技术支持</h1>
+					<ul>
+						<li><a href="../technology/technology.html">产品技术</a></li>
+						<li><a href="../technology/download.html">资料下载</a></li>
+					</ul>
+				</div>
+
+				<!--资讯中心-->
+				<div class="footer_nav">
+					<h1>资讯中心</h1>
+					<ul>
+						<li><a href="../information/introduce.html">公司简介</a></li>
+						<li><a href="../information/honor.html">荣誉资质</a></li>
+						<li><a href="../information/news.html">磊迈新闻</a></li>
+					</ul>
+				</div>
+
+				<!--售后服务-->
+				<div class="footer_nav serve">
+					<h1>售后服务：</h1>
+					<div class="footer_tel">
+						<span class="tel_img"><img src="../images/tel.jpg"></span> 86-75526895498
+					</div>
+					<p>关注我们</p>
+					<ul>
+						
+						<div class="bdsharebuttonbox" data-tag="share_1">
+							<a class="share_one" data-cmd="fbook"></a>
+							<a class="share_two" data-cmd="fx"></a>
+							<a class="share_three" data-cmd="tsina"></a>
+							<a class="share_four" data-cmd="weixin"></a>
+							<a class="share_five" data-cmd="tqq"></a>
+						</div>
+					</ul>
+				</div>
+				<script>
+				//分享
+					window._bd_share_config = {
+						share: [{
+							"bdSize": 36
+						}],
+					}
+					with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
+				</script>
+			</div>
+			<div class="line"></div>
+			<div class="copyright">
+				<p> All Rights Reserved &copy;"LiteMatrix Technology 2012. Reserves All Rights</p>
+			</div>
+		</div>
+		<!--/底部-->
+
+	</body>
+
+</html>

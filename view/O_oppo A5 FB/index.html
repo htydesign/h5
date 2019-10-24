@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<script>
+			// class
+			! function(navigator) {
+				var userAgent = navigator.userAgent;
+				documentElement = document.documentElement;
+				if(userAgent.match(/micromessenger\/5/gi)) {
+					documentElement.className += " mobile wx_mobile wx_mobile_5";
+				} else if(userAgent.match(/micromessenger/gi)) {
+					documentElement.className += " mobile wx_mobile";
+				} else if(userAgent.match(/ucbrowser/gi)) {
+					documentElement.className += " mobile uc_mobile";
+				} else if(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent.toLowerCase())) {
+					documentElement.className += " mobile";
+				} else if(userAgent.toLowerCase().match(/msie/gi) && (parseFloat(userAgent.toLowerCase().match(/msie ([0-9]{1,}[\.0-9]{0,})/i)[1] || 999) < 9)) {
+					documentElement.className += " pc pc-ie pc-ie8";
+				} else if(userAgent.toLowerCase().match(/msie/gi) || navigator.msPointerEnabled || navigator.pointerEnabled) {
+					documentElement.className += " pc pc-ie";
+				} else {
+					documentElement.className += " pc";
+				}
+			}(navigator);
+			// meta
+			! function(userAgent) {
+				var screen_w = parseInt(window.screen.width),
+					scale = screen_w / 640;
+				if(/Android (\d+\.\d+)/.test(userAgent)) {
+					var version = parseFloat(RegExp.$1);
+					document.write(version > 2.3 ? '<meta name="viewport" content="width=640, minimum-scale = ' + scale + ", maximum-scale = " + scale + ', target-densitydpi=device-dpi">' : '<meta name="viewport" content="width=640 target-densitydpi=device-dpi">');
+				} else {
+					document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+				}
+			}(navigator.userAgent);
+		</script>
+		<title>oppo A5 FB </title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/animation.css" />
+	</head>
+
+	<body>
+
+		<div class="hsp">
+			<p></p>
+		</div>
+
+		<div class="container rotate">
+			
+			<div id="music_icon"></div>
+			
+			<!--loading-->
+			<div class="load">
+				<div class="loading">
+					<span></span>
+					<span></span>
+				</div>
+				<p></p>
+			</div>
+
+			<!--home-->
+			<div class="home">
+				<span></span>
+				<span><img src="images/img-02.png"></span>
+			</div>
+
+			<!--ranking-list-->
+			<div class="ranking-list">
+				<div class="go-block"><img src="images/img-28.png"></div>
+				<div class="result-background"></div>
+				<div class="result-container">
+					<span><img src="images/img-21.png"></span>
+					<span><img src="images/img-23.png"></span>
+					<span class="playing">
+						<img src="images/img-24.png">
+					</span>
+					<span class="openOfficial">
+						<a href="index.html"></a>
+					</span>
+				</div>
+				<div class="ranking-box">
+					<h1>
+						<span></span>
+						<span></span>
+						<span>
+							<i class="u-name">Jon: </i>
+							<i class="u-score">56</i>
+						</span>
+					</h1>
+					<div class="friends-ranking" id="wrapper1">
+						<i class="sfriends">
+							<b></b>
+						</i>
+						<div class="scroller" id="friends_wrapper">
+							<ul>
+								<li>
+									<div class="left-userHead">
+										<i>99</i>
+										<span><img src="images/img-16.png"></span>
+									</div>
+									<div class="right-userScore">
+										<p class="userName">userNameuserNameDaiv:</p>
+										<p class="userScore">999</p>
+									</div>
+								</li>
+								
+								<li>
+									<div class="left-userHead">
+										<i>5</i>
+										<span><img src=""></span>
+									</div>
+									<div class="right-userScore">
+										<p class="userName">header:</p>
+										<p class="userScore">999</p>
+									</div>
+								</li>
+								<li>
+									<div class="left-userHead">
+										<i>6</i>
+										<span><img src=""></span>
+									</div>
+									<div class="right-userScore">
+										<p class="userName">header:</p>
+										<p class="userScore">999</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="world-ranking">
+						<i class="sworld">
+							<b></b>
+						</i>
+						<div class="scroller" id="world_wrapper">
+							<ul>
+								<li>
+									<div class="left-userHead">
+										<i>1</i>
+										<span><img src="images/img-16.png"></span>
+									</div>
+									<div class="right-userScore">
+										<p class="userName">Daiv:</p>
+										<p class="userScore">999</p>
+									</div>
+								</li>
+								<li>
+									<div class="left-userHead">
+										<i>2</i>
+										<span><img src=""></span>
+									</div>
+									<div class="right-userScore">
+										<p class="userName">json:</p>
+										<p class="userScore">999</p>
+									</div>
+								</li>
+								<li>
+									<div class="left-userHead">
+										<i>3</i>
+										<span><img src=""></span>
+									</div>
+									<div class="right-userScore">
+										<p class="userName">header:</p>
+										<p class="userScore">999</p>
+									</div>
+								</li>
+								<li>
+									<div class="left-userHead">
+										<i>4</i>
+										<span><img src=""></span>
+									</div>
+									<div class="right-userScore">
+										<p class="userName">header:</p>
+										<p class="userScore">999</p>
+									</div>
+								</li>
+								<li>
+									<div class="left-userHead">
+										<i>5</i>
+										<span><img src=""></span>
+									</div>
+									<div class="right-userScore">
+										<p class="userName">header:</p>
+										<p class="userScore">999</p>
+									</div>
+								</li>
+								<li>
+									<div class="left-userHead">
+										<i>6</i>
+										<span><img src=""></span>
+									</div>
+									<div class="right-userScore">
+										<p class="userName">header:</p>
+										<p class="userScore">999</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--introduce-->
+			<div class="introduce">
+				<div class="introduce-background"></div>
+				<div class="introduce-container">
+					<div class="u-block">
+						<span><img src="images/img-21.png"></span>
+						<span><img src="images/img-04.png"></span>
+						<span><img src="images/img-22.png"></span>
+						<span><img src="images/img-22.png"></span>
+						<span><img src="images/img-22.png"></span>
+						<span><img src="images/img-22.png"></span>
+						<span><img src="images/img-07.png"></span>
+					</div>
+					<div class="u-info">
+						<div class="u-info-one">
+							<span><img src="images/img-05.png"></span>
+						</div>
+						<div class="u-info-two">
+							<span><img src="images/img-08.png"></span>
+							<span>
+								<h1><img src="images/img-09.png"></h1>		
+								<i class="simg">
+									<b></b>
+								</i>
+							</span>							
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--animate-container-->
+			<div class="block">
+
+				<!--scene-->
+				<div class="scene">
+					<canvas id="stage"></canvas>
+				</div>
+
+				<!--count-down-->
+				<div class="count-down p-style">30s</div>
+
+				<!--score-->
+				<div class="score p-style">Score : 0</div>
+
+				<!--GuidanceCourse-->
+				<div class="guidanceCourse">
+
+					<div class="guidance-1">
+						<div class="u-hint">
+							<span><img src="images/img-45.png"></span>
+						</div>
+					</div>
+					<div class="guidance-2">
+						<div class="u-shade"></div>
+						<div class="u-hint">
+							<span><img src="images/img-46.png"></span>
+							<span><img src="images/img-47.png"></span>
+							<span><img src="images/img-48.png"></span>
+						</div>
+					</div>
+					<div class="guidance-3">
+						<div class="u-shade">
+							<span>
+								<i></i>
+							</span>
+						</div>
+						<div class="u-hint">
+							<span><img src="images/img-49.png"></span>
+						</div>
+					</div>
+					<div class="guidance-4">
+						<div class="u-hint">
+							<span class="u1"><img src="images/img-50.png"></span>
+							<span class="u2"><img src="images/img-57.png"></span>
+						</div>
+					</div>
+					<div class="guidance-5">
+						<div class="u-hint">
+							<span class="n-one"><img src="images/img-63.png"></span>
+							<span class="n-two"><img src="images/img-54.png"></span>
+							<span class="n-three"><img src="images/img-64.png"></span>
+						</div>
+					</div>
+					<div class="guidance-6">
+						<div class="u-shade">
+							<span>
+								<i></i>
+							</span>
+						</div>
+						<div class="u-hint">
+							<span><img src="images/img-58.png"></span>
+						</div>
+					</div>
+					<div class="guidance-7">
+						<div class="u-shade">
+							<span>
+								<i></i>
+							</span>
+						</div>
+						<div class="u-hint">
+							<span class="againTry"><img src="images/img-62.png"></span>
+							<span class="start"><img src="images/img-61.png"></span>
+						</div>
+					</div>
+
+					<div class="guidance-8">
+						<div class="u-shade">
+							<span>
+								<i></i>
+							</span>
+						</div>
+						<div class="u-hint">
+							<span class=""><img src="images/img-65.png"></span>
+						</div>
+					</div>
+
+				</div>
+
+				<!--photograph-->
+				<div class="photograph">
+					<span><img src="images/img-16.png"></span>
+					<span class="scaleOpacity"><img src="images/img-14.png"></span>
+					<span></span>
+					<span class="btn">
+						<div class="u-zz2"></div>
+						<div id="photograph_Btn" class="photograph_Btn">
+							<i></i>
+							<i></i>
+						</div>
+					</span>
+					<div class="u-zz">
+						<div class="u-box">
+							<p></p>
+						</div>
+						<div class="u-hint">
+							<b><img src="images/img-51.png"></b>
+							<i class="try-btn"></i>
+						</div>
+					</div>
+					<div class="u-shade">
+
+					</div>
+
+				</div>
+
+				<div class="white"></div>
+
+			</div>
+
+			<!--result-->
+			<div class="result">
+				<div class="result-background result-bg"></div>
+				<div class="result-container result-ct">
+					<span><img src="images/img-21.png"></span>
+					<span><img src="images/img-20.png"></span>
+					<span class="aBtn">
+						<a href="#" class="openResult"></a>
+						<a href="javascript:;" class="openShare"></a>
+						<img src="images/img-19.png">
+					</span>
+
+					<div class="hy-one-btn">
+						<a href="javascript:;" class="openResult"></a>
+						<a href="index.html"></a>
+						<a href="javascript:;" class="openShare"></a>
+					</div>
+
+					<div class="result-score">
+						<!--get score-->
+						<div class="getScore">
+							<div class="left-getscore">
+								<p><img src="images/img-34.png"></p>
+							</div>
+							<div class="right-getscore">
+								<h2>
+									<p><img src="images/img-35.png"></p>
+									<i>0</i>
+									<p><img src="images/img-72.png"></p>
+								</h2>
+								<h3>
+									<img src="images/img-68.png">
+								</h3>
+								<h2>
+									<img src="images/img-67.png">
+								</h2>
+							</div>
+						</div>
+
+						<!--0 score-->
+						<div class="failed">
+							<div class="left-getscore">
+								<p><img src="images/img-34.png"></p>
+							</div>
+							<div class="right-getscore">
+								<h2>
+									<img src="images/img-73.png">
+								</h2>
+								<h3>
+									<img src="images/img-68.png">
+								</h3>
+								<h2>
+									<img src="images/img-67.png">
+								</h2>
+							</div>
+						</div>
+
+						<!--look user score-->
+						<div class="look-score user-look">
+							<div class="left-getscore">
+								<p><img src="images/img-34.png"></p>
+							</div>
+							<div class="right-getscore">
+								<h2>
+									<p><img src="images/img-35.png"></p>
+									<i>0</i>
+									<p><img src="images/img-72.png"></p>
+								</h2>
+								<h3>
+									<img src="images/img-68.png">
+								</h3>
+								<h2>
+									<img src="images/img-67.png">
+								</h2>
+							</div>
+						</div>
+
+						<!--friends look score-->
+						<div class="look-score friends-look">
+							<div class="left-getscore">
+								<p><img src="images/img-34.png"></p>
+							</div>
+							<div class="right-getscore">
+								<h2>
+									<p><img src="images/img-35.png"></p>
+									<i>0</i>
+									<p><img src="images/img-69.png"></p>
+								</h2>
+								<h2>
+									<img src="images/img-70.png">
+								</h2>
+								<h3>
+									<img src="images/img-71.png">
+								</h3>
+								<h2>
+									<img src="images/img-67.png" >
+								</h2>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!--share-->
+			<div class="share">
+				<p>Click share buttom to share this page.</p>
+			</div>
+
+		</div>
+
+		<!--music-->
+		<audio src="music/paizhao.mp3" id="music_photo"></audio>
+		<audio loop="loop" id="music_background">
+			<source src="music/bg.mp3"></source>
+		</audio>
+		
+
+	</body>	
+	<script type="text/javascript" src="js/pxloader-all.min.js"></script>
+	<script type="text/javascript" src="js/easeljs-0.8.2.min.js"></script>
+	<script type="text/javascript" src="js/tweenjs-0.6.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/wx-video-audio-hack.js" ></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/photograph.js"></script>
+
+
+</html>

@@ -1,0 +1,48 @@
+.container{background: #f3f3f3; width: 100%;min-width: 1200px;max-width: 1920px;position: relative;margin: 0px auto;padding-bottom: 50px;}
+.content{width: 1200px;position: relative;margin: 50px auto;background-color: #fff;}
+
+.adress{width: 100%;position: relative; height: 604px;}
+.adress img{display: block;}
+#l-map{
+	margin: auto;
+	width: 100%;
+	height: 100%;
+}
+.add-p{background: #e4e3e3;height: 100px;text-align: center;}
+.add-sp{background: #e4e3e3;height: 100px;text-align: center;margin: 0px auto;background: url(../images/about/ioc6.png);background-repeat: no-repeat;background-position: left center;width: 480px;padding-left: 120px;}
+.add-sp h3{font-size: 27px;color: #333;line-height: 36px;padding-top: 10px;}
+.add-sp span{font-size:16px;color: #777;line-height: 28px;}
+.add-sp h3 span{font-size: 35px;color: #f58029;line-height: 58px;font-family: 'Arial';display: inline-block;margin-left: 10px;}
+
+.nav-con{padding: 80px;}
+.click-a{position: relative;text-align: left;border-bottom: 1px solid #888;}
+.click-a p{display: inline-block;}
+.a-add{background: url(../images/about/addr.jpg);background-repeat: no-repeat;background-position: left center;}
+.a-t{margin-left: 60px; background: url(../images/about/email.jpg);background-repeat: no-repeat;background-position: left center;}
+.a-on .a-add{border-bottom: 3px solid #ff8932; color: #ff8932!important; background: url(../images/about/addr-on.jpg)!important;background-repeat: no-repeat!important;background-position: left center!important;}
+.a-add:hover{border-bottom: 3px solid #ff8932; color: #ff8932!important; background: url(../images/about/addr-on.jpg)!important;background-repeat: no-repeat!important;background-position: left center!important;}
+.a-on .a-t{border-bottom: 3px solid #ff8932;color: #ff8932!important; background: url(../images/about/email-on.jpg)!important;background-repeat: no-repeat!important;background-position: left center!important;}
+.a-t:hover{border-bottom: 3px solid #ff8932;color: #ff8932!important; background: url(../images/about/email-on.jpg)!important;background-repeat: no-repeat!important;background-position: left center!important;}
+.click-a a{position: relative;display: inline-block;padding-left: 30px;font-size: 18px;color: #2c5083;line-height: 48px;}
+.a-ul{position: relative;padding-top: 48px;}
+.a-ul li{display: inline-block;width: 480px;text-align: left;margin-bottom: 40px;}
+.a-h4{ cursor:pointer; margin-bottom: 20px; color: #2c5083;padding-left: 20px;position: relative;line-height: 40px;font-size: 24px;border-bottom: 1px dotted #2c5083; }
+.a-h4 i{width: 7px;height: 7px;position: absolute;left: 0px;top: 18px; display: inline-block;background-color: #2c5083;}
+.a-p1{margin-right: 28px; display: inline-block; color: #333;font-size: 14px;line-height: 26px;padding-left: 35px;}
+.add{background: url(../images/about/a1.jpg);background-repeat: no-repeat;background-position: left center;}
+.tel{background: url(../images/about/a2.jpg);background-repeat: no-repeat;background-position: left center;}
+.pho{background: url(../images/about/a3.jpg);background-repeat: no-repeat;background-position: left center;}
+.a-ul li:nth-child(2n){float: right;}
+
+.inp{width: 530px;position: relative;margin: 50px auto;}
+.inp p{margin-bottom: 20px;}
+.inp-p{vertical-align: top; display: inline-block; font-size: 14px;color: #333;line-height: 26px;width: 88px;margin-right: 15px;text-align: right;}
+.inp-p2{vertical-align: top; display: inline-block; font-size: 14px;color: #333;line-height: 26px;width: 400px;margin-right: 15px;text-align: left;}
+.inp-p i{color:#ff8932;display: inline-block;margin-right: 10px;font-style: normal;line-height: 26px; }
+.inp-p2 i{color:#ff8932;display: inline-block;margin-right: 10px;font-style: normal;line-height: 26px; }
+.inp-text{width: 360px;line-height: 34px;height: 34px;font-size: 14px;color: #333;padding: 0px 20px;border: 1px solid #acacac}
+.inp-t{width: 360px;height: 100px; line-height: 26px;font-size: 14px;color: #333;padding: 0px 20px;border: 1px solid #acacac}
+.sub-a{text-align: center;}
+.sub-a a{font-size: 14px;text-align: center;color: #fff; width: 120px;line-height: 36px;height: 36px;border-radius: 5px;display: inline-block;}
+.sub-a1{background-color: #f58029;margin-right: 20px;}
+.sub-a2{background-color: #c4c4c4}
