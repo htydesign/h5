@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-		<title>S81</title>
+		<title>部分项目</title>
 		<style type="text/css">
 			* {
 				margin: 0;
@@ -63,8 +63,16 @@
 					<a :href="item.projectUrl">{{item.projectName}}</a>
 				</li>
 			</ul>
-			<h1>响应式</h1>
-			
+			<h1>响应式网站</h1>
+			<ul>
+				<li v-for="(item,index) in PC" :key="index">
+					<h2>项目简介：</h2>
+					<p>{{item.introduction}}</p>
+					<h2>使用技术：</h2>
+					<p>{{item.technology}}</p>
+					<a :href="item.projectUrl">{{item.projectName}}</a>
+				</li>
+			</ul>
 			
 		</section>
 	</body>
